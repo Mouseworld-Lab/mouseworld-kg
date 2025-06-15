@@ -1,0 +1,25 @@
+- beans:
+  - name: mappingTemplate
+    type: "#class:com.cefriel.util.ChimeraResourceBean"
+    properties:
+      url: "file://./mappings.vm"
+      serializationFormat: "vtl"
+
+- from:
+    uri: "file:input"
+    parameters:
+      fileName: "input.json"
+      noop: true
+    steps:
+      - to:
+          uri: "mapt://json"
+          parameters:
+            template: "#bean:mappingTemplate"
+            format: "turtle"
+      - to:
+          uri: "file:output"
+          parameters:
+            fileName: "output.ttl"
+            noop: true
+      - log:
+          message: "Lifting has been generated and saved to output/output.ttl"

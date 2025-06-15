@@ -1,0 +1,133 @@
+{
+  "count": 3,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 2585,
+      "url": "http://192.168.159.62:8000/api/ipam/ip-addresses/2585/",
+      "display": "10.0.2.2/24",
+      "family": {
+        "value": 4,
+        "label": "IPv4"
+      },
+      "address": "10.0.2.2/24",
+      "vrf": null,
+      "tenant": null,
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "role": null,
+      "assigned_object_type": "dcim.interface",
+      "assigned_object_id": 5860,
+      "assigned_object": {
+        "id": 5860,
+        "url": "http://192.168.159.62:8000/api/dcim/interfaces/5860/",
+        "display": "eno2",
+        "device": {
+          "id": 340,
+          "url": "http://192.168.159.62:8000/api/dcim/devices/340/",
+          "display": "ALHAMBRA",
+          "name": "ALHAMBRA"
+        },
+        "name": "eno2",
+        "cable": 1275,
+        "_occupied": true
+      },
+      "nat_inside": null,
+      "nat_outside": [],
+      "dns_name": "",
+      "description": "",
+      "comments": "",
+      "tags": [],
+      "custom_fields": {},
+      "created": "2025-02-27T14:14:02.523380Z",
+      "last_updated": "2025-02-27T14:14:02.523408Z"
+    },
+    {
+      "id": 2586,
+      "url": "http://192.168.159.62:8000/api/ipam/ip-addresses/2586/",
+      "display": "10.0.3.3/24",
+      "family": {
+        "value": 4,
+        "label": "IPv4"
+      },
+      "address": "10.0.3.3/24",
+      "vrf": null,
+      "tenant": null,
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "role": null,
+      "assigned_object_type": "dcim.interface",
+      "assigned_object_id": 5861,
+      "assigned_object": {
+        "id": 5861,
+        "url": "http://192.168.159.62:8000/api/dcim/interfaces/5861/",
+        "display": "eno3",
+        "device": {
+          "id": 340,
+          "url": "http://192.168.159.62:8000/api/dcim/devices/340/",
+          "display": "ALHAMBRA",
+          "name": "ALHAMBRA"
+        },
+        "name": "eno3",
+        "cable": 1277,
+        "_occupied": true
+      },
+      "nat_inside": null,
+      "nat_outside": [],
+      "dns_name": "",
+      "description": "",
+      "comments": "",
+      "tags": [],
+      "custom_fields": {},
+      "created": "2025-02-27T14:14:15.109455Z",
+      "last_updated": "2025-02-27T14:14:15.109481Z"
+    },
+    {
+      "id": 1434,
+      "url": "http://192.168.159.62:8000/api/ipam/ip-addresses/1434/",
+      "display": "192.168.27.113/24",
+      "family": {
+        "value": 4,
+        "label": "IPv4"
+      },
+      "address": "192.168.27.113/24",
+      "vrf": null,
+      "tenant": null,
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "role": null,
+      "assigned_object_type": "dcim.interface",
+      "assigned_object_id": 2838,
+      "assigned_object": {
+        "id": 2838,
+        "url": "http://192.168.159.62:8000/api/dcim/interfaces/2838/",
+        "display": "eno1",
+        "device": {
+          "id": 340,
+          "url": "http://192.168.159.62:8000/api/dcim/devices/340/",
+          "display": "ALHAMBRA",
+          "name": "ALHAMBRA"
+        },
+        "name": "eno1",
+        "cable": null,
+        "_occupied": false
+      },
+      "nat_inside": null,
+      "nat_outside": [],
+      "dns_name": "",
+      "description": "",
+      "comments": "",
+      "tags": [],
+      "custom_fields": {},
+      "created": "2022-03-24T00:00:00Z",
+      "last_updated": "2022-03-30T07:55:04.612182Z"
+    }
+  ]
+}

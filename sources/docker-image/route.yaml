@@ -1,0 +1,21 @@
+- from:
+    uri: "file:input"
+    parameters:
+      fileName: "input.ttl"
+      noop: true
+    steps:
+        - to:
+            uri: "direct:storeTriplestore"
+
+- from:
+    uri: "direct:storeTriplestore"
+    steps:
+      - to:
+          uri: "graph://get"
+          parameters:
+            serverUrl: "http://127.0.0.1:7200"
+            repositoryId: "default"
+            rdfFormat: "turtle"
+            defaultGraph: true
+      - log:
+          message: "File stored in remote triplestore"

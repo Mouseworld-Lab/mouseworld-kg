@@ -1,0 +1,61 @@
+- beans:
+  - name: mappingTemplate
+    type: "#class:com.cefriel.util.ChimeraResourceBean"
+    properties:
+      url: "file://./mappings.vm"
+      serializationFormat: "vtl"
+
+- from:
+    uri: "timer:fetchServers?repeatCount=1"
+    steps:
+      - setHeader:
+          name: "X-Auth-Token"
+          constant: "REPLACE WITH OS TOKEN"
+      - setHeader:
+          name: "Accept"
+          constant: "application/json"
+      - to:
+          uri: "http://192.168.27.44:9696/v2.0/networks"
+      - to:
+          uri: "direct:liftOpenStack"
+
+- from:
+    uri: "direct:liftOpenStack"
+    steps:
+      - log:
+          message: "Retrieved data from OpenStack: ${body}"
+      - to:
+          uri: "mapt://json"
+          parameters:
+            template: "#bean:mappingTemplate"
+            format: "turtle"
+      - multicast:
+          steps:
+            - to:
+                uri: "direct:storeLiftedFile"
+            - to:
+                uri: "direct:storeLiftedTriplestore"
+
+- from:
+    uri: "direct:storeLiftedFile"
+    steps:
+      - to:
+          uri: "file:output"
+          parameters:
+            fileName: "output.ttl"
+            noop: true
+      - log:
+          message: "Lifting saved to output/output.ttl"
+
+- from:
+    uri: "direct:storeLiftedTriplestore"
+    steps:
+      - to:
+          uri: "graph://get"
+          parameters:
+            serverUrl: "http://127.0.0.1:7200"
+            repositoryId: "default"
+            rdfFormat: "turtle"
+            defaultGraph: true
+      - log:
+          message: "File stored in remote triplestore"

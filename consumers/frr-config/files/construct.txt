@@ -1,0 +1,59 @@
+PREFIX mw: <https://w3id.org/candil/mouseworld#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+CONSTRUCT {
+    ?node a mw:Router ;
+        mw:nodeId ?nodeId ;
+        mw:hostname ?hostname ;
+        mw:interface ?interface .
+
+    ?interface mw:interfaceName ?ifName ;
+        mw:ipAddress ?address ;
+        a ?ifType .
+
+    ?address mw:addressValue ?addressValue ;
+        mw:belongsToNetwork ?network .
+
+    ?network mw:networkPrefix ?networkPrefix .
+
+    ?staticRoute mw:nextHop ?nextHop ;
+        mw:destinationNetwork ?destinationNetwork .
+
+    ?nextHop mw:addressValue ?nextHopAddress .
+
+    ?destinationNetwork mw:addressValue ?addressValue ;
+        mw:networkMask ?networkMask .
+
+}
+
+WHERE {
+    ?node a mw:Router ;
+        mw:nodeId ?nodeId ;
+        mw:interface ?interface ;
+        mw:staticRoute ?staticRoute .
+
+    ?interface mw:interfaceName ?ifName ;
+        mw:ipAddress ?address ;
+        a ?ifType .
+
+    ?address mw:addressValue ?addressValue ;
+        mw:belongsToNetwork ?network .
+
+    ?network mw:networkPrefix ?networkPrefix .
+
+    ?staticRoute mw:nextHop ?nextHop ;
+        mw:destinationNetwork ?destinationNetwork .
+
+    ?nextHop mw:addressValue ?nextHopAddress .
+
+    ?destinationNetwork mw:addressValue ?addressValue ;
+        mw:networkMask ?networkMask .
+
+}

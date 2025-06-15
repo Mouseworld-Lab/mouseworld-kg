@@ -1,0 +1,31 @@
+- route:
+    id: getNetBoxLinks
+    from:
+      uri: "kamelet:netbox-source"
+      parameters:
+        netboxUrl: "http://192.168.159.62:8000"
+        apiToken: "REPLACE WITH NETBOX TOKEN"
+        endpoint: "/api/dcim/cables/"
+        queryParams: "termination_a_type=dcim.interface&termination_b_type=dcim.interface"
+      steps:
+        - to:
+            uri: "direct:liftNetBoxLinks"
+
+- route:
+    id: liftNetBoxLinks
+    from:
+      uri: "direct:liftNetBoxLinks"
+      steps:
+        - log:
+            message: "Retrieved data from NetBox: ${body}"
+        - to:
+            uri: kamelet:mapping-template-lifting-action
+            parameters:
+              templateUrl: "file://./mappings.vm"
+              inputFormat: "json"
+              outputFormat: "turtle"
+        - log:
+            message: "Lifted data from NetBox: ${body}"
+        - to: "file:output?fileName=output.ttl&noop=true"
+        - log:
+            message: "Lifting has been generated and saved to output/output.ttl"

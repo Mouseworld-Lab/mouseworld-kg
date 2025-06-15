@@ -1,0 +1,55 @@
+#set ( $prefixes = "
+	PREFIX mw: <https://w3id.org/candil/mouseworld#>
+    PREFIX mod: <https://w3id.org/mod#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX vann: <http://purl.org/vocab/vann/>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+" )
+
+#set ( $router = "
+    SELECT *
+    WHERE {
+        ?node a mw:Router ;
+            mw:nodeId ""$map.routerId"" ;
+            mw:hostname ?hostname ;
+            mw:interface ?interface .
+        ?interface mw:interfaceName ?ifName ;
+            mw:ipAddress ?address ;
+            a ?ifType .
+        ?address mw:addressValue ?addressValue ;
+            mw:belongsToNetwork ?network .
+        ?network mw:networkPrefix ?networkPrefix .
+    }
+
+" )
+#set( $queryRouter = "${prefixes}${router}" )
+#set( $routers = $reader.getDataframe($queryRouter) )
+#foreach($r in $routers)
+interface $r.ifName
+    ip address $r.addressValue/$r.networkPrefix
+    #if($r.ifType == "https://w3id.org/candil/mouseworld#IpInterface")    no switchport#end
+
+!
+#end
+#set ( $staticRoute = "
+    SELECT *
+    WHERE {
+        ?node a mw:Router ;
+            mw:staticRoute ?staticRoute .
+        ?staticRoute mw:nextHop ?nextHop ;
+            mw:destinationNetwork ?destinationNetwork .
+        ?nextHop mw:addressValue ?nextHopAddress .
+        ?destinationNetwork mw:addressValue ?addressValue ;
+            mw:networkMask ?networkMask .
+    }
+
+" )
+#set( $queryStaticRoute = "$prefixes$staticRoute" )
+#set( $staticRoutes = $reader.getDataframe($queryStaticRoute) )
+#foreach($statics in $staticRoutes)
+ip route $statics.addressValue $statics.networkMask $statics.nextHopAddress
+#end

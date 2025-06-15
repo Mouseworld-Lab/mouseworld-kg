@@ -1,0 +1,37 @@
+- from:
+    id: "jsonProducerRoute"
+    uri: "direct:produceJson"
+    steps:
+      # Produce JSON data
+      - set-body:
+          simple: '{"name": "John Doe", "age": 30}'
+      # Store JSON data in an exchange property for later use
+      - set-property:
+          name: "JsonData"
+          simple: "${body}"
+      # Send JSON data to loadCsvRoute
+      - to: "direct:combineRoutes"
+
+- from:
+    id: "loadCsvRoute"
+    uri: "file:input?fileName=data.csv&noop=true"
+    steps:
+      # Split CSV file into rows
+      - split:
+          tokenize: "\n"
+          streaming: true
+          steps:
+            # Set CsvRowHeader from the current row
+            - set-header:
+                name: "CsvRowHeader"
+                simple: "${body}"
+            # Send to combiner from for processing
+            - to: "direct:produceJson"
+
+- from:
+    id: "combinerRoute"
+    uri: "direct:combineRoutes"
+    steps:
+      # Restore original JSON data into the body from exchange property
+      - log:
+          message: "JSON Body: ${body}, CsvRow Header: ${header.CsvRowHeader}"

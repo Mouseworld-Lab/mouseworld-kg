@@ -1,0 +1,136 @@
+
+######################
+# BEANS
+######################
+
+- beans:
+  - name: constructGraph
+    type: "#class:com.cefriel.util.ChimeraResourceBean"
+    properties:
+      url: "file://./files/construct.txt"
+      serializationFormat: "txt"
+  - name: selectNodeId
+    type: "#class:com.cefriel.util.ChimeraResourceBean"
+    properties:
+      url: "file://./files/select-node-id.txt"
+      serializationFormat: "txt"
+  - name: loweringMappingTemplate
+    type: "#class:com.cefriel.util.ChimeraResourceBean"
+    properties:
+      url: "file://./files/mappings.vm"
+      serializationFormat: "vtl"
+  - name: addHeaderAggregationStrategy
+    type: "com.candil.camel.AddHeaderAggregationStrategy"
+    properties:
+      bodyIdentifierHeader: "IsBody"
+      headerName: "node-id"
+
+######################
+# ROUTES
+######################
+
+- from:
+    id: connectGraph
+    uri: "graph://get"
+    parameters:
+      serverUrl: http://127.0.0.1:7200
+      repositoryId: default
+      defaultGraph: true
+    steps:
+      - multicast:
+          parallel-processing: false
+          steps:
+            - to: "seda:selectNodeId"
+            - to: "seda:getConfigGraph"
+
+- from:
+    id: selectNodeId
+    uri: seda:selectNodeId
+    steps:
+      - to:
+          uri: "graph://select"
+          parameters:
+            dumpFormat: csv
+            chimeraResource: "#bean:selectNodeId"
+      - to:
+          uri: "direct:splitCsv"
+
+- from:
+    id: "splitCsv"
+    uri: "direct:splitCsv"
+    steps:
+      - split:
+          tokenize: "\n"
+          streaming: true
+          steps:
+            - set-header:
+                name: "node-id"
+                simple: "${body}"
+            # Set custom header to identify this as the body exchange
+            - set-header:
+                name: "IsBody"
+                simple: "false"
+            # Set correlation ID for aggregation
+            - set-header:
+                name: "correlationId"
+                simple: "123"
+            - to: "seda:aggregate"
+
+- from:
+    id: getConfigGraph
+    uri: "seda:getConfigGraph"
+    steps:
+      - to:
+          uri: "graph://construct"
+          parameters:
+            newGraph: true
+            chimeraResource: "#bean:constructGraph"
+      # Set custom header to identify this as the body exchange
+      - set-header:
+          name: "IsBody"
+          simple: "true"
+      # Set correlation ID for aggregation
+      - set-header:
+          name: "correlationId"
+          simple: "123"
+      - to:
+          uri: "seda:aggregate"
+
+- from:
+    id: aggregatorRoute
+    uri: "seda:aggregate"
+    steps:
+      # Aggregate messages based on correlation ID
+      - aggregate:
+          correlation-expression:
+            header: "correlationId"
+          aggregationStrategy: "#bean:addHeaderAggregationStrategy"
+          completion-size: 2
+      # Log final aggregated message
+      - log:
+          message: "Final Message Body: ${body}, Header: ${header.node-id}"
+      - to:
+          uri: "seda:lowering"
+
+- from:
+    id: lowering
+    uri: "seda:lowering"
+    steps:
+      - to:
+          uri: "mapt://rdf"
+          parameters:
+            template: "#bean:loweringMappingTemplate"
+      - to:
+          uri: "direct:storeConfig"
+
+- from:
+    id: storeConfig
+    uri: "direct:storeConfig"
+    steps:
+      - toD:
+          uri: "file:output"
+          parameters:
+            fileName: ${header.node-id}.conf
+            noop: true
+      - log:
+          message: "Lowering has been generated and saved to output/${header.node-id}.conf"

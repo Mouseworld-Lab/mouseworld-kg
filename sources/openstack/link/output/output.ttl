@@ -1,0 +1,85 @@
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mw: <https://w3id.org/candil/mouseworld#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/018dff4b-ad02-4ec8-b531-a71a31c6ecfa>
+  a mw:Link;
+  mw:linkName "r5r6" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/0f656566-5bb7-4501-a8dc-9302ef4f68ed>
+  a mw:Link;
+  mw:linkName "r2r3" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/12b4b9f0-55e9-4dee-967f-25964f6f78a9>
+  a mw:Link;
+  mw:linkName "r3r7" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/18937e35-91f4-434a-a65b-f15b9757cd6c>
+  a mw:Link;
+  mw:linkName "r2r5" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/20b8b1ef-8cfe-4099-a60e-2e1306f2fd93>
+  a mw:Link;
+  mw:linkName "r4r6" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/261842e3-a345-4b90-b37b-5c9ba1fce18b>
+  a mw:Link;
+  mw:linkName "r1r4" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/4e127b07-49b8-418a-ab6a-de77d404dcfb>
+  a mw:Link;
+  mw:linkName "r3r13" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/5b7e50b7-9699-4a9b-83d8-e7ba20486844>
+  a mw:Link;
+  mw:linkName "r3r12" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/5e1c3a0c-9825-4b11-abea-c5f1b5773bee>
+  a mw:Link;
+  mw:linkName "r11r4" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/a63780a3-a992-4b86-97b3-d988ec4b5bfe>
+  a mw:Link;
+  mw:linkName "r6r7" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/c0422e79-2088-4181-9b3b-7fa3ba7c6321>
+  a mw:Link;
+  mw:linkName "r2r12" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/e00db497-40a2-4648-bb99-183a38c2371e>
+  a mw:Link;
+  mw:linkName "management-network" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/e2172a2b-d6e8-488c-b932-babfbbb09d1b>
+  a mw:Link;
+  mw:linkName "r7r13" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/e2dee63f-1aac-4c2d-b977-46b610ec5b8f>
+  a mw:Link;
+  mw:linkName "r1r11" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/f99ab493-edcc-4ed6-9ea1-65098dafa1d6>
+  a mw:Link;
+  mw:linkName "r1r2" .
+
+<http://mouseworld-test.org/Topology/mouseworld> mw:link <http://mouseworld-test.org/Topology/mouseworld/Link/018dff4b-ad02-4ec8-b531-a71a31c6ecfa>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/0f656566-5bb7-4501-a8dc-9302ef4f68ed>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/12b4b9f0-55e9-4dee-967f-25964f6f78a9>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/18937e35-91f4-434a-a65b-f15b9757cd6c>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/20b8b1ef-8cfe-4099-a60e-2e1306f2fd93>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/261842e3-a345-4b90-b37b-5c9ba1fce18b>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/4e127b07-49b8-418a-ab6a-de77d404dcfb>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/5b7e50b7-9699-4a9b-83d8-e7ba20486844>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/5e1c3a0c-9825-4b11-abea-c5f1b5773bee>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/a63780a3-a992-4b86-97b3-d988ec4b5bfe>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/c0422e79-2088-4181-9b3b-7fa3ba7c6321>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/e00db497-40a2-4648-bb99-183a38c2371e>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/e2172a2b-d6e8-488c-b932-babfbbb09d1b>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/e2dee63f-1aac-4c2d-b977-46b610ec5b8f>,
+    <http://mouseworld-test.org/Topology/mouseworld/Link/f99ab493-edcc-4ed6-9ea1-65098dafa1d6> .

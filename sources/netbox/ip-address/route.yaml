@@ -1,0 +1,31 @@
+- route:
+    id: getNetBoxAddresses
+    from:
+      uri: "kamelet:netbox-source"
+      parameters:
+        netboxUrl: "http://192.168.159.62:8000"
+        apiToken: "REPLACE WITH NETBOX TOKEN"
+        endpoint: "/api/ipam/ip-addresses/"
+        queryParams: ""
+      steps:
+        - to:
+            uri: "direct:liftNetBoxAddresses"
+
+- route:
+    id: liftNetBoxAddresses
+    from:
+      uri: "direct:liftNetBoxAddresses"
+      steps:
+        - log:
+            message: "Retrieved data from NetBox: ${body}"
+        - to:
+            uri: kamelet:mapping-template-lifting-action
+            parameters:
+              templateUrl: "file://./mappings.vm"
+              inputFormat: "json"
+              outputFormat: "turtle"
+        - log:
+            message: "Lifted data from NetBox: ${body}"
+        - to: "file:output?fileName=output.ttl&noop=true"
+        - log:
+            message: "Lifting has been generated and saved to output/output.ttl"

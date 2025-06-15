@@ -1,0 +1,104 @@
+#set ( $prefixes = "
+	PREFIX mw: <https://w3id.org/candil/mouseworld#>
+    PREFIX mod: <https://w3id.org/mod#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX vann: <http://purl.org/vocab/vann/>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+" )
+#set ( $topology = "
+    SELECT *
+    WHERE {
+        ?topology a mw:Topology ;
+            mw:topologyName ?topologyName .
+    }
+" )
+#set( $queryTopology = "${prefixes}${topology}" )
+#set( $resultTopology = $reader.getDataframe($queryTopology) )
+name: $resultTopology[0].topologyName
+#set ( $router = "
+    SELECT *
+    WHERE {
+        ?node a mw:Router ;
+            mw:nodeName ?nodeName ;
+            mw:operatingSystem ?operatingSystem
+        .
+        ?operatingSystem a mw:OperatingSystem ;
+            mw:vendor ?vendor ;
+            mw:dockerImage ?dockerImage
+        .
+        ?vendor mw:kneVendorName ?vendorName .
+        ?dockerImage mw:imageUrl ?dockerImageUrl .
+    }
+" )
+#set( $queryRouter = "${prefixes}${router}" )
+#set( $resultRouter = $reader.getDataframe($queryRouter) )
+nodes:
+#foreach($r in $resultRouter)
+- name: $r.nodeName
+  vendor: $r.vendorName
+  config:
+    image: $r.dockerImageUrl
+  interfaces:
+#set ( $interface = "
+    SELECT *
+    WHERE {
+        ?node a mw:Router ;
+            mw:nodeName ""$r.nodeName"" ;
+            mw:interface ?interface
+        .
+        ?interface mw:interfaceName ?interfaceName .
+    }
+" )
+#set( $queryInterface = "${prefixes}${interface}" )
+#set( $resultInterface = $reader.getDataframe($queryInterface) )
+#foreach($i in $resultInterface)
+#set($lowerInterfaceName = $i.interfaceName.toLowerCase())
+    $lowerInterfaceName:
+      name: $i.interfaceName
+#end
+#end
+links:
+#set ( $link = "
+    SELECT *
+    WHERE {
+        ?link a mw:Link .
+    }
+" )
+#set( $queryLink = "${prefixes}${link}" )
+#set( $resultLink = $reader.getDataframe($queryLink) )
+#foreach($i in $resultLink)
+#set ( $connection = "
+    SELECT *
+    WHERE {
+        <$i.link> a mw:Link ;
+            mw:connectsInterface ?ifaceA ;
+            mw:connectsInterface ?ifaceB
+        .
+        ?ifaceA mw:interfaceName ?ifaceNameA .
+        ?nodeA mw:interface ?ifaceA ;
+            mw:nodeName ?nodeNameA
+        .
+        ?ifaceB mw:interfaceName ?ifaceNameB .
+        ?nodeB mw:interface ?ifaceB ;
+            mw:nodeName ?nodeNameB
+        .
+        FILTER (?ifaceA != ?ifaceB)
+    }
+" )
+#set( $queryConnection = "${prefixes}${connection}" )
+#set( $resultConnection = $reader.getDataframe($queryConnection) )
+#foreach($c in $resultConnection)
+#if($foreach.first)
+- a_node: $c.nodeNameA
+#set($lowerIfaceNameA = $c.ifaceNameA.toLowerCase())
+  a_int: $lowerIfaceNameA
+  z_node: $c.nodeNameB
+#set($lowerIfaceNameB = $c.ifaceNameB.toLowerCase())
+  z_int: $lowerIfaceNameB
+#end
+#end
+#end

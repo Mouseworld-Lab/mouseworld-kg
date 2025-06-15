@@ -1,0 +1,46 @@
+@prefix mw: <https://w3id.org/candil/mouseworld#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://mouseworld-test.org/> .
+
+#set ($xs = $reader.getDataframe('{
+    "iterator": "$.ports.*",
+    "paths": {
+        "iface_id": "id",
+        "iface_name": "name",
+        "device_id": "device_id",
+        "network_id": "network_id",
+        "address": "fixed_ips[0].ip_address",
+        "subnet_id": "fixed_ips[0].subnet_id"
+    }
+}'))
+
+#foreach($x in $xs)
+#if($x.iface_name)
+<Topology/mouseworld/Node/$x.device_id/Interface/$x.iface_id> rdf:type mw:Interface ;
+    mw:interfaceName "$x.iface_name" ;
+    #if($x.address)
+    rdf:type mw:IpInterface ;
+    #end
+    mw:ipAddress <IpAddress/$x.address> ;
+.
+
+#if($x.address)
+<IpAddress/$x.address> a mw:IpAddress ;
+    mw:addressValue "$x.address" ;
+    mw:belongsToNetwork <IpNetwork/$x.subnet_id> ;
+.
+#end
+
+<Topology/mouseworld/Node/$x.device_id> mw:interface <Topology/mouseworld/Node/$x.device_id/Interface/$x.iface_id> .
+
+<Topology/mouseworld/Link/$x.network_id> mw:connectsInterface <Topology/mouseworld/Node/$x.device_id/Interface/$x.iface_id> .
+<Topology/mouseworld/Link/$x.network_id> mw:connectsNode <Topology/mouseworld/Node/$x.device_id> .
+#end
+#end
