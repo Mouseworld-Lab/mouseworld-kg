@@ -1,6 +1,8 @@
 # Mouseworld Knowledge Graph
 
-This repository contains the Apache Camel routes used to deploy a twin network based on the Mouseworld Knowledge Graph. The figure below depicts the pipelines that implement semantic lifting of data sources from the real network and semantic lowering to data consumers of the twin network.
+This repository contains the Apache Camel routes used to deploy a twin network based on the Mouseworld Knowledge Graph. This knowledge graph is aligned with the [MW Ontology](https://github.com/Mouseworld-Lab/mouseworld-ontology).
+
+The figure below depicts the pipelines that implement semantic lifting of data sources from the real network and semantic lowering to data consumers of the twin network.
 
 ![KG Pipelines](figures/figures-openstack.png)
 
