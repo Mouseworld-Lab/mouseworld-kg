@@ -1,0 +1,24 @@
+@prefix mw: <https://w3id.org/candil/mouseworld#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://mouseworld-test.org/> .
+
+#set ($xs = $reader.getDataframe('{
+    "iterator": "$.results.*",
+    "paths": {
+        "address": "address",
+        "iface_name": "assigned_object.name",
+        "device_name": "assigned_object.device.name"
+    }
+}'))
+
+#foreach($x in $xs)
+#set ($ipAddress = $x.address.split("/")[0])
+<Topology/mouseworld/Node/$x.device_name/Interface/$x.iface_name> mw:ipAddress <IpAddress/$ipAddress> .
+#end

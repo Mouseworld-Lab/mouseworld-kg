@@ -1,0 +1,539 @@
+{
+  "count": 4,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 340,
+      "url": "http://192.168.159.62:8000/api/dcim/devices/340/",
+      "display": "ALHAMBRA",
+      "name": "ALHAMBRA",
+      "device_type": {
+        "id": 4,
+        "url": "http://192.168.159.62:8000/api/dcim/device-types/4/",
+        "display": "Poweredge R720",
+        "manufacturer": {
+          "id": 3,
+          "url": "http://192.168.159.62:8000/api/dcim/manufacturers/3/",
+          "display": "Dell",
+          "name": "Dell",
+          "slug": "dell"
+        },
+        "model": "Poweredge R720",
+        "slug": "poweredge-r720"
+      },
+      "device_role": {
+        "id": 8,
+        "url": "http://192.168.159.62:8000/api/dcim/device-roles/8/",
+        "display": "Server",
+        "name": "Server",
+        "slug": "server"
+      },
+      "tenant": {
+        "id": 82,
+        "url": "http://192.168.159.62:8000/api/tenancy/tenants/82/",
+        "display": "HORSE",
+        "name": "HORSE",
+        "slug": "horse"
+      },
+      "platform": null,
+      "serial": "",
+      "asset_tag": null,
+      "site": {
+        "id": 1,
+        "url": "http://192.168.159.62:8000/api/dcim/sites/1/",
+        "display": "DistritoT Sur 3",
+        "name": "DistritoT Sur 3",
+        "slug": "Sur_3"
+      },
+      "location": {
+        "id": 1,
+        "url": "http://192.168.159.62:8000/api/dcim/locations/1/",
+        "display": "Net-Virt",
+        "name": "Net-Virt",
+        "slug": "net-virt",
+        "_depth": 0
+      },
+      "rack": {
+        "id": 37,
+        "url": "http://192.168.159.62:8000/api/dcim/racks/37/",
+        "display": "1-P (1-P)",
+        "name": "1-P"
+      },
+      "position": 43.0,
+      "face": {
+        "value": "front",
+        "label": "Front"
+      },
+      "parent_device": null,
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "airflow": null,
+      "primary_ip": {
+        "id": 1434,
+        "url": "http://192.168.159.62:8000/api/ipam/ip-addresses/1434/",
+        "display": "192.168.27.113/24",
+        "family": 4,
+        "address": "192.168.27.113/24"
+      },
+      "primary_ip4": {
+        "id": 1434,
+        "url": "http://192.168.159.62:8000/api/ipam/ip-addresses/1434/",
+        "display": "192.168.27.113/24",
+        "family": 4,
+        "address": "192.168.27.113/24"
+      },
+      "primary_ip6": null,
+      "cluster": null,
+      "virtual_chassis": null,
+      "vc_position": null,
+      "vc_priority": null,
+      "description": "",
+      "comments": "En uso por Jose M. Manjón. Tiene una tarjeta QRNG de QSIDE. Antiguo ESXPTI04.",
+      "local_context_data": null,
+      "tags": [
+        {
+          "id": 39,
+          "url": "http://192.168.159.62:8000/api/extras/tags/39/",
+          "display": "FRR",
+          "name": "FRR",
+          "slug": "frr",
+          "color": "ff9800"
+        },
+        {
+          "id": 3,
+          "url": "http://192.168.159.62:8000/api/extras/tags/3/",
+          "display": "IP & Transport",
+          "name": "IP & Transport",
+          "slug": "Telefonica",
+          "color": "2196f3"
+        },
+        {
+          "id": 40,
+          "url": "http://192.168.159.62:8000/api/extras/tags/40/",
+          "display": "Mouseworld",
+          "name": "Mouseworld",
+          "slug": "mouseworld",
+          "color": "00ffff"
+        }
+      ],
+      "custom_fields": {
+        "regular_user_1": null,
+        "regular_user_2": null,
+        "operative_system": "Ubuntu Server 24.04",
+        "cpu_model": "2x Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz",
+        "cpu_cores": "64 (2x16x2)",
+        "ram_memory": "31.94 GB",
+        "ram_available": "14.01 GB",
+        "disk_available": "49.06 GB",
+        "disk_size": "187.02 GB",
+        "power_type": "AC",
+        "power_consumption": null
+      },
+      "config_context": {},
+      "config_template": null,
+      "created": "2021-06-01T00:00:00Z",
+      "last_updated": "2025-03-18T09:31:21.457904Z"
+    },
+    {
+      "id": 453,
+      "url": "http://192.168.159.62:8000/api/dcim/devices/453/",
+      "display": "CUYAGUA",
+      "name": "CUYAGUA",
+      "device_type": {
+        "id": 4,
+        "url": "http://192.168.159.62:8000/api/dcim/device-types/4/",
+        "display": "Poweredge R720",
+        "manufacturer": {
+          "id": 3,
+          "url": "http://192.168.159.62:8000/api/dcim/manufacturers/3/",
+          "display": "Dell",
+          "name": "Dell",
+          "slug": "dell"
+        },
+        "model": "Poweredge R720",
+        "slug": "poweredge-r720"
+      },
+      "device_role": {
+        "id": 8,
+        "url": "http://192.168.159.62:8000/api/dcim/device-roles/8/",
+        "display": "Server",
+        "name": "Server",
+        "slug": "server"
+      },
+      "tenant": {
+        "id": 82,
+        "url": "http://192.168.159.62:8000/api/tenancy/tenants/82/",
+        "display": "HORSE",
+        "name": "HORSE",
+        "slug": "horse"
+      },
+      "platform": null,
+      "serial": "",
+      "asset_tag": null,
+      "site": {
+        "id": 1,
+        "url": "http://192.168.159.62:8000/api/dcim/sites/1/",
+        "display": "DistritoT Sur 3",
+        "name": "DistritoT Sur 3",
+        "slug": "Sur_3"
+      },
+      "location": {
+        "id": 1,
+        "url": "http://192.168.159.62:8000/api/dcim/locations/1/",
+        "display": "Net-Virt",
+        "name": "Net-Virt",
+        "slug": "net-virt",
+        "_depth": 0
+      },
+      "rack": {
+        "id": 35,
+        "url": "http://192.168.159.62:8000/api/dcim/racks/35/",
+        "display": "1-N (1-N)",
+        "name": "1-N"
+      },
+      "position": 36.0,
+      "face": {
+        "value": "front",
+        "label": "Front"
+      },
+      "parent_device": null,
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "airflow": null,
+      "primary_ip": {
+        "id": 1475,
+        "url": "http://192.168.159.62:8000/api/ipam/ip-addresses/1475/",
+        "display": "192.168.27.207/24",
+        "family": 4,
+        "address": "192.168.27.207/24"
+      },
+      "primary_ip4": {
+        "id": 1475,
+        "url": "http://192.168.159.62:8000/api/ipam/ip-addresses/1475/",
+        "display": "192.168.27.207/24",
+        "family": 4,
+        "address": "192.168.27.207/24"
+      },
+      "primary_ip6": null,
+      "cluster": null,
+      "virtual_chassis": null,
+      "vc_position": null,
+      "vc_priority": null,
+      "description": "",
+      "comments": "Servidor en uso por Jose M. Manjón.",
+      "local_context_data": null,
+      "tags": [
+        {
+          "id": 39,
+          "url": "http://192.168.159.62:8000/api/extras/tags/39/",
+          "display": "FRR",
+          "name": "FRR",
+          "slug": "frr",
+          "color": "ff9800"
+        },
+        {
+          "id": 3,
+          "url": "http://192.168.159.62:8000/api/extras/tags/3/",
+          "display": "IP & Transport",
+          "name": "IP & Transport",
+          "slug": "Telefonica",
+          "color": "2196f3"
+        },
+        {
+          "id": 40,
+          "url": "http://192.168.159.62:8000/api/extras/tags/40/",
+          "display": "Mouseworld",
+          "name": "Mouseworld",
+          "slug": "mouseworld",
+          "color": "00ffff"
+        }
+      ],
+      "custom_fields": {
+        "regular_user_1": null,
+        "regular_user_2": null,
+        "operative_system": "Ubuntu 18.04.1 LTS",
+        "cpu_model": "10x Intel Core Processor (Haswell, no TSX)",
+        "cpu_cores": "10 (10x1x1)",
+        "ram_memory": "7.63 GB",
+        "ram_available": "2.34 GB",
+        "disk_available": "355.51 GB",
+        "disk_size": "392.92 GB",
+        "power_type": "AC",
+        "power_consumption": null
+      },
+      "config_context": {},
+      "config_template": null,
+      "created": "2022-02-24T00:00:00Z",
+      "last_updated": "2025-03-18T09:31:36.657502Z"
+    },
+    {
+      "id": 204,
+      "url": "http://192.168.159.62:8000/api/dcim/devices/204/",
+      "display": "Eter",
+      "name": "Eter",
+      "device_type": {
+        "id": 4,
+        "url": "http://192.168.159.62:8000/api/dcim/device-types/4/",
+        "display": "Poweredge R720",
+        "manufacturer": {
+          "id": 3,
+          "url": "http://192.168.159.62:8000/api/dcim/manufacturers/3/",
+          "display": "Dell",
+          "name": "Dell",
+          "slug": "dell"
+        },
+        "model": "Poweredge R720",
+        "slug": "poweredge-r720"
+      },
+      "device_role": {
+        "id": 8,
+        "url": "http://192.168.159.62:8000/api/dcim/device-roles/8/",
+        "display": "Server",
+        "name": "Server",
+        "slug": "server"
+      },
+      "tenant": {
+        "id": 82,
+        "url": "http://192.168.159.62:8000/api/tenancy/tenants/82/",
+        "display": "HORSE",
+        "name": "HORSE",
+        "slug": "horse"
+      },
+      "platform": {
+        "id": 14,
+        "url": "http://192.168.159.62:8000/api/dcim/platforms/14/",
+        "display": "Intel (R) Xeon (R) CPU E5410 @2.33Ghz",
+        "name": "Intel (R) Xeon (R) CPU E5410 @2.33Ghz",
+        "slug": "intel-r-xeon-r-cpu-e5410-v2-2-33ghz"
+      },
+      "serial": "",
+      "asset_tag": null,
+      "site": {
+        "id": 1,
+        "url": "http://192.168.159.62:8000/api/dcim/sites/1/",
+        "display": "DistritoT Sur 3",
+        "name": "DistritoT Sur 3",
+        "slug": "Sur_3"
+      },
+      "location": {
+        "id": 1,
+        "url": "http://192.168.159.62:8000/api/dcim/locations/1/",
+        "display": "Net-Virt",
+        "name": "Net-Virt",
+        "slug": "net-virt",
+        "_depth": 0
+      },
+      "rack": {
+        "id": 36,
+        "url": "http://192.168.159.62:8000/api/dcim/racks/36/",
+        "display": "1-O (1-O)",
+        "name": "1-O"
+      },
+      "position": 1.0,
+      "face": {
+        "value": "front",
+        "label": "Front"
+      },
+      "parent_device": null,
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "airflow": null,
+      "primary_ip": {
+        "id": 454,
+        "url": "http://192.168.159.62:8000/api/ipam/ip-addresses/454/",
+        "display": "192.168.27.44/24",
+        "family": 4,
+        "address": "192.168.27.44/24"
+      },
+      "primary_ip4": {
+        "id": 454,
+        "url": "http://192.168.159.62:8000/api/ipam/ip-addresses/454/",
+        "display": "192.168.27.44/24",
+        "family": 4,
+        "address": "192.168.27.44/24"
+      },
+      "primary_ip6": null,
+      "cluster": null,
+      "virtual_chassis": null,
+      "vc_position": null,
+      "vc_priority": null,
+      "description": "",
+      "comments": "En uso por Jose M. Manjón.",
+      "local_context_data": null,
+      "tags": [
+        {
+          "id": 3,
+          "url": "http://192.168.159.62:8000/api/extras/tags/3/",
+          "display": "IP & Transport",
+          "name": "IP & Transport",
+          "slug": "Telefonica",
+          "color": "2196f3"
+        },
+        {
+          "id": 40,
+          "url": "http://192.168.159.62:8000/api/extras/tags/40/",
+          "display": "Mouseworld",
+          "name": "Mouseworld",
+          "slug": "mouseworld",
+          "color": "00ffff"
+        }
+      ],
+      "custom_fields": {
+        "regular_user_1": null,
+        "regular_user_2": null,
+        "operative_system": "Ubuntu 18.04.6 LTS",
+        "cpu_model": "2x Intel(R) Xeon(R) CPU E5-2695 v2 @ 2.40GHz",
+        "cpu_cores": "24 (2x12x1)",
+        "ram_memory": "125.92 GB",
+        "ram_available": "116.37 GB",
+        "disk_available": "2397.76 GB",
+        "disk_size": "2623.03 GB",
+        "power_type": "AC",
+        "power_consumption": null
+      },
+      "config_context": {},
+      "config_template": null,
+      "created": "2017-09-21T00:00:00Z",
+      "last_updated": "2025-03-18T09:31:55.029044Z"
+    },
+    {
+      "id": 344,
+      "url": "http://192.168.159.62:8000/api/dcim/devices/344/",
+      "display": "ULTIMATE",
+      "name": "ULTIMATE",
+      "device_type": {
+        "id": 4,
+        "url": "http://192.168.159.62:8000/api/dcim/device-types/4/",
+        "display": "Poweredge R720",
+        "manufacturer": {
+          "id": 3,
+          "url": "http://192.168.159.62:8000/api/dcim/manufacturers/3/",
+          "display": "Dell",
+          "name": "Dell",
+          "slug": "dell"
+        },
+        "model": "Poweredge R720",
+        "slug": "poweredge-r720"
+      },
+      "device_role": {
+        "id": 8,
+        "url": "http://192.168.159.62:8000/api/dcim/device-roles/8/",
+        "display": "Server",
+        "name": "Server",
+        "slug": "server"
+      },
+      "tenant": {
+        "id": 82,
+        "url": "http://192.168.159.62:8000/api/tenancy/tenants/82/",
+        "display": "HORSE",
+        "name": "HORSE",
+        "slug": "horse"
+      },
+      "platform": {
+        "id": 35,
+        "url": "http://192.168.159.62:8000/api/dcim/platforms/35/",
+        "display": "Ubuntu 18.04",
+        "name": "Ubuntu 18.04",
+        "slug": "ubuntu-18-4"
+      },
+      "serial": "",
+      "asset_tag": null,
+      "site": {
+        "id": 1,
+        "url": "http://192.168.159.62:8000/api/dcim/sites/1/",
+        "display": "DistritoT Sur 3",
+        "name": "DistritoT Sur 3",
+        "slug": "Sur_3"
+      },
+      "location": {
+        "id": 1,
+        "url": "http://192.168.159.62:8000/api/dcim/locations/1/",
+        "display": "Net-Virt",
+        "name": "Net-Virt",
+        "slug": "net-virt",
+        "_depth": 0
+      },
+      "rack": {
+        "id": 36,
+        "url": "http://192.168.159.62:8000/api/dcim/racks/36/",
+        "display": "1-O (1-O)",
+        "name": "1-O"
+      },
+      "position": 38.0,
+      "face": {
+        "value": "front",
+        "label": "Front"
+      },
+      "parent_device": null,
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "airflow": null,
+      "primary_ip": {
+        "id": 929,
+        "url": "http://192.168.159.62:8000/api/ipam/ip-addresses/929/",
+        "display": "192.168.27.64/24",
+        "family": 4,
+        "address": "192.168.27.64/24"
+      },
+      "primary_ip4": {
+        "id": 929,
+        "url": "http://192.168.159.62:8000/api/ipam/ip-addresses/929/",
+        "display": "192.168.27.64/24",
+        "family": 4,
+        "address": "192.168.27.64/24"
+      },
+      "primary_ip6": null,
+      "cluster": null,
+      "virtual_chassis": null,
+      "vc_position": null,
+      "vc_priority": null,
+      "description": "",
+      "comments": "En uso por Jose M. Manjón.",
+      "local_context_data": null,
+      "tags": [
+        {
+          "id": 3,
+          "url": "http://192.168.159.62:8000/api/extras/tags/3/",
+          "display": "IP & Transport",
+          "name": "IP & Transport",
+          "slug": "Telefonica",
+          "color": "2196f3"
+        },
+        {
+          "id": 40,
+          "url": "http://192.168.159.62:8000/api/extras/tags/40/",
+          "display": "Mouseworld",
+          "name": "Mouseworld",
+          "slug": "mouseworld",
+          "color": "00ffff"
+        }
+      ],
+      "custom_fields": {
+        "regular_user_1": null,
+        "regular_user_2": null,
+        "operative_system": "Ubuntu 22.04.3 LTS",
+        "cpu_model": "2x Intel(R) Xeon(R) CPU E5-2640 v2 @ 2.00GHz",
+        "cpu_cores": "32 (2x8x2)",
+        "ram_memory": "31.33 GB",
+        "ram_available": "30.78 GB",
+        "disk_available": "2596.1 GB",
+        "disk_size": "2748.07 GB",
+        "power_type": "AC",
+        "power_consumption": null
+      },
+      "config_context": {},
+      "config_template": null,
+      "created": "2021-06-01T00:00:00Z",
+      "last_updated": "2025-03-18T09:32:14.649383Z"
+    }
+  ]
+}

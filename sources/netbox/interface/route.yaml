@@ -1,0 +1,39 @@
+- route:
+    id: getNetBoxInterfaces
+    from:
+      uri: "kamelet:netbox-source"
+      parameters:
+        netboxUrl: "http://192.168.159.62:8000"
+        apiToken: "REPLACE WITH NETBOX TOKEN"
+        endpoint: "/api/dcim/interfaces/"
+        queryParams: "device=ALHAMBRA"
+      steps:
+        - to:
+            uri: "direct:liftNetBoxInterfaces"
+
+- route:
+    id: liftNetBoxInterfaces
+    from:
+      uri: "direct:liftNetBoxInterfaces"
+      steps:
+        - log:
+            message: "Retrieved data from NetBox: ${body}"
+        - to:
+            uri: kamelet:mapping-template-lifting-action
+            parameters:
+              templateUrl: "file://./mappings.vm"
+              inputFormat: "json"
+              outputFormat: "turtle"
+        - log:
+            message: "Lifted data from NetBox: ${body}"
+        - to: "file:output?fileName=output.ttl&noop=true"
+        - log:
+            message: "Lifting has been generated and saved to output/output.ttl"
+        - to:
+              uri: "kamelet:graph-get-rdf4j-sink"
+              parameters:
+                serverAddress: "http://127.0.0.1"
+                serverPort: 7200
+                repositoryId: "default"
+        - log:
+            message: "Lifting has been generated and stored in remote triplestore"

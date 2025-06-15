@@ -1,0 +1,68 @@
+@prefix mw: <https://w3id.org/candil/mouseworld#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://mouseworld-test.org/> .
+
+#macro(subnetMask $prefix)
+  #set($prefix = $math.toInteger($prefix))
+  #set($maskParts = [])
+  #foreach($octetIndex in [0..3])
+    #set($bitsRemaining = $prefix - ($octetIndex * 8))
+    #if($bitsRemaining >= 8)
+      #set($bits = 8)
+    #elseif($bitsRemaining > 0)
+      #set($bits = $bitsRemaining)
+    #else
+      #set($bits = 0)
+    #end
+    #if($bits == 8)
+      #set($octet = 255)
+    #elseif($bits == 7)
+      #set($octet = 254)
+    #elseif($bits == 6)
+      #set($octet = 252)
+    #elseif($bits == 5)
+      #set($octet = 248)
+    #elseif($bits == 4)
+      #set($octet = 240)
+    #elseif($bits == 3)
+      #set($octet = 224)
+    #elseif($bits == 2)
+      #set($octet = 192)
+    #elseif($bits == 1)
+      #set($octet = 128)
+    #else
+      #set($octet = 0)
+    #end
+    #set($discard = $maskParts.add("$octet"))
+  #end
+  #set($netmask = "$maskParts.get(0).$maskParts.get(1).$maskParts.get(2).$maskParts.get(3)")
+#end
+
+
+#set ($xs = $reader.getDataframe('{
+    "iterator": "$.subnets.*",
+    "paths": {
+        "cidr": "cidr",
+        "subnet_id": "id"
+    }
+}'))
+
+#foreach($x in $xs)
+#set($cidr = $x.cidr.split("/"))
+#set($address = $cidr[0])
+#set($prefix = $cidr[1])
+#subnetMask($prefix)
+
+<Topology/mouseworld/Link/$x.subnet_id> rdf:type mw:IpNetwork ;
+    mw:addressValue "$address" ;
+    mw:networkPrefix "$prefix"^^xsd:integer ;
+    mw:networkMask "$netmask" ;
+.
+#end

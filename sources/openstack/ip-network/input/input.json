@@ -1,0 +1,441 @@
+{
+  "subnets": [
+    {
+      "id": "05315a2e-947b-4a66-8ae9-fb82629bfce0",
+      "name": "r5r6",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "018dff4b-ad02-4ec8-b531-a71a31c6ecfa",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.7.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.7.2",
+          "end": "192.168.7.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:23:30Z",
+      "updated_at": "2025-05-23T12:06:38Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+      "name": "management-subnet",
+      "tenant_id": "311f8f3d723644368e2a386ad7e38cfb",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": "192.168.27.1",
+      "cidr": "192.168.27.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.27.166",
+          "end": "192.168.27.186"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [
+        "8.8.8.8"
+      ],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-19T11:30:58Z",
+      "updated_at": "2025-05-19T11:30:58Z",
+      "revision_number": 0,
+      "project_id": "311f8f3d723644368e2a386ad7e38cfb"
+    },
+    {
+      "id": "3a406604-28b3-41b0-8007-d71c4dd413b3",
+      "name": "r7r13",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "e2172a2b-d6e8-488c-b932-babfbbb09d1b",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.11.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.11.2",
+          "end": "192.168.11.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:27:36Z",
+      "updated_at": "2025-05-23T12:09:25Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "3eda892d-4e9b-443c-8977-9fc60bd0a8c1",
+      "name": "r6r7",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "a63780a3-a992-4b86-97b3-d988ec4b5bfe",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.9.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.9.2",
+          "end": "192.168.9.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:26:45Z",
+      "updated_at": "2025-05-23T12:09:02Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "47ed346a-aba4-46e5-b900-d312a86a3cb5",
+      "name": "r4r6",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "20b8b1ef-8cfe-4099-a60e-2e1306f2fd93",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.5.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.5.2",
+          "end": "192.168.5.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:23:00Z",
+      "updated_at": "2025-05-23T12:07:48Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "5d0f2222-2429-496e-9a60-4d5c6e8fda94",
+      "name": "r2r12",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "c0422e79-2088-4181-9b3b-7fa3ba7c6321",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.13.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.13.2",
+          "end": "192.168.13.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:28:09Z",
+      "updated_at": "2025-05-23T12:09:14Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "6b5d9daf-109b-4e23-89a0-484c0fd121b0",
+      "name": "r3r13",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "4e127b07-49b8-418a-ab6a-de77d404dcfb",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.12.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.12.2",
+          "end": "192.168.12.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:32:56Z",
+      "updated_at": "2025-05-23T12:08:22Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "8dc94851-3847-4c09-831f-f55df97eb602",
+      "name": "r1r11",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "e2dee63f-1aac-4c2d-b977-46b610ec5b8f",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.1.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.1.2",
+          "end": "192.168.1.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:08:55Z",
+      "updated_at": "2025-05-23T12:09:36Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "a44fb8b0-6c35-4b51-883b-5ba4c39ec2b2",
+      "name": "r11r4",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "5e1c3a0c-9825-4b11-abea-c5f1b5773bee",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.2.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.2.2",
+          "end": "192.168.2.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:11:15Z",
+      "updated_at": "2025-05-23T12:08:51Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "a5c75775-5a90-418e-b831-d4ebe58ec6de",
+      "name": "r3r12",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "5b7e50b7-9699-4a9b-83d8-e7ba20486844",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.14.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.14.2",
+          "end": "192.168.14.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:28:53Z",
+      "updated_at": "2025-05-23T12:08:38Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "afa7dd99-85e9-410a-9858-d1d7058b0393",
+      "name": "r2r5",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "18937e35-91f4-434a-a65b-f15b9757cd6c",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.6.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.6.3",
+          "end": "192.168.6.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:24:03Z",
+      "updated_at": "2025-05-23T12:07:22Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "bca7abdf-4e00-4d47-a6f2-5cf69fae6082",
+      "name": "r1r2",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "f99ab493-edcc-4ed6-9ea1-65098dafa1d6",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.4.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.4.2",
+          "end": "192.168.4.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:07:46Z",
+      "updated_at": "2025-05-23T12:09:46Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "bfd746d1-765f-4f4c-9703-3e2c658d1603",
+      "name": "r3r7",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "12b4b9f0-55e9-4dee-967f-25964f6f78a9",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.10.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.10.2",
+          "end": "192.168.10.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:31:55Z",
+      "updated_at": "2025-05-23T12:07:11Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "c6699e16-4fb2-4ae6-8d90-5d568974b018",
+      "name": "r1r4",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "261842e3-a345-4b90-b37b-5c9ba1fce18b",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.3.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.3.2",
+          "end": "192.168.3.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:09:42Z",
+      "updated_at": "2025-05-23T12:08:04Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "d32feabb-75e8-4fc4-8ed1-85d0689beec1",
+      "name": "r2r3",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "0f656566-5bb7-4501-a8dc-9302ef4f68ed",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.8.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.8.2",
+          "end": "192.168.8.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": true,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-05-21T15:24:53Z",
+      "updated_at": "2025-05-23T12:06:55Z",
+      "revision_number": 1,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    }
+  ]
+}

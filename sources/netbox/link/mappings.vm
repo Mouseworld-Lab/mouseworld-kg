@@ -1,0 +1,36 @@
+@prefix mw: <https://w3id.org/candil/mouseworld#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://mouseworld-test.org/> .
+
+#set ($xs = $reader.getDataframe('{
+    "iterator": "$.results.*",
+    "paths": {
+        "device_a": "a_terminations[0].object.device.name",
+        "device_b": "b_terminations[0].object.device.name",
+        "iface_a": "a_terminations[0].object.name",
+        "iface_b": "b_terminations[0].object.name",
+    }
+}'))
+
+#foreach($x in $xs)
+<Topology/mouseworld/Link/$x.device_a/$x.device_b> rdf:type mw:Link ;
+    mw:connectsNode <Topology/mouseworld/Node/$x.device_a> ;
+    mw:connectsNode <Topology/mouseworld/Node/$x.device_b> ;
+    mw:connectsInterface <Topology/mouseworld/Node/$x.device_a/Interface/$x.iface_a> ;
+    mw:connectsInterface <Topology/mouseworld/Node/$x.device_b/Interface/$x.iface_b> ;
+.
+#end
+
+<Topology/mouseworld> rdf:type mw:Topology ;
+    mw:topologyId "mouseworld" ;
+    #foreach($x in $xs)
+    mw:link <Topology/mouseworld/Link/$x.device_a/$x.device_b> ;
+    #end
+.

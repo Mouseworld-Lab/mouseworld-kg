@@ -1,0 +1,25 @@
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mw: <https://w3id.org/candil/mouseworld#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Node/ALHAMBRA/Interface/eno1> a mw:Interface;
+  mw:interfaceNme "eno1" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Node/ALHAMBRA/Interface/eno2> a mw:Interface;
+  mw:interfaceNme "eno2" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Node/ALHAMBRA/Interface/eno3> a mw:Interface;
+  mw:interfaceNme "eno3" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Node/ALHAMBRA/Interface/eno4> a mw:Interface;
+  mw:interfaceNme "eno4" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Node/ALHAMBRA> mw:interface <http://mouseworld-test.org/Topology/mouseworld/Node/ALHAMBRA/Interface/eno1>,
+    <http://mouseworld-test.org/Topology/mouseworld/Node/ALHAMBRA/Interface/eno2>, <http://mouseworld-test.org/Topology/mouseworld/Node/ALHAMBRA/Interface/eno3>,
+    <http://mouseworld-test.org/Topology/mouseworld/Node/ALHAMBRA/Interface/eno4> .

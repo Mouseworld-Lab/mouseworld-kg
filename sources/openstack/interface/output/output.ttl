@@ -1,0 +1,67 @@
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mw: <https://w3id.org/candil/mouseworld#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/18a1a6bd-4d3d-4902-be3f-19e86481d41f>
+  a mw:Interface, mw:IpInterface;
+  mw:interfaceName "r3_eth4";
+  mw:ipAddress <http://mouseworld-test.org/IpAddress/192.168.8.3> .
+
+<http://mouseworld-test.org/IpAddress/192.168.8.3> a mw:IpAddress;
+  mw:addressValue "192.168.8.3";
+  mw:belongsToNetwork <http://mouseworld-test.org/IpNetwork/d32feabb-75e8-4fc4-8ed1-85d0689beec1> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38>
+  mw:interface <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/18a1a6bd-4d3d-4902-be3f-19e86481d41f>,
+    <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/42e7149d-a5c1-4027-9c17-be28123f4df3>,
+    <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/827b4072-9b84-45b9-a460-fc8b98a567b4>,
+    <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/92ed2b4b-9074-4c1b-93a3-d30219595c3c> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/0f656566-5bb7-4501-a8dc-9302ef4f68ed>
+  mw:connectsInterface <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/18a1a6bd-4d3d-4902-be3f-19e86481d41f>;
+  mw:connectsNode <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/42e7149d-a5c1-4027-9c17-be28123f4df3>
+  a mw:Interface, mw:IpInterface;
+  mw:interfaceName "r3_eth2";
+  mw:ipAddress <http://mouseworld-test.org/IpAddress/192.168.12.3> .
+
+<http://mouseworld-test.org/IpAddress/192.168.12.3> a mw:IpAddress;
+  mw:addressValue "192.168.12.3";
+  mw:belongsToNetwork <http://mouseworld-test.org/IpNetwork/6b5d9daf-109b-4e23-89a0-484c0fd121b0> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/4e127b07-49b8-418a-ab6a-de77d404dcfb>
+  mw:connectsInterface <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/42e7149d-a5c1-4027-9c17-be28123f4df3>;
+  mw:connectsNode <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/827b4072-9b84-45b9-a460-fc8b98a567b4>
+  a mw:Interface, mw:IpInterface;
+  mw:interfaceName "r3_eth5";
+  mw:ipAddress <http://mouseworld-test.org/IpAddress/192.168.14.3> .
+
+<http://mouseworld-test.org/IpAddress/192.168.14.3> a mw:IpAddress;
+  mw:addressValue "192.168.14.3";
+  mw:belongsToNetwork <http://mouseworld-test.org/IpNetwork/a5c75775-5a90-418e-b831-d4ebe58ec6de> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/5b7e50b7-9699-4a9b-83d8-e7ba20486844>
+  mw:connectsInterface <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/827b4072-9b84-45b9-a460-fc8b98a567b4>;
+  mw:connectsNode <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/92ed2b4b-9074-4c1b-93a3-d30219595c3c>
+  a mw:Interface, mw:IpInterface;
+  mw:interfaceName "r3_eth3";
+  mw:ipAddress <http://mouseworld-test.org/IpAddress/192.168.10.3> .
+
+<http://mouseworld-test.org/IpAddress/192.168.10.3> a mw:IpAddress;
+  mw:addressValue "192.168.10.3";
+  mw:belongsToNetwork <http://mouseworld-test.org/IpNetwork/bfd746d1-765f-4f4c-9703-3e2c658d1603> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/12b4b9f0-55e9-4dee-967f-25964f6f78a9>
+  mw:connectsInterface <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/92ed2b4b-9074-4c1b-93a3-d30219595c3c>;
+  mw:connectsNode <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38> .

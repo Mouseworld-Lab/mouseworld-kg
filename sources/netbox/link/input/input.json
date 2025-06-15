@@ -1,0 +1,129 @@
+{
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 1275,
+      "url": "http://192.168.159.62:8000/api/dcim/cables/1275/",
+      "display": "#1275",
+      "type": "",
+      "a_terminations": [
+        {
+          "object_type": "dcim.interface",
+          "object_id": 3027,
+          "object": {
+            "id": 3027,
+            "url": "http://192.168.159.62:8000/api/dcim/interfaces/3027/",
+            "display": "eno4",
+            "device": {
+              "id": 453,
+              "url": "http://192.168.159.62:8000/api/dcim/devices/453/",
+              "display": "CUYAGUA",
+              "name": "CUYAGUA"
+            },
+            "name": "eno4",
+            "cable": 1275,
+            "_occupied": true
+          }
+        }
+      ],
+      "b_terminations": [
+        {
+          "object_type": "dcim.interface",
+          "object_id": 5860,
+          "object": {
+            "id": 5860,
+            "url": "http://192.168.159.62:8000/api/dcim/interfaces/5860/",
+            "display": "eno2",
+            "device": {
+              "id": 340,
+              "url": "http://192.168.159.62:8000/api/dcim/devices/340/",
+              "display": "ALHAMBRA",
+              "name": "ALHAMBRA"
+            },
+            "name": "eno2",
+            "cable": 1275,
+            "_occupied": true
+          }
+        }
+      ],
+      "status": {
+        "value": "connected",
+        "label": "Connected"
+      },
+      "tenant": null,
+      "label": "",
+      "color": "",
+      "length": null,
+      "length_unit": null,
+      "description": "",
+      "comments": "",
+      "tags": [],
+      "custom_fields": {},
+      "created": "2024-11-07T12:12:56.724364Z",
+      "last_updated": "2024-11-07T12:12:56.724389Z"
+    },
+    {
+      "id": 1277,
+      "url": "http://192.168.159.62:8000/api/dcim/cables/1277/",
+      "display": "#1277",
+      "type": "",
+      "a_terminations": [
+        {
+          "object_type": "dcim.interface",
+          "object_id": 5861,
+          "object": {
+            "id": 5861,
+            "url": "http://192.168.159.62:8000/api/dcim/interfaces/5861/",
+            "display": "eno3",
+            "device": {
+              "id": 340,
+              "url": "http://192.168.159.62:8000/api/dcim/devices/340/",
+              "display": "ALHAMBRA",
+              "name": "ALHAMBRA"
+            },
+            "name": "eno3",
+            "cable": 1277,
+            "_occupied": true
+          }
+        }
+      ],
+      "b_terminations": [
+        {
+          "object_type": "dcim.interface",
+          "object_id": 1589,
+          "object": {
+            "id": 1589,
+            "url": "http://192.168.159.62:8000/api/dcim/interfaces/1589/",
+            "display": "eno2",
+            "device": {
+              "id": 344,
+              "url": "http://192.168.159.62:8000/api/dcim/devices/344/",
+              "display": "ULTIMATE",
+              "name": "ULTIMATE"
+            },
+            "name": "eno2",
+            "cable": 1277,
+            "_occupied": true
+          }
+        }
+      ],
+      "status": {
+        "value": "connected",
+        "label": "Connected"
+      },
+      "tenant": null,
+      "label": "",
+      "color": "",
+      "length": null,
+      "length_unit": null,
+      "description": "",
+      "comments": "",
+      "tags": [],
+      "custom_fields": {},
+      "created": "2024-11-07T12:51:47.801664Z",
+      "last_updated": "2024-11-07T12:51:47.801691Z"
+    }
+  ]
+}

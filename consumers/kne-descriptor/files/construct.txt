@@ -1,0 +1,76 @@
+PREFIX mw: <https://w3id.org/candil/mouseworld#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+CONSTRUCT {
+    ?topology a mw:Topology ;
+        mw:topologyName ?topologyName ;
+        mw:node ?node ;
+        mw:link ?link .
+
+    ?node a mw:Router ;
+        mw:nodeName ?nodeName ;
+        mw:operatingSystem ?operatingSystem ;
+        mw:interface ?interface .
+
+    ?operatingSystem a mw:OperatingSystem ;
+        mw:vendor ?vendor ;
+        mw:dockerImage ?dockerImage .
+
+    ?vendor mw:kneVendorName ?vendorName .
+    ?dockerImage mw:imageUrl ?dockerImageUrl .
+
+    ?interface mw:interfaceName ?interfaceName .
+
+    ?link a mw:Link ;
+        mw:connectsInterface ?ifaceA ;
+        mw:connectsInterface ?ifaceB
+    .
+    ?ifaceA mw:interfaceName ?ifaceNameA .
+    ?nodeA mw:interface ?ifaceA ;
+        mw:nodeName ?nodeIdA
+    .
+    ?ifaceB mw:interfaceName ?ifaceNameB .
+    ?nodeB mw:interface ?ifaceB ;
+        mw:nodeName ?nodeIdB
+}
+
+WHERE {
+    ?topology a mw:Topology ;
+        mw:topologyName ?topologyName ;
+        mw:node ?node
+    .
+
+    ?node a mw:Router ;
+        mw:nodeName ?nodeName ;
+        mw:operatingSystem ?operatingSystem ;
+        mw:interface ?interface
+    .
+    ?interface mw:interfaceName ?interfaceName .
+    ?operatingSystem a mw:OperatingSystem ;
+        mw:vendor ?vendor ;
+        mw:dockerImage ?dockerImage
+    .
+    ?vendor mw:kneVendorName ?vendorName .
+    ?dockerImage mw:imageUrl ?dockerImageUrl .
+
+    ?link a mw:Link ;
+        mw:connectsInterface ?ifaceA ;
+        mw:connectsInterface ?ifaceB
+    .
+    ?ifaceA mw:interfaceName ?ifaceNameA .
+    ?nodeA mw:interface ?ifaceA ;
+        mw:nodeName ?nodeIdA
+    .
+    ?ifaceB mw:interfaceName ?ifaceNameB .
+    ?nodeB mw:interface ?ifaceB ;
+        mw:nodeName ?nodeIdB
+    .
+    FILTER (?ifaceA != ?ifaceB)
+}

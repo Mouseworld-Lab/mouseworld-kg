@@ -1,0 +1,29 @@
+@prefix mw: <https://w3id.org/candil/mouseworld#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://mouseworld-test.org/> .
+
+#set ($xs = $reader.getDataframe('{
+    "iterator": "$.results.*",
+    "paths": {
+        "name": "name"
+    }
+}'))
+
+#foreach($x in $xs)
+<Topology/mouseworld/Node/$x.name> rdf:type mw:Router ;
+    mw:nodeId "$x.name" .
+#end
+
+<Topology/mouseworld> rdf:type mw:Topology ;
+    mw:topologyId "mouseworld" ;
+    #foreach($x in $xs)
+    mw:node <Topology/mouseworld/Node/$x.name> ;
+    #end
+.

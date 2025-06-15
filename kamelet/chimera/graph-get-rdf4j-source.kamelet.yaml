@@ -1,0 +1,60 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: graph-get-rdf4j-source
+  annotations:
+    camel.apache.org/catalog.version: "4.3.0"
+    camel.apache.org/provider: "Chimera"
+    camel.apache.org/kamelet.group: "Graph"
+  labels:
+    camel.apache.org/kamelet.type: "source"
+spec:
+  definition:
+    title: "Graph Get RDF4J Source"
+    description: "Retrieves RDF graph from remote triplestore using a SPARQL SELECT query"
+    properties:
+      serverAddress:
+        title: Server Address
+        description: URL of the triplestore server
+        type: string
+      serverPort:
+        title: Server Port
+        description: Listening port of the triplestore server
+        type: integer
+        default: 7200
+      repositoryId:
+        title: Repository ID
+        description: Repository ID in the RDF4J-compatible triplestore
+        type: string
+      literalQuery:
+        title: Literal SPARQL SELECT query
+        description: SPARQL SELECT query used to retrieve data from the triplestore
+        type: string
+      fileQueryPath:
+        title: File SPARQL SELECT query
+        description: Path to file containing the SPARQL SELECT query used to retrieve data from the triplestore
+        type: string
+      dumpFormat:
+        title: Dump Format
+        description: Format of the output of the SPARQL SELECT query (e.g., memory)
+        type: stringx
+        enum: ["memory", "json", "csv", "xml", "tsv"]
+        default: memory
+  dependencies:
+    - "mvn:com.cefriel:camel-chimera-graph:4.3.0"
+  template:
+    beans:
+      - name: fileQuery
+        type: "#class:com.cefriel.util.ChimeraResourceBean"
+        properties:
+          url: "{{fileQueryPath}}"
+          serializationFormat: "txt"
+    from:
+      uri: "graph://get?serverUrl={{serverAddress}}:{{serverPort}}&repositoryId={{repositoryId}}&defaultGraph=true"
+      steps:
+        - to:
+            # uri: "graph://select?query={{sparqlSelectQuery}}&dumpFormat={{dumpFormat}}"
+            # uri: "graph://select?chimeraResource=#bean:{{fileQuery}}&dumpFormat={{dumpFormat}}"
+            uri: "graph://construct?newGraph=true&chimeraResource=#bean:{{fileQuery}}"
+        - to:
+            uri: "kamelet:sink"

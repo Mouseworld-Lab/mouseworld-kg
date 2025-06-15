@@ -1,0 +1,982 @@
+{
+  "servers": [
+    {
+      "id": "173e0b81-06e5-4af0-9e87-8cab0117bb38",
+      "name": "r3",
+      "status": "ACTIVE",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "user_id": "a8489fb4334647b0985e4f9da3f5d894",
+      "metadata": {},
+      "hostId": "945c0b29c94a038304deb9cdaa6b8ae7003ed280fbc33782e505f1fc",
+      "image": {
+        "id": "1d35fa76-6177-4b18-8502-aa6716b117b6",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/images/1d35fa76-6177-4b18-8502-aa6716b117b6"
+          }
+        ]
+      },
+      "flavor": {
+        "id": "373be856-2584-4418-b98a-9668510059bb",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/flavors/373be856-2584-4418-b98a-9668510059bb"
+          }
+        ]
+      },
+      "created": "2025-05-22T15:39:07Z",
+      "updated": "2025-05-22T15:39:42Z",
+      "addresses": {
+        "management-network": [
+          {
+            "version": 4,
+            "addr": "192.168.27.184",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:24:94:56"
+          }
+        ],
+        "r3r13": [
+          {
+            "version": 4,
+            "addr": "192.168.12.3",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:46:56:92"
+          }
+        ],
+        "r3r7": [
+          {
+            "version": 4,
+            "addr": "192.168.10.3",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:44:f7:2b"
+          }
+        ],
+        "r2r3": [
+          {
+            "version": 4,
+            "addr": "192.168.8.3",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:17:77:89"
+          }
+        ],
+        "r3r12": [
+          {
+            "version": 4,
+            "addr": "192.168.14.3",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:7a:12:c9"
+          }
+        ]
+      },
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://192.168.27.44:8774/v2.1/servers/173e0b81-06e5-4af0-9e87-8cab0117bb38"
+        },
+        {
+          "rel": "bookmark",
+          "href": "http://192.168.27.44:8774/servers/173e0b81-06e5-4af0-9e87-8cab0117bb38"
+        }
+      ],
+      "OS-DCF:diskConfig": "MANUAL",
+      "progress": 0,
+      "OS-EXT-AZ:availability_zone": "nova",
+      "config_drive": "",
+      "key_name": null,
+      "OS-SRV-USG:launched_at": "2025-05-22T15:39:42.000000",
+      "OS-SRV-USG:terminated_at": null,
+      "OS-EXT-STS:task_state": null,
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-STS:power_state": 1,
+      "os-extended-volumes:volumes_attached": [],
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "id": "3dd0c3b2-b3d7-452f-9b1f-7e6b2a994666",
+      "name": "r6",
+      "status": "ACTIVE",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "user_id": "a8489fb4334647b0985e4f9da3f5d894",
+      "metadata": {},
+      "hostId": "945c0b29c94a038304deb9cdaa6b8ae7003ed280fbc33782e505f1fc",
+      "image": {
+        "id": "1d35fa76-6177-4b18-8502-aa6716b117b6",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/images/1d35fa76-6177-4b18-8502-aa6716b117b6"
+          }
+        ]
+      },
+      "flavor": {
+        "id": "373be856-2584-4418-b98a-9668510059bb",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/flavors/373be856-2584-4418-b98a-9668510059bb"
+          }
+        ]
+      },
+      "created": "2025-05-22T15:39:06Z",
+      "updated": "2025-05-22T15:39:39Z",
+      "addresses": {
+        "management-network": [
+          {
+            "version": 4,
+            "addr": "192.168.27.180",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:d8:da:e6"
+          }
+        ],
+        "r6r7": [
+          {
+            "version": 4,
+            "addr": "192.168.9.6",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:d6:78:e1"
+          }
+        ],
+        "r5r6": [
+          {
+            "version": 4,
+            "addr": "192.168.7.6",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:26:b1:89"
+          }
+        ],
+        "r4r6": [
+          {
+            "version": 4,
+            "addr": "192.168.5.6",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:0c:7c:aa"
+          }
+        ]
+      },
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://192.168.27.44:8774/v2.1/servers/3dd0c3b2-b3d7-452f-9b1f-7e6b2a994666"
+        },
+        {
+          "rel": "bookmark",
+          "href": "http://192.168.27.44:8774/servers/3dd0c3b2-b3d7-452f-9b1f-7e6b2a994666"
+        }
+      ],
+      "OS-DCF:diskConfig": "MANUAL",
+      "progress": 0,
+      "OS-EXT-AZ:availability_zone": "nova",
+      "config_drive": "",
+      "key_name": null,
+      "OS-SRV-USG:launched_at": "2025-05-22T15:39:39.000000",
+      "OS-SRV-USG:terminated_at": null,
+      "OS-EXT-STS:task_state": null,
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-STS:power_state": 1,
+      "os-extended-volumes:volumes_attached": [],
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "id": "aeb02fae-8718-4245-b447-dcfe6b629a7e",
+      "name": "r12",
+      "status": "ACTIVE",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "user_id": "a8489fb4334647b0985e4f9da3f5d894",
+      "metadata": {},
+      "hostId": "945c0b29c94a038304deb9cdaa6b8ae7003ed280fbc33782e505f1fc",
+      "image": {
+        "id": "1d35fa76-6177-4b18-8502-aa6716b117b6",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/images/1d35fa76-6177-4b18-8502-aa6716b117b6"
+          }
+        ]
+      },
+      "flavor": {
+        "id": "373be856-2584-4418-b98a-9668510059bb",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/flavors/373be856-2584-4418-b98a-9668510059bb"
+          }
+        ]
+      },
+      "created": "2025-05-22T15:39:06Z",
+      "updated": "2025-05-22T15:39:30Z",
+      "addresses": {
+        "management-network": [
+          {
+            "version": 4,
+            "addr": "192.168.27.176",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:ab:10:61"
+          }
+        ],
+        "r2r12": [
+          {
+            "version": 4,
+            "addr": "192.168.13.12",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:02:ca:d5"
+          }
+        ],
+        "r3r12": [
+          {
+            "version": 4,
+            "addr": "192.168.14.12",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:ce:78:3e"
+          }
+        ]
+      },
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://192.168.27.44:8774/v2.1/servers/aeb02fae-8718-4245-b447-dcfe6b629a7e"
+        },
+        {
+          "rel": "bookmark",
+          "href": "http://192.168.27.44:8774/servers/aeb02fae-8718-4245-b447-dcfe6b629a7e"
+        }
+      ],
+      "OS-DCF:diskConfig": "MANUAL",
+      "progress": 0,
+      "OS-EXT-AZ:availability_zone": "nova",
+      "config_drive": "",
+      "key_name": null,
+      "OS-SRV-USG:launched_at": "2025-05-22T15:39:30.000000",
+      "OS-SRV-USG:terminated_at": null,
+      "OS-EXT-STS:task_state": null,
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-STS:power_state": 1,
+      "os-extended-volumes:volumes_attached": [],
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "id": "c0779980-91b3-4cd6-9bd6-5f2df029c476",
+      "name": "r4",
+      "status": "ACTIVE",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "user_id": "a8489fb4334647b0985e4f9da3f5d894",
+      "metadata": {},
+      "hostId": "945c0b29c94a038304deb9cdaa6b8ae7003ed280fbc33782e505f1fc",
+      "image": {
+        "id": "1d35fa76-6177-4b18-8502-aa6716b117b6",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/images/1d35fa76-6177-4b18-8502-aa6716b117b6"
+          }
+        ]
+      },
+      "flavor": {
+        "id": "373be856-2584-4418-b98a-9668510059bb",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/flavors/373be856-2584-4418-b98a-9668510059bb"
+          }
+        ]
+      },
+      "created": "2025-05-22T15:39:06Z",
+      "updated": "2025-05-22T15:39:34Z",
+      "addresses": {
+        "management-network": [
+          {
+            "version": 4,
+            "addr": "192.168.27.186",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:93:82:66"
+          }
+        ],
+        "r1r4": [
+          {
+            "version": 4,
+            "addr": "192.168.3.4",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:85:b6:7e"
+          }
+        ],
+        "r11r4": [
+          {
+            "version": 4,
+            "addr": "192.168.2.4",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:c2:e1:57"
+          }
+        ],
+        "r4r6": [
+          {
+            "version": 4,
+            "addr": "192.168.5.4",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:a5:31:d1"
+          }
+        ]
+      },
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://192.168.27.44:8774/v2.1/servers/c0779980-91b3-4cd6-9bd6-5f2df029c476"
+        },
+        {
+          "rel": "bookmark",
+          "href": "http://192.168.27.44:8774/servers/c0779980-91b3-4cd6-9bd6-5f2df029c476"
+        }
+      ],
+      "OS-DCF:diskConfig": "MANUAL",
+      "progress": 0,
+      "OS-EXT-AZ:availability_zone": "nova",
+      "config_drive": "",
+      "key_name": null,
+      "OS-SRV-USG:launched_at": "2025-05-22T15:39:34.000000",
+      "OS-SRV-USG:terminated_at": null,
+      "OS-EXT-STS:task_state": null,
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-STS:power_state": 1,
+      "os-extended-volumes:volumes_attached": [],
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "id": "d3d5cb8f-4cb3-41ce-a8a4-90e7824f56aa",
+      "name": "r11",
+      "status": "ACTIVE",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "user_id": "a8489fb4334647b0985e4f9da3f5d894",
+      "metadata": {},
+      "hostId": "945c0b29c94a038304deb9cdaa6b8ae7003ed280fbc33782e505f1fc",
+      "image": {
+        "id": "1d35fa76-6177-4b18-8502-aa6716b117b6",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/images/1d35fa76-6177-4b18-8502-aa6716b117b6"
+          }
+        ]
+      },
+      "flavor": {
+        "id": "373be856-2584-4418-b98a-9668510059bb",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/flavors/373be856-2584-4418-b98a-9668510059bb"
+          }
+        ]
+      },
+      "created": "2025-05-22T15:39:06Z",
+      "updated": "2025-05-22T15:39:32Z",
+      "addresses": {
+        "management-network": [
+          {
+            "version": 4,
+            "addr": "192.168.27.179",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:c0:5a:b4"
+          }
+        ],
+        "r1r11": [
+          {
+            "version": 4,
+            "addr": "192.168.1.11",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:06:5a:ba"
+          }
+        ],
+        "r11r4": [
+          {
+            "version": 4,
+            "addr": "192.168.2.11",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:ec:fa:89"
+          }
+        ]
+      },
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://192.168.27.44:8774/v2.1/servers/d3d5cb8f-4cb3-41ce-a8a4-90e7824f56aa"
+        },
+        {
+          "rel": "bookmark",
+          "href": "http://192.168.27.44:8774/servers/d3d5cb8f-4cb3-41ce-a8a4-90e7824f56aa"
+        }
+      ],
+      "OS-DCF:diskConfig": "MANUAL",
+      "progress": 0,
+      "OS-EXT-AZ:availability_zone": "nova",
+      "config_drive": "",
+      "key_name": null,
+      "OS-SRV-USG:launched_at": "2025-05-22T15:39:32.000000",
+      "OS-SRV-USG:terminated_at": null,
+      "OS-EXT-STS:task_state": null,
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-STS:power_state": 1,
+      "os-extended-volumes:volumes_attached": [],
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "id": "53791f32-8537-4de1-9f43-a6b82f1d44f0",
+      "name": "r1",
+      "status": "ACTIVE",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "user_id": "a8489fb4334647b0985e4f9da3f5d894",
+      "metadata": {},
+      "hostId": "945c0b29c94a038304deb9cdaa6b8ae7003ed280fbc33782e505f1fc",
+      "image": {
+        "id": "1d35fa76-6177-4b18-8502-aa6716b117b6",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/images/1d35fa76-6177-4b18-8502-aa6716b117b6"
+          }
+        ]
+      },
+      "flavor": {
+        "id": "373be856-2584-4418-b98a-9668510059bb",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/flavors/373be856-2584-4418-b98a-9668510059bb"
+          }
+        ]
+      },
+      "created": "2025-05-22T15:39:05Z",
+      "updated": "2025-05-22T15:39:27Z",
+      "addresses": {
+        "management-network": [
+          {
+            "version": 4,
+            "addr": "192.168.27.173",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:b0:ec:11"
+          }
+        ],
+        "r1r4": [
+          {
+            "version": 4,
+            "addr": "192.168.3.1",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:e3:57:a2"
+          }
+        ],
+        "r1r2": [
+          {
+            "version": 4,
+            "addr": "192.168.4.1",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:b2:8f:83"
+          }
+        ],
+        "r1r11": [
+          {
+            "version": 4,
+            "addr": "192.168.1.1",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:62:0c:66"
+          }
+        ]
+      },
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://192.168.27.44:8774/v2.1/servers/53791f32-8537-4de1-9f43-a6b82f1d44f0"
+        },
+        {
+          "rel": "bookmark",
+          "href": "http://192.168.27.44:8774/servers/53791f32-8537-4de1-9f43-a6b82f1d44f0"
+        }
+      ],
+      "OS-DCF:diskConfig": "MANUAL",
+      "progress": 0,
+      "OS-EXT-AZ:availability_zone": "nova",
+      "config_drive": "",
+      "key_name": null,
+      "OS-SRV-USG:launched_at": "2025-05-22T15:39:27.000000",
+      "OS-SRV-USG:terminated_at": null,
+      "OS-EXT-STS:task_state": null,
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-STS:power_state": 1,
+      "os-extended-volumes:volumes_attached": [],
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "id": "d841de70-c4e1-45a9-a365-1578d840ba2e",
+      "name": "r2",
+      "status": "ACTIVE",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "user_id": "a8489fb4334647b0985e4f9da3f5d894",
+      "metadata": {},
+      "hostId": "945c0b29c94a038304deb9cdaa6b8ae7003ed280fbc33782e505f1fc",
+      "image": {
+        "id": "1d35fa76-6177-4b18-8502-aa6716b117b6",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/images/1d35fa76-6177-4b18-8502-aa6716b117b6"
+          }
+        ]
+      },
+      "flavor": {
+        "id": "373be856-2584-4418-b98a-9668510059bb",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/flavors/373be856-2584-4418-b98a-9668510059bb"
+          }
+        ]
+      },
+      "created": "2025-05-22T15:39:05Z",
+      "updated": "2025-05-22T15:39:30Z",
+      "addresses": {
+        "management-network": [
+          {
+            "version": 4,
+            "addr": "192.168.27.167",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:71:99:cc"
+          }
+        ],
+        "r2r12": [
+          {
+            "version": 4,
+            "addr": "192.168.13.20",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:ca:7b:0d"
+          }
+        ],
+        "r1r2": [
+          {
+            "version": 4,
+            "addr": "192.168.4.20",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:95:07:66"
+          }
+        ],
+        "r2r3": [
+          {
+            "version": 4,
+            "addr": "192.168.8.20",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:2d:5b:e6"
+          }
+        ],
+        "r2r5": [
+          {
+            "version": 4,
+            "addr": "192.168.6.20",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:8e:37:f6"
+          }
+        ]
+      },
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://192.168.27.44:8774/v2.1/servers/d841de70-c4e1-45a9-a365-1578d840ba2e"
+        },
+        {
+          "rel": "bookmark",
+          "href": "http://192.168.27.44:8774/servers/d841de70-c4e1-45a9-a365-1578d840ba2e"
+        }
+      ],
+      "OS-DCF:diskConfig": "MANUAL",
+      "progress": 0,
+      "OS-EXT-AZ:availability_zone": "nova",
+      "config_drive": "",
+      "key_name": null,
+      "OS-SRV-USG:launched_at": "2025-05-22T15:39:30.000000",
+      "OS-SRV-USG:terminated_at": null,
+      "OS-EXT-STS:task_state": null,
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-STS:power_state": 1,
+      "os-extended-volumes:volumes_attached": [],
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "id": "ecec9bcb-959d-44fa-8e28-f6c2df4b429e",
+      "name": "r13",
+      "status": "ACTIVE",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "user_id": "a8489fb4334647b0985e4f9da3f5d894",
+      "metadata": {},
+      "hostId": "945c0b29c94a038304deb9cdaa6b8ae7003ed280fbc33782e505f1fc",
+      "image": {
+        "id": "1d35fa76-6177-4b18-8502-aa6716b117b6",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/images/1d35fa76-6177-4b18-8502-aa6716b117b6"
+          }
+        ]
+      },
+      "flavor": {
+        "id": "373be856-2584-4418-b98a-9668510059bb",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/flavors/373be856-2584-4418-b98a-9668510059bb"
+          }
+        ]
+      },
+      "created": "2025-05-22T15:39:05Z",
+      "updated": "2025-05-22T15:39:20Z",
+      "addresses": {
+        "management-network": [
+          {
+            "version": 4,
+            "addr": "192.168.27.172",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:cc:43:85"
+          }
+        ],
+        "r3r13": [
+          {
+            "version": 4,
+            "addr": "192.168.12.13",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:13:9d:b3"
+          }
+        ],
+        "r7r13": [
+          {
+            "version": 4,
+            "addr": "192.168.11.13",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:18:a9:ee"
+          }
+        ]
+      },
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://192.168.27.44:8774/v2.1/servers/ecec9bcb-959d-44fa-8e28-f6c2df4b429e"
+        },
+        {
+          "rel": "bookmark",
+          "href": "http://192.168.27.44:8774/servers/ecec9bcb-959d-44fa-8e28-f6c2df4b429e"
+        }
+      ],
+      "OS-DCF:diskConfig": "MANUAL",
+      "progress": 0,
+      "OS-EXT-AZ:availability_zone": "nova",
+      "config_drive": "",
+      "key_name": null,
+      "OS-SRV-USG:launched_at": "2025-05-22T15:39:20.000000",
+      "OS-SRV-USG:terminated_at": null,
+      "OS-EXT-STS:task_state": null,
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-STS:power_state": 1,
+      "os-extended-volumes:volumes_attached": [],
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "id": "1b5aae2b-ddd9-435d-9b2d-93141a58202f",
+      "name": "r5",
+      "status": "ACTIVE",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "user_id": "a8489fb4334647b0985e4f9da3f5d894",
+      "metadata": {},
+      "hostId": "945c0b29c94a038304deb9cdaa6b8ae7003ed280fbc33782e505f1fc",
+      "image": {
+        "id": "1d35fa76-6177-4b18-8502-aa6716b117b6",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/images/1d35fa76-6177-4b18-8502-aa6716b117b6"
+          }
+        ]
+      },
+      "flavor": {
+        "id": "373be856-2584-4418-b98a-9668510059bb",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/flavors/373be856-2584-4418-b98a-9668510059bb"
+          }
+        ]
+      },
+      "created": "2025-05-22T15:39:00Z",
+      "updated": "2025-05-22T15:39:18Z",
+      "addresses": {
+        "management-network": [
+          {
+            "version": 4,
+            "addr": "192.168.27.181",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:ed:e8:ab"
+          }
+        ],
+        "r5r6": [
+          {
+            "version": 4,
+            "addr": "192.168.7.5",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:84:2d:31"
+          }
+        ],
+        "r2r5": [
+          {
+            "version": 4,
+            "addr": "192.168.6.5",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:aa:57:90"
+          }
+        ]
+      },
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://192.168.27.44:8774/v2.1/servers/1b5aae2b-ddd9-435d-9b2d-93141a58202f"
+        },
+        {
+          "rel": "bookmark",
+          "href": "http://192.168.27.44:8774/servers/1b5aae2b-ddd9-435d-9b2d-93141a58202f"
+        }
+      ],
+      "OS-DCF:diskConfig": "MANUAL",
+      "progress": 0,
+      "OS-EXT-AZ:availability_zone": "nova",
+      "config_drive": "",
+      "key_name": null,
+      "OS-SRV-USG:launched_at": "2025-05-22T15:39:18.000000",
+      "OS-SRV-USG:terminated_at": null,
+      "OS-EXT-STS:task_state": null,
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-STS:power_state": 1,
+      "os-extended-volumes:volumes_attached": [],
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "id": "5df03e8c-201a-442f-afa8-7ba79aacf221",
+      "name": "r7",
+      "status": "ACTIVE",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "user_id": "a8489fb4334647b0985e4f9da3f5d894",
+      "metadata": {},
+      "hostId": "945c0b29c94a038304deb9cdaa6b8ae7003ed280fbc33782e505f1fc",
+      "image": {
+        "id": "1d35fa76-6177-4b18-8502-aa6716b117b6",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/images/1d35fa76-6177-4b18-8502-aa6716b117b6"
+          }
+        ]
+      },
+      "flavor": {
+        "id": "373be856-2584-4418-b98a-9668510059bb",
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "http://192.168.27.44:8774/flavors/373be856-2584-4418-b98a-9668510059bb"
+          }
+        ]
+      },
+      "created": "2025-05-22T15:39:00Z",
+      "updated": "2025-05-22T15:39:18Z",
+      "addresses": {
+        "management-network": [
+          {
+            "version": 4,
+            "addr": "192.168.27.178",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:9f:8e:0b"
+          }
+        ],
+        "r6r7": [
+          {
+            "version": 4,
+            "addr": "192.168.9.7",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:b1:cc:f2"
+          }
+        ],
+        "r7r13": [
+          {
+            "version": 4,
+            "addr": "192.168.11.7",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:34:05:75"
+          }
+        ],
+        "r3r7": [
+          {
+            "version": 4,
+            "addr": "192.168.10.7",
+            "OS-EXT-IPS:type": "fixed",
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:0a:24:e3"
+          }
+        ]
+      },
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://192.168.27.44:8774/v2.1/servers/5df03e8c-201a-442f-afa8-7ba79aacf221"
+        },
+        {
+          "rel": "bookmark",
+          "href": "http://192.168.27.44:8774/servers/5df03e8c-201a-442f-afa8-7ba79aacf221"
+        }
+      ],
+      "OS-DCF:diskConfig": "MANUAL",
+      "progress": 0,
+      "OS-EXT-AZ:availability_zone": "nova",
+      "config_drive": "",
+      "key_name": null,
+      "OS-SRV-USG:launched_at": "2025-05-22T15:39:18.000000",
+      "OS-SRV-USG:terminated_at": null,
+      "OS-EXT-STS:task_state": null,
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-STS:power_state": 1,
+      "os-extended-volumes:volumes_attached": [],
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+- from:
+    uri: "file:input?fileName=input.json&noop=true"
+    steps:
+      - log:
+            message: "Loaded data from NetBox: ${body}"
+      - to:
+          uri: kamelet:mapping-template-lifting-action
+          parameters:
+            templateUrl: "file://./mappings.vm"
+            inputFormat: "json"
+            outputFormat: "turtle"
+      - to: "file:output?fileName=output.ttl&noop=true"
+      - log:
+          message: "Lifting has been generated and saved to output/output.ttl"

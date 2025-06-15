@@ -1,0 +1,61 @@
+apiVersion: camel.apache.org/v1
+kind: Kamelet
+metadata:
+  name: netbox-source
+  labels:
+    camel.apache.org/kamelet.type: "source"
+spec:
+  definition:
+    title: "NetBox Source"
+    description: "Retrieve data from NetBox REST API with custom query parameters"
+    required:
+      - netboxUrl
+      - apiToken
+      - endpoint
+    properties:
+      netboxUrl:
+        title: NetBox URL
+        description: The base URL of your NetBox instance
+        type: string
+        example: "https://netbox.example.com"
+      apiToken:
+        title: API Token
+        description: The NetBox API token for authentication
+        type: string
+        format: password
+        x-descriptors:
+          - urn:alm:descriptor:com.tectonic.ui:password
+      endpoint:
+        title: API Endpoint
+        description: The specific NetBox API endpoint to query
+        type: string
+        example: "/api/dcim/devices/"
+      queryParams:
+        title: Query Parameters
+        description: Additional query parameters for the API request
+        type: string
+        example: "limit=10&offset=0"
+      period:
+        title: Poll Period
+        description: The time interval between API calls (milliseconds)
+        type: integer
+        default: 10000
+  dependencies:
+    - "camel:http"
+    - "camel:jackson"
+  template:
+    from:
+      uri: "timer:netbox?period={{period}}"
+      steps:
+        - setHeader:
+            name: Authorization
+            simple: "Token {{apiToken}}"
+        - setHeader:
+            name: Accept
+            constant: "application/json"
+        - setHeader:
+            name: CamelHttpQuery
+            simple: "{{queryParams}}"
+        - to:
+            uri: "{{netboxUrl}}{{endpoint}}"
+        - to: "kamelet:sink"

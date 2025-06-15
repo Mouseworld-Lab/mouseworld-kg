@@ -1,0 +1,64 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: graph-get-rdf4j-sink
+  annotations:
+    camel.apache.org/catalog.version: "4.3.0"
+    camel.apache.org/provider: "Chimera"
+    camel.apache.org/kamelet.group: "Graph"
+  labels:
+    camel.apache.org/kamelet.type: "sink"
+spec:
+  definition:
+    title: "Graph Get RDF4J Sink"
+    description: "Loads triples into a remote triplestore compatible with RDF4J"
+    required:
+      - serverAddress
+      - serverPort
+      - repositoryId
+    properties:
+      serverAddress:
+        title: Server Address
+        description: URL of the triplestore server
+        type: string
+      serverPort:
+        title: Server Port
+        description: Listening port of the triplestore server
+        type: integer
+        default: 7200
+      repositoryId:
+        title: Repository ID
+        description: Repository ID in the RDF4J-compatible triplestore
+        type: string
+      defaultGraph:
+        title: Default Graph
+        description: Load triples into default graph
+        type: boolean
+        default: true
+      namedGraph:
+        title: Named Graph
+        description: Load triples into named graph
+        type: string
+      rdfFormat:
+        title: RDF Format
+        description: Format of the RDF data (e.g., turtle)
+        type: string
+        enum: ["turtle", "rdfxml", "nt", "json"]
+        default: turtle
+  dependencies:
+    - "mvn:com.cefriel:camel-chimera-graph:4.3.0"
+  template:
+    from:
+      uri: kamelet:source
+      steps:
+        - log: "Processing with defaultGraph: {{defaultGraph}}"
+        - choice:
+            precondition: true
+            when:
+            - simple: "{{defaultGraph}} == true"
+              steps:
+                - to:
+                    uri: "graph://get?serverUrl={{serverAddress}}:{{serverPort}}&repositoryId={{repositoryId}}&rdfFormat={{rdfFormat}}&defaultGraph={{defaultGraph}}"
+            otherwise:
+              steps:
+                - to: "graph://get?serverUrl={{serverAddress}}:{{serverPort}}&repositoryId={{repositoryId}}&rdfFormat={{rdfFormat}}&defaultGraph={{defaultGraph}}&namedGraph={{namedGraph}}"

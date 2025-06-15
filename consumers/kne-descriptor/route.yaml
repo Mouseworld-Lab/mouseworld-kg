@@ -1,0 +1,51 @@
+
+- beans:
+  - name: fileQuery
+    type: "#class:com.cefriel.util.ChimeraResourceBean"
+    properties:
+      url: "file://./files/construct.txt"
+      serializationFormat: "txt"
+  - name: loweringMappingTemplate
+    type: "#class:com.cefriel.util.ChimeraResourceBean"
+    properties:
+      url: "file://./files/mappings.vm"
+      serializationFormat: "vtl"
+
+- from:
+    id: query
+    uri: "graph://get"
+    parameters:
+      serverUrl: http://127.0.0.1:7200
+      repositoryId: default
+      defaultGraph: true
+    steps:
+      - to:
+          uri: "graph://construct"
+          parameters:
+            newGraph: true
+            chimeraResource: "#bean:fileQuery"
+      - to:
+          uri: "seda:lowering"
+
+- from:
+    id: lowering
+    uri: "seda:lowering"
+    steps:
+      - to:
+          uri: "mapt://rdf"
+          parameters:
+            template: "#bean:loweringMappingTemplate"
+      - to:
+          uri: "direct:store"
+
+- from:
+    id: store
+    uri: "direct:store"
+    steps:
+      - to:
+          uri: "file:output"
+          parameters:
+            fileName: example.yaml
+            noop: true
+      - log:
+          message: "Lowering has been generated and saved to output/example.yaml"

@@ -1,0 +1,55 @@
+- route:
+    id: getNetBox
+    from:
+      uri: "kamelet:netbox-source"
+      parameters:
+        netboxUrl: "http://192.168.159.62:8000"
+        apiToken: "REPLACE WITH NETBOX TOKEN"
+        endpoint: "/api/dcim/devices/"
+        queryParams: "tag=mouseworld"
+      steps:
+        - to:
+            uri: "direct:liftNetBox"
+
+- route:
+    id: liftNetBox
+    from:
+      uri: "direct:liftNetBox"
+      steps:
+        - log:
+            message: "Retrieved data from NetBox: ${body}"
+        - to:
+            uri: kamelet:mapping-template-lifting-action
+            parameters:
+              templateUrl: "file://./mappings.vm"
+              inputFormat: "json"
+              outputFormat: "turtle"
+        - log:
+            message: "Lifted data from NetBox: ${body}"
+        - to:
+            uri: "direct:storeLifted"
+        - to:
+            uri: "direct:storeTriplestore"
+
+- route:
+    id: storeLifted
+    from:
+      uri: "direct:storeLifted"
+      steps:
+        - to: "file:output?fileName=output.ttl&noop=true"
+        - log:
+            message: "Lifting saved to output/output.ttl"
+
+- route:
+    id: storeTriplestore
+    from:
+      uri: "direct:storeTriplestore"
+      steps:
+        - to:
+            uri: "kamelet:graph-get-rdf4j-sink"
+            parameters:
+              serverAddress: "http://127.0.0.1"
+              serverPort: 7200
+              repositoryId: "default"
+        - log:
+            message: "Lifting stored in remote triplestore"

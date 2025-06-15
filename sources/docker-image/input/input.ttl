@@ -1,0 +1,34 @@
+@prefix mw: <https://w3id.org/candil/mouseworld#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://mouseworld-test.org/> .
+
+####################
+# Vendors
+####################
+
+<Vendor/FRRouting> a mw:Vendor ;
+    mw:vendorName "FRRouting" ;
+    mw:kneVendorName "HOST" ;
+.
+
+<OperatingSystem/FRR-10.4> a mw:OperatingSystem ;
+    mw:osName "FRR" ;
+    mw:osVersion "v10.4" ;
+    mw:vendor <Vendor/FRRouting> ;
+    mw:dockerImage <DockerImage/frr-ubuntu22_grpc> ;
+.
+
+####################
+# Docker
+####################
+
+<DockerImage/frr-ubuntu22_grpc> a mw:DockerImage ;
+    mw:imageUrl "192.168.159.18:8030/frr-ubuntu22:grpc"
+.

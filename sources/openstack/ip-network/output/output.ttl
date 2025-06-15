@@ -1,0 +1,99 @@
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mw: <https://w3id.org/candil/mouseworld#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/05315a2e-947b-4a66-8ae9-fb82629bfce0>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.7.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/06ff9050-d42e-4504-ac0f-69b030077ede>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.27.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/3a406604-28b3-41b0-8007-d71c4dd413b3>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.11.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/3eda892d-4e9b-443c-8977-9fc60bd0a8c1>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.9.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/47ed346a-aba4-46e5-b900-d312a86a3cb5>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.5.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/5d0f2222-2429-496e-9a60-4d5c6e8fda94>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.13.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/6b5d9daf-109b-4e23-89a0-484c0fd121b0>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.12.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/8dc94851-3847-4c09-831f-f55df97eb602>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.1.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/a44fb8b0-6c35-4b51-883b-5ba4c39ec2b2>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.2.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/a5c75775-5a90-418e-b831-d4ebe58ec6de>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.14.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/afa7dd99-85e9-410a-9858-d1d7058b0393>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.6.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/bca7abdf-4e00-4d47-a6f2-5cf69fae6082>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.4.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/bfd746d1-765f-4f4c-9703-3e2c658d1603>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.10.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/c6699e16-4fb2-4ae6-8d90-5d568974b018>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.3.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
+
+<http://mouseworld-test.org/Topology/mouseworld/Link/d32feabb-75e8-4fc4-8ed1-85d0689beec1>
+  a mw:IpNetwork;
+  mw:addressValue "192.168.8.0";
+  mw:networkPrefix "24"^^xsd:integer;
+  mw:networkMask "255.255.255.0" .
