@@ -1,4 +1,3 @@
-@prefix mw: <https://w3id.org/candil/mouseworld#> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,7 +6,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://mouseworld-test.org/> .
+@prefix mw-pm: <https://w3id.org/mouseworld/platform#> .
+@prefix mw-rt: <https://w3id.org/mouseworld/routing#> .
+@prefix mw-topo: <https://w3id.org/mouseworld/topology#> .
+@prefix mw-infra: <https://w3id.org/mouseworld/infra#> .
+@base <http://example.org/> .
 
 #set ($xs = $reader.getDataframe('{
     "iterator": "$.ports.*",
@@ -23,24 +26,24 @@
 
 #foreach($x in $xs)
 #if($x.iface_name)
-<Topology/mouseworld/Node/$x.device_id/Interface/$x.iface_id> rdf:type mw:Interface ;
-    mw:interfaceName "$x.iface_name" ;
+<Topology/mouseworld/Node/$x.device_id/Interface/$x.iface_id> rdf:type mw-topo:Interface ;
+    mw-topo:interfaceName "$x.iface_name" ;
     #if($x.address)
-    rdf:type mw:IpInterface ;
+    rdf:type mw-rt:IpInterface ;
     #end
-    mw:ipAddress <IpAddress/$x.address> ;
+    mw-rt:ipAddress <IpAddress/$x.address> ;
 .
 
 #if($x.address)
-<IpAddress/$x.address> a mw:IpAddress ;
-    mw:addressValue "$x.address" ;
-    mw:belongsToNetwork <IpNetwork/$x.subnet_id> ;
+<IpAddress/$x.address> a mw-rt:IpAddress ;
+    mw-rt:addressValue "$x.address" ;
+    mw-rt:belongsToNetwork <IpNetwork/$x.subnet_id> ;
 .
 #end
 
-<Topology/mouseworld/Node/$x.device_id> mw:interface <Topology/mouseworld/Node/$x.device_id/Interface/$x.iface_id> .
+<Topology/mouseworld/Node/$x.device_id> mw-topo:interface <Topology/mouseworld/Node/$x.device_id/Interface/$x.iface_id> .
 
-<Topology/mouseworld/Link/$x.network_id> mw:connectsInterface <Topology/mouseworld/Node/$x.device_id/Interface/$x.iface_id> .
-<Topology/mouseworld/Link/$x.network_id> mw:connectsNode <Topology/mouseworld/Node/$x.device_id> .
+<Topology/mouseworld/Link/$x.network_id> mw-topo:connectsInterface <Topology/mouseworld/Node/$x.device_id/Interface/$x.iface_id> .
+<Topology/mouseworld/Link/$x.network_id> mw-topo:connectsNode <Topology/mouseworld/Node/$x.device_id> .
 #end
 #end

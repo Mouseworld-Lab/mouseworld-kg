@@ -1,4 +1,3 @@
-@prefix mw: <https://w3id.org/candil/mouseworld#> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,28 +6,31 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://mouseworld-test.org/> .
+@prefix mw-pm: <https://w3id.org/mouseworld/platform#> .
+@prefix mw-rt: <https://w3id.org/mouseworld/routing#> .
+@prefix mw-topo: <https://w3id.org/mouseworld/topology#> .
+@prefix mw-infra: <https://w3id.org/mouseworld/infra#> .
+@base <http://example.org/> .
 
 ####################
 # Vendors
 ####################
 
-<Vendor/FRRouting> a mw:Vendor ;
-    mw:vendorName "FRRouting" ;
-    mw:kneVendorName "HOST" ;
+<Vendor/FRRouting> a mw-pm:Vendor ;
+    mw-pm:vendorName "FRRouting" ;
 .
 
-<OperatingSystem/FRR-10.4> a mw:OperatingSystem ;
-    mw:osName "FRR" ;
-    mw:osVersion "v10.4" ;
-    mw:vendor <Vendor/FRRouting> ;
-    mw:dockerImage <DockerImage/frr-ubuntu22_grpc> ;
+<OperatingSystem/FRR-10.4> a mw-pm:OperatingSystem ;
+    mw-pm:osName "FRR" ;
+    mw-pm:osVersion "v10.4" ;
+    mw-pm:vendor <Vendor/FRRouting> ;
+    mw-infra:dockerImage <DockerImage/frr-ubuntu22_grpc> ;
 .
 
 ####################
 # Docker
 ####################
 
-<DockerImage/frr-ubuntu22_grpc> a mw:DockerImage ;
-    mw:imageUrl "192.168.159.18:8030/frr-ubuntu22:grpc"
+<DockerImage/frr-ubuntu22_grpc> a mw-infra:DockerImage ;
+    mw-infra:imageUrl "192.168.159.18:8030/frr-ubuntu22:grpc"
 .

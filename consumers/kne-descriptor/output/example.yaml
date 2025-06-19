@@ -1,165 +1,227 @@
 name: mouseworld
 nodes:
-- name: r7
-  vendor: HOST
-  config:
-    image: 192.168.159.18:8030/frr-ubuntu22:grpc
-  interfaces:
-    r7_eth3:
-      name: r7_eth3
-    r7_eth2:
-      name: r7_eth2
-    r7_eth4:
-      name: r7_eth4
-- name: r3
-  vendor: HOST
-  config:
-    image: 192.168.159.18:8030/frr-ubuntu22:grpc
-  interfaces:
-    r3_eth2:
-      name: r3_eth2
-    r3_eth4:
-      name: r3_eth4
-    r3_eth5:
-      name: r3_eth5
-    r3_eth3:
-      name: r3_eth3
 - name: r1
   vendor: HOST
   config:
     image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
   interfaces:
-    r1_eth3:
-      name: r1_eth3
-    r1_eth4:
-      name: r1_eth4
-    r1_eth2:
-      name: r1_eth2
-- name: r4
-  vendor: HOST
-  config:
-    image: 192.168.159.18:8030/frr-ubuntu22:grpc
-  interfaces:
-    r4_eth2:
-      name: r4_eth2
-    r4_eth3:
-      name: r4_eth3
-    r4_eth4:
-      name: r4_eth4
+    ens4:
+      name: ens4
+    ens6:
+      name: ens6
+    ens5:
+      name: ens5
 - name: r11
   vendor: HOST
   config:
     image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
   interfaces:
-    r11_eth3:
-      name: r11_eth3
-    r11_eth2:
-      name: r11_eth2
-- name: r13
+    ens4:
+      name: ens4
+    ens5:
+      name: ens5
+    ens3:
+      name: ens3
+- name: gateway
   vendor: HOST
   config:
     image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
   interfaces:
-    r13_eth2:
-      name: r13_eth2
-    r13_eth3:
-      name: r13_eth3
-- name: r5
+    ens4:
+      name: ens4
+- name: r7
   vendor: HOST
   config:
     image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
   interfaces:
-    r5_eth2:
-      name: r5_eth2
-    r5_eth3:
-      name: r5_eth3
-- name: r12
-  vendor: HOST
-  config:
-    image: 192.168.159.18:8030/frr-ubuntu22:grpc
-  interfaces:
-    r12_eth2:
-      name: r12_eth2
-    r12_eth4:
-      name: r12_eth4
-- name: r6
-  vendor: HOST
-  config:
-    image: 192.168.159.18:8030/frr-ubuntu22:grpc
-  interfaces:
-    r6_eth3:
-      name: r6_eth3
-    r6_eth2:
-      name: r6_eth2
-    r6_eth4:
-      name: r6_eth4
+    ens5:
+      name: ens5
+    ens4:
+      name: ens4
+    ens6:
+      name: ens6
 - name: r2
   vendor: HOST
   config:
     image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
   interfaces:
-    r2_eth4:
-      name: r2_eth4
-    r2_eth2:
-      name: r2_eth2
-    r2_eth3:
-      name: r2_eth3
-    r5_eth5:
-      name: r5_eth5
+    ens4:
+      name: ens4
+    ens5:
+      name: ens5
+    ens6:
+      name: ens6
+    ens7:
+      name: ens7
+    ens8:
+      name: ens8
+- name: r12
+  vendor: HOST
+  config:
+    image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
+  interfaces:
+    ens5:
+      name: ens5
+    ens4:
+      name: ens4
+- name: edge
+  vendor: HOST
+  config:
+    image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
+  interfaces:
+    ens3:
+      name: ens3
+- name: r3
+  vendor: HOST
+  config:
+    image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
+  interfaces:
+    ens4:
+      name: ens4
+    ens7:
+      name: ens7
+    ens6:
+      name: ens6
+    ens5:
+      name: ens5
+- name: r13
+  vendor: HOST
+  config:
+    image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
+  interfaces:
+    ens4:
+      name: ens4
+    ens5:
+      name: ens5
+- name: r4
+  vendor: HOST
+  config:
+    image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
+  interfaces:
+    ens5:
+      name: ens5
+    ens4:
+      name: ens4
+    ens6:
+      name: ens6
+- name: r5
+  vendor: HOST
+  config:
+    image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
+  interfaces:
+    ens4:
+      name: ens4
+    ens5:
+      name: ens5
+- name: r6
+  vendor: HOST
+  config:
+    image: 192.168.159.18:8030/frr-ubuntu22:grpc
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
+  interfaces:
+    ens5:
+      name: ens5
+    ens4:
+      name: ens4
+    ens6:
+      name: ens6
 links:
-- a_node: r3
-  a_int: r3_eth3
-  z_node: r7
-  z_int: r7_eth4
 - a_node: r13
-  a_int: r13_eth2
+  a_int: ens4
   z_node: r3
-  z_int: r3_eth2
-- a_node: r1
-  a_int: r1_eth3
+  z_int: ens4
+- a_node: r12
+  a_int: ens4
   z_node: r2
-  z_int: r2_eth3
+  z_int: ens5
+- a_node: r3
+  a_int: ens5
+  z_node: r7
+  z_int: ens6
 - a_node: r2
-  a_int: r2_eth2
-  z_node: r12
-  z_int: r12_eth2
-- a_node: r4
-  a_int: r4_eth3
-  z_node: r11
-  z_int: r11_eth3
-- a_node: r5
-  a_int: r5_eth3
-  z_node: r2
-  z_int: r5_eth5
-- a_node: r4
-  a_int: r4_eth2
+  a_int: ens6
   z_node: r1
-  z_int: r1_eth2
-- a_node: r6
-  a_int: r6_eth2
-  z_node: r7
-  z_int: r7_eth2
-- a_node: r5
-  a_int: r5_eth2
-  z_node: r6
-  z_int: r6_eth3
-- a_node: r13
-  a_int: r13_eth3
-  z_node: r7
-  z_int: r7_eth3
-- a_node: r6
-  a_int: r6_eth4
-  z_node: r4
-  z_int: r4_eth4
-- a_node: r2
-  a_int: r2_eth4
-  z_node: r3
-  z_int: r3_eth4
-- a_node: r3
-  a_int: r3_eth5
-  z_node: r12
-  z_int: r12_eth4
+  z_int: ens5
+- a_node: r7
+  a_int: ens5
+  z_node: r13
+  z_int: ens5
 - a_node: r11
-  a_int: r11_eth2
+  a_int: ens3
+  z_node: edge
+  z_int: ens3
+- a_node: r12
+  a_int: ens5
+  z_node: r3
+  z_int: ens7
+- a_node: r2
+  a_int: ens7
+  z_node: r3
+  z_int: ens6
+- a_node: r4
+  a_int: ens5
+  z_node: r11
+  z_int: ens5
+- a_node: r11
+  a_int: ens4
   z_node: r1
-  z_int: r1_eth4
+  z_int: ens6
+- a_node: r5
+  a_int: ens4
+  z_node: r6
+  z_int: ens5
+- a_node: r4
+  a_int: ens6
+  z_node: r6
+  z_int: ens6
+- a_node: r4
+  a_int: ens4
+  z_node: r1
+  z_int: ens4
+- a_node: r6
+  a_int: ens4
+  z_node: r7
+  z_int: ens4
+- a_node: r2
+  a_int: ens8
+  z_node: r5
+  z_int: ens5
+- a_node: gateway
+  a_int: ens4
+  z_node: r2
+  z_int: ens4
