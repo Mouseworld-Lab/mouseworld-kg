@@ -1,4 +1,3 @@
-PREFIX mw: <https://w3id.org/candil/mouseworld#>
 PREFIX mod: <https://w3id.org/mod#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -7,70 +6,73 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX mw-pm: <https://w3id.org/mouseworld/platform#>
+PREFIX mw-rt: <https://w3id.org/mouseworld/routing#>
+PREFIX mw-topo: <https://w3id.org/mouseworld/topology#>
+PREFIX mw-infra: <https://w3id.org/mouseworld/infra#>
 
 CONSTRUCT {
-    ?topology a mw:Topology ;
-        mw:topologyName ?topologyName ;
-        mw:node ?node ;
-        mw:link ?link .
+    ?topology a mw-topo:Topology ;
+        mw-topo:topologyName ?topologyName ;
+        mw-topo:node ?node ;
+        mw-topo:link ?link .
 
-    ?node a mw:Router ;
-        mw:nodeName ?nodeName ;
-        mw:operatingSystem ?operatingSystem ;
-        mw:interface ?interface .
+    ?node a mw-pm:Router ;
+        mw-topo:nodeName ?nodeName ;
+        mw-pm:operatingSystem ?operatingSystem ;
+        mw-topo:interface ?interface .
 
-    ?operatingSystem a mw:OperatingSystem ;
-        mw:vendor ?vendor ;
-        mw:dockerImage ?dockerImage .
+    ?operatingSystem a mw-pm:OperatingSystem ;
+        mw-pm:vendor ?vendor ;
+        mw-infra:dockerImage ?dockerImage .
+    ?vendor mw-pm:vendorName ?vendorName .
+    ?dockerImage mw-infra:imageUrl ?dockerImageUrl .
 
-    ?vendor mw:kneVendorName ?vendorName .
-    ?dockerImage mw:imageUrl ?dockerImageUrl .
+    ?interface mw-topo:interfaceName ?interfaceName .
 
-    ?interface mw:interfaceName ?interfaceName .
-
-    ?link a mw:Link ;
-        mw:connectsInterface ?ifaceA ;
-        mw:connectsInterface ?ifaceB
+    ?link a mw-topo:Link ;
+        mw-topo:connectsInterface ?ifaceA ;
+        mw-topo:connectsInterface ?ifaceB
     .
-    ?ifaceA mw:interfaceName ?ifaceNameA .
-    ?nodeA mw:interface ?ifaceA ;
-        mw:nodeName ?nodeIdA
+    ?ifaceA mw-topo:interfaceName ?ifaceNameA .
+    ?nodeA mw-topo:interface ?ifaceA ;
+        mw-topo:nodeName ?nodeIdA
     .
-    ?ifaceB mw:interfaceName ?ifaceNameB .
-    ?nodeB mw:interface ?ifaceB ;
-        mw:nodeName ?nodeIdB
+    ?ifaceB mw-topo:interfaceName ?ifaceNameB .
+    ?nodeB mw-topo:interface ?ifaceB ;
+        mw-topo:nodeName ?nodeIdB
 }
 
 WHERE {
-    ?topology a mw:Topology ;
-        mw:topologyName ?topologyName ;
-        mw:node ?node
+    ?topology a mw-topo:Topology ;
+        mw-topo:topologyName ?topologyName ;
+        mw-topo:node ?node
     .
 
-    ?node a mw:Router ;
-        mw:nodeName ?nodeName ;
-        mw:operatingSystem ?operatingSystem ;
-        mw:interface ?interface
+    ?node a mw-pm:Router ;
+        mw-topo:nodeName ?nodeName ;
+        mw-pm:operatingSystem ?operatingSystem ;
+        mw-topo:interface ?interface
     .
-    ?interface mw:interfaceName ?interfaceName .
-    ?operatingSystem a mw:OperatingSystem ;
-        mw:vendor ?vendor ;
-        mw:dockerImage ?dockerImage
+    ?interface mw-topo:interfaceName ?interfaceName .
+    ?operatingSystem a mw-pm:OperatingSystem ;
+        mw-pm:vendor ?vendor ;
+        mw-infra:dockerImage ?dockerImage
     .
-    ?vendor mw:kneVendorName ?vendorName .
-    ?dockerImage mw:imageUrl ?dockerImageUrl .
+    ?vendor mw-pm:vendorName ?vendorName .
+    ?dockerImage mw-infra:imageUrl ?dockerImageUrl .
 
-    ?link a mw:Link ;
-        mw:connectsInterface ?ifaceA ;
-        mw:connectsInterface ?ifaceB
+    ?link a mw-topo:Link ;
+        mw-topo:connectsInterface ?ifaceA ;
+        mw-topo:connectsInterface ?ifaceB
     .
-    ?ifaceA mw:interfaceName ?ifaceNameA .
-    ?nodeA mw:interface ?ifaceA ;
-        mw:nodeName ?nodeIdA
+    ?ifaceA mw-topo:interfaceName ?ifaceNameA .
+    ?nodeA mw-topo:interface ?ifaceA ;
+        mw-topo:nodeName ?nodeIdA
     .
-    ?ifaceB mw:interfaceName ?ifaceNameB .
-    ?nodeB mw:interface ?ifaceB ;
-        mw:nodeName ?nodeIdB
+    ?ifaceB mw-topo:interfaceName ?ifaceNameB .
+    ?nodeB mw-topo:interface ?ifaceB ;
+        mw-topo:nodeName ?nodeIdB
     .
     FILTER (?ifaceA != ?ifaceB)
 }

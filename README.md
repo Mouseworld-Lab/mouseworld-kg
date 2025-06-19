@@ -16,3 +16,9 @@ docker container run --rm -it -p 7200:7200 \
 ```
 
 Once GraphDB has started, make sure to create a repository in the database.
+
+Next, execute each Camel route using JBang:
+
+```bash
+jbang camel@apache/camel run route.yaml --camel-version=4.10.0 --dep=mvn:com.cefriel:camel-chimera-graph:4.3.0,mvn:com.cefriel:camel-chimera-mapping-template:4.3.0
+```

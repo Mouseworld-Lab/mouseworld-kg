@@ -1,4 +1,3 @@
-@prefix mw: <https://w3id.org/candil/mouseworld#> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,7 +6,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://mouseworld-test.org/> .
+@prefix mw-pm: <https://w3id.org/mouseworld/platform#> .
+@prefix mw-rt: <https://w3id.org/mouseworld/routing#> .
+@prefix mw-topo: <https://w3id.org/mouseworld/topology#> .
+@prefix mw-infra: <https://w3id.org/mouseworld/infra#> .
+@base <http://example.org/> .
 
 #set ($xs = $reader.getDataframe('{
     "iterator": "$.networks.*",
@@ -18,11 +21,11 @@
 }'))
 
 #foreach($x in $xs)
-<Topology/mouseworld/Link/$x.network_id> rdf:type mw:Link ;
-    mw:linkName "$x.network_name" ;
+<Topology/mouseworld/Link/$x.network_id> rdf:type mw-topo:Link ;
+    mw-topo:linkName "$x.network_name" ;
 .
 #end
 
 #foreach($x in $xs)
-<Topology/mouseworld> mw:link <Topology/mouseworld/Link/$x.network_id> .
+<Topology/mouseworld> mw-topo:link <Topology/mouseworld/Link/$x.network_id> .
 #end

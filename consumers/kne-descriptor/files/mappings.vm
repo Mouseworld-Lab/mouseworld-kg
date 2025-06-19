@@ -1,5 +1,4 @@
 #set ( $prefixes = "
-	PREFIX mw: <https://w3id.org/candil/mouseworld#>
     PREFIX mod: <https://w3id.org/mod#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -8,12 +7,16 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX vann: <http://purl.org/vocab/vann/>
     PREFIX dcterms: <http://purl.org/dc/terms/>
+    PREFIX mw-pm: <https://w3id.org/mouseworld/platform#>
+    PREFIX mw-rt: <https://w3id.org/mouseworld/routing#>
+    PREFIX mw-topo: <https://w3id.org/mouseworld/topology#>
+    PREFIX mw-infra: <https://w3id.org/mouseworld/infra#>
 " )
 #set ( $topology = "
     SELECT *
     WHERE {
-        ?topology a mw:Topology ;
-            mw:topologyName ?topologyName .
+        ?topology a mw-topo:Topology ;
+            mw-topo:topologyName ?topologyName .
     }
 " )
 #set( $queryTopology = "${prefixes}${topology}" )
@@ -22,35 +25,43 @@ name: $resultTopology[0].topologyName
 #set ( $router = "
     SELECT *
     WHERE {
-        ?node a mw:Router ;
-            mw:nodeName ?nodeName ;
-            mw:operatingSystem ?operatingSystem
+        ?node a mw-pm:Router ;
+            mw-topo:nodeName ?nodeName ;
+            mw-pm:operatingSystem ?operatingSystem
         .
-        ?operatingSystem a mw:OperatingSystem ;
-            mw:vendor ?vendor ;
-            mw:dockerImage ?dockerImage
+        ?operatingSystem a mw-pm:OperatingSystem ;
+            mw-pm:vendor ?vendor ;
+            mw-infra:dockerImage ?dockerImage
         .
-        ?vendor mw:kneVendorName ?vendorName .
-        ?dockerImage mw:imageUrl ?dockerImageUrl .
+        ?vendor mw-pm:vendorName ?vendorName .
+        ?dockerImage mw-infra:imageUrl ?dockerImageUrl .
     }
 " )
 #set( $queryRouter = "${prefixes}${router}" )
 #set( $resultRouter = $reader.getDataframe($queryRouter) )
 nodes:
 #foreach($r in $resultRouter)
+#if($r.vendorName == "FRRouting")
+#set($vendorName = "HOST")
+#else
+#set($vendorName = $r.vendorName)
+#end
 - name: $r.nodeName
-  vendor: $r.vendorName
+  vendor: $vendorName
   config:
     image: $r.dockerImageUrl
+    config_path: /etc/frr
+    config_file: frr.conf
+    file: /frr.conf
   interfaces:
 #set ( $interface = "
     SELECT *
     WHERE {
-        ?node a mw:Router ;
-            mw:nodeName ""$r.nodeName"" ;
-            mw:interface ?interface
+        ?node a mw-pm:Router ;
+            mw-topo:nodeName ""$r.nodeName"" ;
+            mw-topo:interface ?interface
         .
-        ?interface mw:interfaceName ?interfaceName .
+        ?interface mw-topo:interfaceName ?interfaceName .
     }
 " )
 #set( $queryInterface = "${prefixes}${interface}" )
@@ -65,7 +76,7 @@ links:
 #set ( $link = "
     SELECT *
     WHERE {
-        ?link a mw:Link .
+        ?link a mw-topo:Link .
     }
 " )
 #set( $queryLink = "${prefixes}${link}" )
@@ -74,17 +85,17 @@ links:
 #set ( $connection = "
     SELECT *
     WHERE {
-        <$i.link> a mw:Link ;
-            mw:connectsInterface ?ifaceA ;
-            mw:connectsInterface ?ifaceB
+        <$i.link> a mw-topo:Link ;
+            mw-topo:connectsInterface ?ifaceA ;
+            mw-topo:connectsInterface ?ifaceB
         .
-        ?ifaceA mw:interfaceName ?ifaceNameA .
-        ?nodeA mw:interface ?ifaceA ;
-            mw:nodeName ?nodeNameA
+        ?ifaceA mw-topo:interfaceName ?ifaceNameA .
+        ?nodeA mw-topo:interface ?ifaceA ;
+            mw-topo:nodeName ?nodeNameA
         .
-        ?ifaceB mw:interfaceName ?ifaceNameB .
-        ?nodeB mw:interface ?ifaceB ;
-            mw:nodeName ?nodeNameB
+        ?ifaceB mw-topo:interfaceName ?ifaceNameB .
+        ?nodeB mw-topo:interface ?ifaceB ;
+            mw-topo:nodeName ?nodeNameB
         .
         FILTER (?ifaceA != ?ifaceB)
     }

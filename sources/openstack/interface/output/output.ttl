@@ -1,67 +1,465 @@
 @prefix mod: <https://w3id.org/mod#> .
+@prefix mw-rt: <https://w3id.org/mouseworld/routing#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix mw-topo: <https://w3id.org/mouseworld/topology#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix mw-pm: <https://w3id.org/mouseworld/platform#> .
+@prefix mw-infra: <https://w3id.org/mouseworld/infra#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mw: <https://w3id.org/candil/mouseworld#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/18a1a6bd-4d3d-4902-be3f-19e86481d41f>
-  a mw:Interface, mw:IpInterface;
-  mw:interfaceName "r3_eth4";
-  mw:ipAddress <http://mouseworld-test.org/IpAddress/192.168.8.3> .
+<http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28/Interface/0148757c-9899-4fb3-854c-9bfb4757dceb>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens4";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.7.5> .
 
-<http://mouseworld-test.org/IpAddress/192.168.8.3> a mw:IpAddress;
-  mw:addressValue "192.168.8.3";
-  mw:belongsToNetwork <http://mouseworld-test.org/IpNetwork/d32feabb-75e8-4fc4-8ed1-85d0689beec1> .
+<http://example.org/IpAddress/192.168.7.5> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.7.5";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/05315a2e-947b-4a66-8ae9-fb82629bfce0> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38>
-  mw:interface <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/18a1a6bd-4d3d-4902-be3f-19e86481d41f>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/42e7149d-a5c1-4027-9c17-be28123f4df3>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/827b4072-9b84-45b9-a460-fc8b98a567b4>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/92ed2b4b-9074-4c1b-93a3-d30219595c3c> .
+<http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28/Interface/0148757c-9899-4fb3-854c-9bfb4757dceb>,
+    <http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28/Interface/e6a0960d-67b9-4a5b-a802-c75d395827d7> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Link/0f656566-5bb7-4501-a8dc-9302ef4f68ed>
-  mw:connectsInterface <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/18a1a6bd-4d3d-4902-be3f-19e86481d41f>;
-  mw:connectsNode <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38> .
+<http://example.org/Topology/mouseworld/Link/018dff4b-ad02-4ec8-b531-a71a31c6ecfa>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28/Interface/0148757c-9899-4fb3-854c-9bfb4757dceb>,
+    <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/ce3e9d08-7d0b-424a-9026-f7654351fa49>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28>,
+    <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/42e7149d-a5c1-4027-9c17-be28123f4df3>
-  a mw:Interface, mw:IpInterface;
-  mw:interfaceName "r3_eth2";
-  mw:ipAddress <http://mouseworld-test.org/IpAddress/192.168.12.3> .
+<http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/1a7320a4-8150-46f0-9b44-d950c793090f>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens5";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.2.11> .
 
-<http://mouseworld-test.org/IpAddress/192.168.12.3> a mw:IpAddress;
-  mw:addressValue "192.168.12.3";
-  mw:belongsToNetwork <http://mouseworld-test.org/IpNetwork/6b5d9daf-109b-4e23-89a0-484c0fd121b0> .
+<http://example.org/IpAddress/192.168.2.11> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.2.11";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/a44fb8b0-6c35-4b51-883b-5ba4c39ec2b2> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Link/4e127b07-49b8-418a-ab6a-de77d404dcfb>
-  mw:connectsInterface <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/42e7149d-a5c1-4027-9c17-be28123f4df3>;
-  mw:connectsNode <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38> .
+<http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/1a7320a4-8150-46f0-9b44-d950c793090f>,
+    <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/3c09bcd7-d4d9-4bf9-a469-d3a942f3afae>,
+    <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/e1a6b126-60d8-4f27-9485-e53f26bd0859> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/827b4072-9b84-45b9-a460-fc8b98a567b4>
-  a mw:Interface, mw:IpInterface;
-  mw:interfaceName "r3_eth5";
-  mw:ipAddress <http://mouseworld-test.org/IpAddress/192.168.14.3> .
+<http://example.org/Topology/mouseworld/Link/5e1c3a0c-9825-4b11-abea-c5f1b5773bee>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/1a7320a4-8150-46f0-9b44-d950c793090f>,
+    <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/848ba49c-3da3-408c-b409-0ec48b04bdc1>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9>,
+    <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893> .
 
-<http://mouseworld-test.org/IpAddress/192.168.14.3> a mw:IpAddress;
-  mw:addressValue "192.168.14.3";
-  mw:belongsToNetwork <http://mouseworld-test.org/IpNetwork/a5c75775-5a90-418e-b831-d4ebe58ec6de> .
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/2e81e121-171e-41a9-89a3-baabec84bf13>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens4";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.15.20> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Link/5b7e50b7-9699-4a9b-83d8-e7ba20486844>
-  mw:connectsInterface <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/827b4072-9b84-45b9-a460-fc8b98a567b4>;
-  mw:connectsNode <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38> .
+<http://example.org/IpAddress/192.168.15.20> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.15.20";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/03c5efb8-a240-4232-8183-6fc510d1a691> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/92ed2b4b-9074-4c1b-93a3-d30219595c3c>
-  a mw:Interface, mw:IpInterface;
-  mw:interfaceName "r3_eth3";
-  mw:ipAddress <http://mouseworld-test.org/IpAddress/192.168.10.3> .
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/2e81e121-171e-41a9-89a3-baabec84bf13>,
+    <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/48b9fe03-a316-475d-981f-8b9f5c1a738e>,
+    <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/54bd73e8-1a53-4058-b573-f4abe9b58a73>,
+    <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/9ffa6ca8-9cf7-4ae9-bac2-75a5e270f9b7>,
+    <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/b73d8bf7-9b9a-4e46-8033-b5449b889a97> .
 
-<http://mouseworld-test.org/IpAddress/192.168.10.3> a mw:IpAddress;
-  mw:addressValue "192.168.10.3";
-  mw:belongsToNetwork <http://mouseworld-test.org/IpNetwork/bfd746d1-765f-4f4c-9703-3e2c658d1603> .
+<http://example.org/Topology/mouseworld/Link/94c8a8b2-a012-46e3-b739-9bd64f11ca7d>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/2e81e121-171e-41a9-89a3-baabec84bf13>,
+    <http://example.org/Topology/mouseworld/Node/8decd573-1001-48bd-ac5a-2fc9fad0eddd/Interface/b359b5dd-d6e9-459a-9b45-6ed102b984dc>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463>,
+    <http://example.org/Topology/mouseworld/Node/8decd573-1001-48bd-ac5a-2fc9fad0eddd> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Link/12b4b9f0-55e9-4dee-967f-25964f6f78a9>
-  mw:connectsInterface <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38/Interface/92ed2b4b-9074-4c1b-93a3-d30219595c3c>;
-  mw:connectsNode <http://mouseworld-test.org/Topology/mouseworld/Node/173e0b81-06e5-4af0-9e87-8cab0117bb38> .
+<http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/309cd551-14a3-420f-8ea1-fe883d4b17c1>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens4";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.9.6> .
+
+<http://example.org/IpAddress/192.168.9.6> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.9.6";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/3eda892d-4e9b-443c-8977-9fc60bd0a8c1> .
+
+<http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/309cd551-14a3-420f-8ea1-fe883d4b17c1>,
+    <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/57c5a20d-f85a-46fa-a296-c22d830ca8a3>,
+    <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/ce3e9d08-7d0b-424a-9026-f7654351fa49> .
+
+<http://example.org/Topology/mouseworld/Link/a63780a3-a992-4b86-97b3-d988ec4b5bfe>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/309cd551-14a3-420f-8ea1-fe883d4b17c1>,
+    <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/e91d815f-bb60-44b2-a8da-2da0b86ae1ef>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b>,
+    <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d> .
+
+<http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/346b819e-a5fb-4eff-80b3-7ac05f1e3399>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens5";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.10.3> .
+
+<http://example.org/IpAddress/192.168.10.3> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.10.3";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/bfd746d1-765f-4f4c-9703-3e2c658d1603> .
+
+<http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/346b819e-a5fb-4eff-80b3-7ac05f1e3399>,
+    <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/489a01c4-586d-43cc-8676-191b37b63f2e>,
+    <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/c71e8fe2-39b9-4130-b4e1-bbc46d0aeb0c>,
+    <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/dadb7f6e-86b5-4728-b550-748254099e33> .
+
+<http://example.org/Topology/mouseworld/Link/12b4b9f0-55e9-4dee-967f-25964f6f78a9>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/346b819e-a5fb-4eff-80b3-7ac05f1e3399>,
+    <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/df7f4b0b-c59b-4d1a-a48a-6e73e123506d>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f>,
+    <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d> .
+
+<http://example.org/Topology/mouseworld/Node/6a14c1c5-e33a-4919-b50e-873a616fa195/Interface/34ea2540-75b8-4a94-a6d1-93f4a5a859b4>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens3";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.27.185> .
+
+<http://example.org/IpAddress/192.168.27.185> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.27.185";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/06ff9050-d42e-4504-ac0f-69b030077ede> .
+
+<http://example.org/Topology/mouseworld/Node/6a14c1c5-e33a-4919-b50e-873a616fa195>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/6a14c1c5-e33a-4919-b50e-873a616fa195/Interface/34ea2540-75b8-4a94-a6d1-93f4a5a859b4> .
+
+<http://example.org/Topology/mouseworld/Link/e00db497-40a2-4648-bb99-183a38c2371e>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/6a14c1c5-e33a-4919-b50e-873a616fa195/Interface/34ea2540-75b8-4a94-a6d1-93f4a5a859b4>,
+    <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/e1a6b126-60d8-4f27-9485-e53f26bd0859>,
+    <http://example.org/Topology/mouseworld/Node//Interface/fd6f1234-2209-439f-ae96-cd9ba49c577b>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/6a14c1c5-e33a-4919-b50e-873a616fa195>,
+    <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9>,
+    <http://example.org/Topology/mouseworld/Node/> .
+
+<http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/39370e4f-9de6-4212-a6dd-d4361c1567e5>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens4";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.3.1> .
+
+<http://example.org/IpAddress/192.168.3.1> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.3.1";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/c6699e16-4fb2-4ae6-8d90-5d568974b018> .
+
+<http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/39370e4f-9de6-4212-a6dd-d4361c1567e5>,
+    <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/8904fa21-1a8f-46a7-ac51-1d35c95b8689>,
+    <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/c09112c5-92db-4d08-92d4-2ca271de62ef> .
+
+<http://example.org/Topology/mouseworld/Link/261842e3-a345-4b90-b37b-5c9ba1fce18b>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/39370e4f-9de6-4212-a6dd-d4361c1567e5>,
+    <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/3ab2938e-ce18-4670-ac25-eb8d9ed2353a>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587>,
+    <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893> .
+
+<http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/3ab2938e-ce18-4670-ac25-eb8d9ed2353a>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens4";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.3.4> .
+
+<http://example.org/IpAddress/192.168.3.4> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.3.4";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/c6699e16-4fb2-4ae6-8d90-5d568974b018> .
+
+<http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/3ab2938e-ce18-4670-ac25-eb8d9ed2353a>,
+    <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/848ba49c-3da3-408c-b409-0ec48b04bdc1>,
+    <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/ad17041f-0f2b-4723-aa8b-badddf29eb75> .
+
+<http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/3c09bcd7-d4d9-4bf9-a469-d3a942f3afae>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens4";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.1.11> .
+
+<http://example.org/IpAddress/192.168.1.11> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.1.11";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/8dc94851-3847-4c09-831f-f55df97eb602> .
+
+<http://example.org/Topology/mouseworld/Link/e2dee63f-1aac-4c2d-b977-46b610ec5b8f>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/3c09bcd7-d4d9-4bf9-a469-d3a942f3afae>,
+    <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/c09112c5-92db-4d08-92d4-2ca271de62ef>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9>,
+    <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587> .
+
+<http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/489a01c4-586d-43cc-8676-191b37b63f2e>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens4";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.12.3> .
+
+<http://example.org/IpAddress/192.168.12.3> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.12.3";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/6b5d9daf-109b-4e23-89a0-484c0fd121b0> .
+
+<http://example.org/Topology/mouseworld/Link/4e127b07-49b8-418a-ab6a-de77d404dcfb>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/489a01c4-586d-43cc-8676-191b37b63f2e>,
+    <http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02/Interface/81b7d786-2c65-417a-850b-385a9f817b22>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f>,
+    <http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02> .
+
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/48b9fe03-a316-475d-981f-8b9f5c1a738e>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens5";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.13.20> .
+
+<http://example.org/IpAddress/192.168.13.20> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.13.20";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/5d0f2222-2429-496e-9a60-4d5c6e8fda94> .
+
+<http://example.org/Topology/mouseworld/Link/c0422e79-2088-4181-9b3b-7fa3ba7c6321>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/48b9fe03-a316-475d-981f-8b9f5c1a738e>,
+    <http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b/Interface/72054a9b-395b-4ab9-aaf2-3945fbe443ee>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463>,
+    <http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b> .
+
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/54bd73e8-1a53-4058-b573-f4abe9b58a73>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens8";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.6.20> .
+
+<http://example.org/IpAddress/192.168.6.20> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.6.20";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/afa7dd99-85e9-410a-9858-d1d7058b0393> .
+
+<http://example.org/Topology/mouseworld/Link/18937e35-91f4-434a-a65b-f15b9757cd6c>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/54bd73e8-1a53-4058-b573-f4abe9b58a73>,
+    <http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28/Interface/e6a0960d-67b9-4a5b-a802-c75d395827d7>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463>,
+    <http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28> .
+
+<http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/57c5a20d-f85a-46fa-a296-c22d830ca8a3>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens6";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.5.6> .
+
+<http://example.org/IpAddress/192.168.5.6> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.5.6";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/47ed346a-aba4-46e5-b900-d312a86a3cb5> .
+
+<http://example.org/Topology/mouseworld/Link/20b8b1ef-8cfe-4099-a60e-2e1306f2fd93>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/57c5a20d-f85a-46fa-a296-c22d830ca8a3>,
+    <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/ad17041f-0f2b-4723-aa8b-badddf29eb75>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b>,
+    <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893> .
+
+<http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02/Interface/603c7bc8-bcab-4908-84ba-f8ef53c1c928>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens5";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.11.13> .
+
+<http://example.org/IpAddress/192.168.11.13> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.11.13";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/3a406604-28b3-41b0-8007-d71c4dd413b3> .
+
+<http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02/Interface/603c7bc8-bcab-4908-84ba-f8ef53c1c928>,
+    <http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02/Interface/81b7d786-2c65-417a-850b-385a9f817b22> .
+
+<http://example.org/Topology/mouseworld/Link/e2172a2b-d6e8-488c-b932-babfbbb09d1b>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02/Interface/603c7bc8-bcab-4908-84ba-f8ef53c1c928>,
+    <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/6f1021b6-0d7c-41f0-b81b-66976c8fc5cf>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02>,
+    <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d> .
+
+<http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/6f1021b6-0d7c-41f0-b81b-66976c8fc5cf>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens5";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.11.7> .
+
+<http://example.org/IpAddress/192.168.11.7> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.11.7";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/3a406604-28b3-41b0-8007-d71c4dd413b3> .
+
+<http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/6f1021b6-0d7c-41f0-b81b-66976c8fc5cf>,
+    <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/df7f4b0b-c59b-4d1a-a48a-6e73e123506d>,
+    <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/e91d815f-bb60-44b2-a8da-2da0b86ae1ef> .
+
+<http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b/Interface/72054a9b-395b-4ab9-aaf2-3945fbe443ee>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens4";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.13.12> .
+
+<http://example.org/IpAddress/192.168.13.12> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.13.12";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/5d0f2222-2429-496e-9a60-4d5c6e8fda94> .
+
+<http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b/Interface/72054a9b-395b-4ab9-aaf2-3945fbe443ee>,
+    <http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b/Interface/b9c37b8e-49bc-4c7b-a898-f60a55fb6304> .
+
+<http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02/Interface/81b7d786-2c65-417a-850b-385a9f817b22>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens4";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.12.13> .
+
+<http://example.org/IpAddress/192.168.12.13> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.12.13";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/6b5d9daf-109b-4e23-89a0-484c0fd121b0> .
+
+<http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/848ba49c-3da3-408c-b409-0ec48b04bdc1>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens5";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.2.4> .
+
+<http://example.org/IpAddress/192.168.2.4> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.2.4";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/a44fb8b0-6c35-4b51-883b-5ba4c39ec2b2> .
+
+<http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/8904fa21-1a8f-46a7-ac51-1d35c95b8689>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens5";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.4.1> .
+
+<http://example.org/IpAddress/192.168.4.1> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.4.1";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/bca7abdf-4e00-4d47-a6f2-5cf69fae6082> .
+
+<http://example.org/Topology/mouseworld/Link/f99ab493-edcc-4ed6-9ea1-65098dafa1d6>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/8904fa21-1a8f-46a7-ac51-1d35c95b8689>,
+    <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/b73d8bf7-9b9a-4e46-8033-b5449b889a97>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587>,
+    <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463> .
+
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/9ffa6ca8-9cf7-4ae9-bac2-75a5e270f9b7>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens7";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.8.20> .
+
+<http://example.org/IpAddress/192.168.8.20> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.8.20";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/d32feabb-75e8-4fc4-8ed1-85d0689beec1> .
+
+<http://example.org/Topology/mouseworld/Link/0f656566-5bb7-4501-a8dc-9302ef4f68ed>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/9ffa6ca8-9cf7-4ae9-bac2-75a5e270f9b7>,
+    <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/dadb7f6e-86b5-4728-b550-748254099e33>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463>,
+    <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f> .
+
+<http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/ad17041f-0f2b-4723-aa8b-badddf29eb75>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens6";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.5.4> .
+
+<http://example.org/IpAddress/192.168.5.4> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.5.4";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/47ed346a-aba4-46e5-b900-d312a86a3cb5> .
+
+<http://example.org/Topology/mouseworld/Node/8decd573-1001-48bd-ac5a-2fc9fad0eddd/Interface/b359b5dd-d6e9-459a-9b45-6ed102b984dc>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens4";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.15.3> .
+
+<http://example.org/IpAddress/192.168.15.3> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.15.3";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/03c5efb8-a240-4232-8183-6fc510d1a691> .
+
+<http://example.org/Topology/mouseworld/Node/8decd573-1001-48bd-ac5a-2fc9fad0eddd>
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/8decd573-1001-48bd-ac5a-2fc9fad0eddd/Interface/b359b5dd-d6e9-459a-9b45-6ed102b984dc> .
+
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/b73d8bf7-9b9a-4e46-8033-b5449b889a97>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens6";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.4.20> .
+
+<http://example.org/IpAddress/192.168.4.20> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.4.20";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/bca7abdf-4e00-4d47-a6f2-5cf69fae6082> .
+
+<http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b/Interface/b9c37b8e-49bc-4c7b-a898-f60a55fb6304>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens5";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.14.12> .
+
+<http://example.org/IpAddress/192.168.14.12> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.14.12";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/a5c75775-5a90-418e-b831-d4ebe58ec6de> .
+
+<http://example.org/Topology/mouseworld/Link/5b7e50b7-9699-4a9b-83d8-e7ba20486844>
+  mw-topo:connectsInterface <http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b/Interface/b9c37b8e-49bc-4c7b-a898-f60a55fb6304>,
+    <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/c71e8fe2-39b9-4130-b4e1-bbc46d0aeb0c>;
+  mw-topo:connectsNode <http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b>,
+    <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f> .
+
+<http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/c09112c5-92db-4d08-92d4-2ca271de62ef>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens6";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.1.1> .
+
+<http://example.org/IpAddress/192.168.1.1> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.1.1";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/8dc94851-3847-4c09-831f-f55df97eb602> .
+
+<http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/c71e8fe2-39b9-4130-b4e1-bbc46d0aeb0c>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens7";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.14.3> .
+
+<http://example.org/IpAddress/192.168.14.3> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.14.3";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/a5c75775-5a90-418e-b831-d4ebe58ec6de> .
+
+<http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/ce3e9d08-7d0b-424a-9026-f7654351fa49>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens5";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.7.6> .
+
+<http://example.org/IpAddress/192.168.7.6> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.7.6";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/05315a2e-947b-4a66-8ae9-fb82629bfce0> .
+
+<http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/dadb7f6e-86b5-4728-b550-748254099e33>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens6";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.8.3> .
+
+<http://example.org/IpAddress/192.168.8.3> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.8.3";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/d32feabb-75e8-4fc4-8ed1-85d0689beec1> .
+
+<http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/df7f4b0b-c59b-4d1a-a48a-6e73e123506d>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens6";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.10.7> .
+
+<http://example.org/IpAddress/192.168.10.7> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.10.7";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/bfd746d1-765f-4f4c-9703-3e2c658d1603> .
+
+<http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/e1a6b126-60d8-4f27-9485-e53f26bd0859>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens3";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.27.175> .
+
+<http://example.org/IpAddress/192.168.27.175> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.27.175";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/06ff9050-d42e-4504-ac0f-69b030077ede> .
+
+<http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28/Interface/e6a0960d-67b9-4a5b-a802-c75d395827d7>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens5";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.6.5> .
+
+<http://example.org/IpAddress/192.168.6.5> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.6.5";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/afa7dd99-85e9-410a-9858-d1d7058b0393> .
+
+<http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/e91d815f-bb60-44b2-a8da-2da0b86ae1ef>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens4";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.9.7> .
+
+<http://example.org/IpAddress/192.168.9.7> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.9.7";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/3eda892d-4e9b-443c-8977-9fc60bd0a8c1> .
+
+<http://example.org/Topology/mouseworld/Node//Interface/fd6f1234-2209-439f-ae96-cd9ba49c577b>
+  a mw-topo:Interface, mw-rt:IpInterface;
+  mw-topo:interfaceName "ens3";
+  mw-rt:ipAddress <http://example.org/IpAddress/192.168.27.187> .
+
+<http://example.org/IpAddress/192.168.27.187> a mw-rt:IpAddress;
+  mw-rt:addressValue "192.168.27.187";
+  mw-rt:belongsToNetwork <http://example.org/IpNetwork/06ff9050-d42e-4504-ac0f-69b030077ede> .
+
+<http://example.org/Topology/mouseworld/Node/> mw-topo:interface <http://example.org/Topology/mouseworld/Node//Interface/fd6f1234-2209-439f-ae96-cd9ba49c577b> .

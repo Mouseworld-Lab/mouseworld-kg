@@ -1,4 +1,3 @@
-@prefix mw: <https://w3id.org/candil/mouseworld#> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,7 +6,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://mouseworld-test.org/> .
+@prefix mw-pm: <https://w3id.org/mouseworld/platform#> .
+@prefix mw-rt: <https://w3id.org/mouseworld/routing#> .
+@prefix mw-topo: <https://w3id.org/mouseworld/topology#> .
+@prefix mw-infra: <https://w3id.org/mouseworld/infra#> .
+@base <http://example.org/> .
 
 #macro(subnetMask $prefix)
   #set($prefix = $math.toInteger($prefix))
@@ -60,9 +63,9 @@
 #set($prefix = $cidr[1])
 #subnetMask($prefix)
 
-<Topology/mouseworld/Link/$x.subnet_id> rdf:type mw:IpNetwork ;
-    mw:addressValue "$address" ;
-    mw:networkPrefix "$prefix"^^xsd:integer ;
-    mw:networkMask "$netmask" ;
+<Topology/mouseworld/Link/$x.subnet_id> rdf:type mw-rt:IpNetwork ;
+    mw-rt:addressValue "$address" ;
+    mw-rt:networkPrefix "$prefix"^^xsd:integer ;
+    mw-rt:networkMask "$netmask" ;
 .
 #end

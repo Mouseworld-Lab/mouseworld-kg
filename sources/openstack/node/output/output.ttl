@@ -1,72 +1,85 @@
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix mw-topo: <https://w3id.org/mouseworld/topology#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix mw-pm: <https://w3id.org/mouseworld/platform#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mw: <https://w3id.org/candil/mouseworld#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/f22a0609-a04d-4aa0-9cf4-c216b5f13648>
-  a mw:Router;
-  mw:nodeName "r2";
-  mw:operatingSystem <http://mouseworld-test.org/OperatingSystem/FRR-10.4> .
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463>
+  a mw-pm:Router;
+  mw-topo:nodeName "r2";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/586b6926-062b-4b8c-b800-9a111e4a7661>
-  a mw:Router;
-  mw:nodeName "r11";
-  mw:operatingSystem <http://mouseworld-test.org/OperatingSystem/FRR-10.4> .
+<http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587>
+  a mw-pm:Router;
+  mw-topo:nodeName "r1";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/6ed9ccf1-b0a7-47b5-a14c-6e7bdd6ad71c>
-  a mw:Router;
-  mw:nodeName "r6";
-  mw:operatingSystem <http://mouseworld-test.org/OperatingSystem/FRR-10.4> .
+<http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b>
+  a mw-pm:Router;
+  mw-topo:nodeName "r6";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/f8cfe454-d5ef-4138-8a64-97a6392d2037>
-  a mw:Router;
-  mw:nodeName "r3";
-  mw:operatingSystem <http://mouseworld-test.org/OperatingSystem/FRR-10.4> .
+<http://example.org/Topology/mouseworld/Node/8decd573-1001-48bd-ac5a-2fc9fad0eddd>
+  a mw-pm:Router;
+  mw-topo:nodeName "gateway";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/fe97a975-4bec-4bb8-a02f-487aa0a9bbc9>
-  a mw:Router;
-  mw:nodeName "r1";
-  mw:operatingSystem <http://mouseworld-test.org/OperatingSystem/FRR-10.4> .
+<http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d>
+  a mw-pm:Router;
+  mw-topo:nodeName "r7";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/09ba5ddf-99e5-4947-9d6d-1f4088e4f9c3>
-  a mw:Router;
-  mw:nodeName "r7";
-  mw:operatingSystem <http://mouseworld-test.org/OperatingSystem/FRR-10.4> .
+<http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9>
+  a mw-pm:Router;
+  mw-topo:nodeName "r11";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/623a6c1c-6b11-4140-8983-5dc9a7828fb2>
-  a mw:Router;
-  mw:nodeName "r13";
-  mw:operatingSystem <http://mouseworld-test.org/OperatingSystem/FRR-10.4> .
+<http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f>
+  a mw-pm:Router;
+  mw-topo:nodeName "r3";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/9291bd11-b751-4787-9614-3dee58fec760>
-  a mw:Router;
-  mw:nodeName "r5";
-  mw:operatingSystem <http://mouseworld-test.org/OperatingSystem/FRR-10.4> .
+<http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893>
+  a mw-pm:Router;
+  mw-topo:nodeName "r4";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/13872910-b674-4871-a67b-765f1402dc61>
-  a mw:Router;
-  mw:nodeName "r4";
-  mw:operatingSystem <http://mouseworld-test.org/OperatingSystem/FRR-10.4> .
+<http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28>
+  a mw-pm:Router;
+  mw-topo:nodeName "r5";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
 
-<http://mouseworld-test.org/Topology/mouseworld/Node/9b440d5c-ec6b-41ac-9c34-69b673c0792d>
-  a mw:Router;
-  mw:nodeName "r12";
-  mw:operatingSystem <http://mouseworld-test.org/OperatingSystem/FRR-10.4> .
+<http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02>
+  a mw-pm:Router;
+  mw-topo:nodeName "r13";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
 
-<http://mouseworld-test.org/Topology/mouseworld> a mw:Topology;
-  mw:topologyName "mouseworld";
-  mw:node <http://mouseworld-test.org/Topology/mouseworld/Node/f22a0609-a04d-4aa0-9cf4-c216b5f13648>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/586b6926-062b-4b8c-b800-9a111e4a7661>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/6ed9ccf1-b0a7-47b5-a14c-6e7bdd6ad71c>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/f8cfe454-d5ef-4138-8a64-97a6392d2037>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/fe97a975-4bec-4bb8-a02f-487aa0a9bbc9>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/09ba5ddf-99e5-4947-9d6d-1f4088e4f9c3>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/623a6c1c-6b11-4140-8983-5dc9a7828fb2>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/9291bd11-b751-4787-9614-3dee58fec760>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/13872910-b674-4871-a67b-765f1402dc61>,
-    <http://mouseworld-test.org/Topology/mouseworld/Node/9b440d5c-ec6b-41ac-9c34-69b673c0792d> .
+<http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b>
+  a mw-pm:Router;
+  mw-topo:nodeName "r12";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
+
+<http://example.org/Topology/mouseworld/Node/6a14c1c5-e33a-4919-b50e-873a616fa195>
+  a mw-pm:Router;
+  mw-topo:nodeName "edge";
+  mw-pm:operatingSystem <http://example.org/OperatingSystem/FRR-10.4> .
+
+<http://example.org/Topology/mouseworld> a mw-topo:Topology;
+  mw-topo:topologyName "mouseworld";
+  mw-topo:node <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463>,
+    <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587>,
+    <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b>,
+    <http://example.org/Topology/mouseworld/Node/8decd573-1001-48bd-ac5a-2fc9fad0eddd>,
+    <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d>,
+    <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9>,
+    <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f>,
+    <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893>,
+    <http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28>,
+    <http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02>,
+    <http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b>,
+    <http://example.org/Topology/mouseworld/Node/6a14c1c5-e33a-4919-b50e-873a616fa195> .
