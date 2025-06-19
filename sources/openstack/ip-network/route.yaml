@@ -10,7 +10,7 @@
     steps:
       - setHeader:
           name: "X-Auth-Token"
-          constant: "REPLACE WITH OS TOKEN"
+          constant: "REPLACE_WITH_YOUR_OS_TOKEN"
       - setHeader:
           name: "Accept"
           constant: "application/json"
