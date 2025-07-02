@@ -10,39 +10,191 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@base <http://example.org/> .
 
+<http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28>
+  a mw-pm:Router;
+  mw-topo:nodeName "r5";
+  mw-pm:hostname "r5";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28/Interface/0148757c-9899-4fb3-854c-9bfb4757dceb>,
+    <http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28/Interface/e6a0960d-67b9-4a5b-a802-c75d395827d7> .
 
-####################
-# Topology
-####################
+<http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28/Interface/0148757c-9899-4fb3-854c-9bfb4757dceb>
+  mw-topo:interfaceName "ens4" .
 
-<Topology/frr01> a mw-topo:Topology ;
-    mw-topo:topologyId "frr01" ;
-    mw-topo:node <Topology/frr01/Node/router1> ;
-.
+<http://example.org/Topology/mouseworld/Node/3a4632eb-6743-4f80-ac33-4272334cce28/Interface/e6a0960d-67b9-4a5b-a802-c75d395827d7>
+  mw-topo:interfaceName "ens5" .
 
-####################
-# Router 1
-####################
+<http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b>
+  a mw-pm:Router;
+  mw-topo:nodeName "r6";
+  mw-pm:hostname "r6";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/ce3e9d08-7d0b-424a-9026-f7654351fa49>,
+    <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/309cd551-14a3-420f-8ea1-fe883d4b17c1>,
+    <http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/57c5a20d-f85a-46fa-a296-c22d830ca8a3> .
 
-<Topology/frr01/Node/router1> a mw-topo:Router ;
-    mw-topo:nodeName "router1" ;
-    mw-pm:hostname "router1" ;
-    mw-topo:os <OperatingSystem/FRR-v7.5.1> ;
-    mw-topo:interface <Topology/frr01/Node/router1/Interface/eth1> ,
-                 <Topology/frr01/Node/router1/Interface/eth2> ,
-                 <Topology/frr01/Node/router1/Interface/eth3>
-.
+<http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/ce3e9d08-7d0b-424a-9026-f7654351fa49>
+  mw-topo:interfaceName "ens5" .
 
-<Topology/frr01/Node/router1/Interface/eth1> a mw-rt:IpInterface ;
-    mw-topo:interfaceName "eth1" ;
-.
+<http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/309cd551-14a3-420f-8ea1-fe883d4b17c1>
+  mw-topo:interfaceName "ens4" .
 
-<Topology/frr01/Node/router1/Interface/eth2> a mw-rt:IpInterface ;
-    mw-topo:interfaceName "eth2" ;
-.
+<http://example.org/Topology/mouseworld/Node/03800770-43bd-4b37-b592-e7ab4d38ca1b/Interface/57c5a20d-f85a-46fa-a296-c22d830ca8a3>
+  mw-topo:interfaceName "ens6" .
 
-<Topology/frr01/Node/router1/Interface/eth3> a mw-rt:IpInterface ;
-    mw-topo:interfaceName "eth3" ;
-.
+<http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9>
+  a mw-pm:Router;
+  mw-topo:nodeName "r11";
+  mw-pm:hostname "r11";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/1a7320a4-8150-46f0-9b44-d950c793090f>,
+    <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/3c09bcd7-d4d9-4bf9-a469-d3a942f3afae>,
+    <http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/e1a6b126-60d8-4f27-9485-e53f26bd0859> .
+
+<http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/1a7320a4-8150-46f0-9b44-d950c793090f>
+  mw-topo:interfaceName "ens5" .
+
+<http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/3c09bcd7-d4d9-4bf9-a469-d3a942f3afae>
+  mw-topo:interfaceName "ens4" .
+
+<http://example.org/Topology/mouseworld/Node/28197c79-ccb6-44ea-9aa1-9d4ee8a424a9/Interface/e1a6b126-60d8-4f27-9485-e53f26bd0859>
+  mw-topo:interfaceName "ens3" .
+
+<http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893>
+  a mw-pm:Router;
+  mw-topo:nodeName "r4";
+  mw-pm:hostname "r4";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/848ba49c-3da3-408c-b409-0ec48b04bdc1>,
+    <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/3ab2938e-ce18-4670-ac25-eb8d9ed2353a>,
+    <http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/ad17041f-0f2b-4723-aa8b-badddf29eb75> .
+
+<http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/848ba49c-3da3-408c-b409-0ec48b04bdc1>
+  mw-topo:interfaceName "ens5" .
+
+<http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/3ab2938e-ce18-4670-ac25-eb8d9ed2353a>
+  mw-topo:interfaceName "ens4" .
+
+<http://example.org/Topology/mouseworld/Node/20edd894-8763-4002-b9b6-bb2aae70f893/Interface/ad17041f-0f2b-4723-aa8b-badddf29eb75>
+  mw-topo:interfaceName "ens6" .
+
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463>
+  a mw-pm:Router;
+  mw-topo:nodeName "r2";
+  mw-pm:hostname "r2";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/2e81e121-171e-41a9-89a3-baabec84bf13>,
+    <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/48b9fe03-a316-475d-981f-8b9f5c1a738e>,
+    <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/54bd73e8-1a53-4058-b573-f4abe9b58a73>,
+    <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/9ffa6ca8-9cf7-4ae9-bac2-75a5e270f9b7>,
+    <http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/b73d8bf7-9b9a-4e46-8033-b5449b889a97> .
+
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/2e81e121-171e-41a9-89a3-baabec84bf13>
+  mw-topo:interfaceName "ens4" .
+
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/48b9fe03-a316-475d-981f-8b9f5c1a738e>
+  mw-topo:interfaceName "ens5" .
+
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/54bd73e8-1a53-4058-b573-f4abe9b58a73>
+  mw-topo:interfaceName "ens8" .
+
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/9ffa6ca8-9cf7-4ae9-bac2-75a5e270f9b7>
+  mw-topo:interfaceName "ens7" .
+
+<http://example.org/Topology/mouseworld/Node/6fd33e86-bc2b-459f-93da-6e22d6cee463/Interface/b73d8bf7-9b9a-4e46-8033-b5449b889a97>
+  mw-topo:interfaceName "ens6" .
+
+<http://example.org/Topology/mouseworld/Node/8decd573-1001-48bd-ac5a-2fc9fad0eddd>
+  a mw-pm:Router;
+  mw-topo:nodeName "gateway";
+  mw-pm:hostname "gateway";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/8decd573-1001-48bd-ac5a-2fc9fad0eddd/Interface/b359b5dd-d6e9-459a-9b45-6ed102b984dc> .
+
+<http://example.org/Topology/mouseworld/Node/8decd573-1001-48bd-ac5a-2fc9fad0eddd/Interface/b359b5dd-d6e9-459a-9b45-6ed102b984dc>
+  mw-topo:interfaceName "ens4" .
+
+<http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d>
+  a mw-pm:Router;
+  mw-topo:nodeName "r7";
+  mw-pm:hostname "r7";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/e91d815f-bb60-44b2-a8da-2da0b86ae1ef>,
+    <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/df7f4b0b-c59b-4d1a-a48a-6e73e123506d>,
+    <http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/6f1021b6-0d7c-41f0-b81b-66976c8fc5cf> .
+
+<http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/e91d815f-bb60-44b2-a8da-2da0b86ae1ef>
+  mw-topo:interfaceName "ens4" .
+
+<http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/df7f4b0b-c59b-4d1a-a48a-6e73e123506d>
+  mw-topo:interfaceName "ens6" .
+
+<http://example.org/Topology/mouseworld/Node/0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d/Interface/6f1021b6-0d7c-41f0-b81b-66976c8fc5cf>
+  mw-topo:interfaceName "ens5" .
+
+<http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f>
+  a mw-pm:Router;
+  mw-topo:nodeName "r3";
+  mw-pm:hostname "r3";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/346b819e-a5fb-4eff-80b3-7ac05f1e3399>,
+    <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/489a01c4-586d-43cc-8676-191b37b63f2e>,
+    <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/c71e8fe2-39b9-4130-b4e1-bbc46d0aeb0c>,
+    <http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/dadb7f6e-86b5-4728-b550-748254099e33> .
+
+<http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/346b819e-a5fb-4eff-80b3-7ac05f1e3399>
+  mw-topo:interfaceName "ens5" .
+
+<http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/489a01c4-586d-43cc-8676-191b37b63f2e>
+  mw-topo:interfaceName "ens4" .
+
+<http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/c71e8fe2-39b9-4130-b4e1-bbc46d0aeb0c>
+  mw-topo:interfaceName "ens7" .
+
+<http://example.org/Topology/mouseworld/Node/0f753a2b-87de-41b0-aacf-5dea7dea500f/Interface/dadb7f6e-86b5-4728-b550-748254099e33>
+  mw-topo:interfaceName "ens6" .
+
+<http://example.org/Topology/mouseworld/Node/6a14c1c5-e33a-4919-b50e-873a616fa195>
+  a mw-pm:Router;
+  mw-topo:nodeName "edge";
+  mw-pm:hostname "edge";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/6a14c1c5-e33a-4919-b50e-873a616fa195/Interface/34ea2540-75b8-4a94-a6d1-93f4a5a859b4> .
+
+<http://example.org/Topology/mouseworld/Node/6a14c1c5-e33a-4919-b50e-873a616fa195/Interface/34ea2540-75b8-4a94-a6d1-93f4a5a859b4>
+  mw-topo:interfaceName "ens3" .
+
+<http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587>
+  a mw-pm:Router;
+  mw-topo:nodeName "r1";
+  mw-pm:hostname "r1";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/39370e4f-9de6-4212-a6dd-d4361c1567e5>,
+    <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/8904fa21-1a8f-46a7-ac51-1d35c95b8689>,
+    <http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/c09112c5-92db-4d08-92d4-2ca271de62ef> .
+
+<http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/39370e4f-9de6-4212-a6dd-d4361c1567e5>
+  mw-topo:interfaceName "ens4" .
+
+<http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/8904fa21-1a8f-46a7-ac51-1d35c95b8689>
+  mw-topo:interfaceName "ens5" .
+
+<http://example.org/Topology/mouseworld/Node/28ed9028-52d4-4bce-8dcc-d1f5bfdd1587/Interface/c09112c5-92db-4d08-92d4-2ca271de62ef>
+  mw-topo:interfaceName "ens6" .
+
+<http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02>
+  a mw-pm:Router;
+  mw-topo:nodeName "r13";
+  mw-pm:hostname "r13";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02/Interface/81b7d786-2c65-417a-850b-385a9f817b22>,
+    <http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02/Interface/603c7bc8-bcab-4908-84ba-f8ef53c1c928> .
+
+<http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02/Interface/81b7d786-2c65-417a-850b-385a9f817b22>
+  mw-topo:interfaceName "ens4" .
+
+<http://example.org/Topology/mouseworld/Node/921afc0f-2f29-4919-950f-ecb26d2cfc02/Interface/603c7bc8-bcab-4908-84ba-f8ef53c1c928>
+  mw-topo:interfaceName "ens5" .
+
+<http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b>
+  a mw-pm:Router;
+  mw-topo:nodeName "r12";
+  mw-pm:hostname "r12";
+  mw-topo:interface <http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b/Interface/72054a9b-395b-4ab9-aaf2-3945fbe443ee>,
+    <http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b/Interface/b9c37b8e-49bc-4c7b-a898-f60a55fb6304> .
+
+<http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b/Interface/72054a9b-395b-4ab9-aaf2-3945fbe443ee>
+  mw-topo:interfaceName "ens4" .
+
+<http://example.org/Topology/mouseworld/Node/affa2096-e63d-430f-a51f-e2ee7c503a4b/Interface/b9c37b8e-49bc-4c7b-a898-f60a55fb6304>
+  mw-topo:interfaceName "ens5" .
