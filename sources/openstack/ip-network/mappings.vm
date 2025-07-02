@@ -63,7 +63,7 @@
 #set($prefix = $cidr[1])
 #subnetMask($prefix)
 
-<Topology/mouseworld/Link/$x.subnet_id> rdf:type mw-rt:IpNetwork ;
+<IpNetwork/$x.subnet_id> rdf:type mw-rt:IpNetwork ;
     mw-rt:addressValue "$address" ;
     mw-rt:networkPrefix "$prefix"^^xsd:integer ;
     mw-rt:networkMask "$netmask" ;
