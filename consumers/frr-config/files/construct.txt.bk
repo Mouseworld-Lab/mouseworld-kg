@@ -17,7 +17,14 @@ CONSTRUCT {
         mw-pm:hostname ?nodeId ;
         mw-topo:interface ?interface .
 
-    ?interface mw-topo:interfaceName ?ifName ,
+    ?interface mw-topo:interfaceName ?ifName ;
+        mw-rt:ipAddress ?address ;
+        a ?ifType .
+
+    ?address mw-rt:addressValue ?addressValue ;
+        mw-rt:belongsToNetwork ?network .
+
+    ?network mw-rt:networkPrefix ?networkPrefix .
 
 }
 
@@ -26,5 +33,12 @@ WHERE {
         mw-topo:nodeName ?nodeId ;
         mw-topo:interface ?interface .
 
-    ?interface mw-topo:interfaceName ?ifName .
+    ?interface mw-topo:interfaceName ?ifName ;
+        mw-rt:ipAddress ?address ;
+        a ?ifType .
+
+    ?address mw-rt:addressValue ?addressValue ;
+        mw-rt:belongsToNetwork ?network .
+
+    ?network mw-rt:networkPrefix ?networkPrefix .
 }

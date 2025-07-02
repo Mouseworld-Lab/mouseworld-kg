@@ -1,0 +1,48 @@
+@prefix mod: <https://w3id.org/mod#> .
+@prefix mw-rt: <https://w3id.org/mouseworld/routing#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix mw-topo: <https://w3id.org/mouseworld/topology#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix mw-pm: <https://w3id.org/mouseworld/platform#> .
+@prefix mw-infra: <https://w3id.org/mouseworld/infra#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@base <http://example.org/> .
+
+
+####################
+# Topology
+####################
+
+<Topology/frr01> a mw-topo:Topology ;
+    mw-topo:topologyId "frr01" ;
+    mw-topo:node <Topology/frr01/Node/router1> ;
+.
+
+####################
+# Router 1
+####################
+
+<Topology/frr01/Node/router1> a mw-topo:Router ;
+    mw-topo:nodeName "router1" ;
+    mw-pm:hostname "router1" ;
+    mw-topo:os <OperatingSystem/FRR-v7.5.1> ;
+    mw-topo:interface <Topology/frr01/Node/router1/Interface/eth1> ,
+                 <Topology/frr01/Node/router1/Interface/eth2> ,
+                 <Topology/frr01/Node/router1/Interface/eth3>
+.
+
+<Topology/frr01/Node/router1/Interface/eth1> a mw-rt:IpInterface ;
+    mw-topo:interfaceName "eth1" ;
+.
+
+<Topology/frr01/Node/router1/Interface/eth2> a mw-rt:IpInterface ;
+    mw-topo:interfaceName "eth2" ;
+.
+
+<Topology/frr01/Node/router1/Interface/eth3> a mw-rt:IpInterface ;
+    mw-topo:interfaceName "eth3" ;
+.

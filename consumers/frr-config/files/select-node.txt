@@ -1,4 +1,3 @@
-PREFIX mw: <https://w3id.org/candil/mouseworld#>
 PREFIX mod: <https://w3id.org/mod#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -7,13 +6,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX mw-pm: <https://w3id.org/mouseworld/platform#>
+PREFIX mw-rt: <https://w3id.org/mouseworld/routing#>
+PREFIX mw-topo: <https://w3id.org/mouseworld/topology#>
+PREFIX mw-infra: <https://w3id.org/mouseworld/infra#>
 
 SELECT ?nodeId
 
 WHERE {
-    ?topology a mw:Topology ;
-        mw:node ?node .
+    ?topology a mw-topo:Topology ;
+        mw-topo:node ?node .
 
-    ?node a mw:Router ;
-        mw:nodeId ?nodeId .
+    ?node a mw-pm:Router ;
+        mw-topo:nodeName ?nodeId .
 }

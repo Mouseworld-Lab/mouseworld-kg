@@ -1,37 +1,54 @@
-- from:
-    id: "jsonProducerRoute"
-    uri: "direct:produceJson"
-    steps:
-      # Produce JSON data
-      - set-body:
-          simple: '{"name": "John Doe", "age": 30}'
-      # Store JSON data in an exchange property for later use
-      - set-property:
-          name: "JsonData"
-          simple: "${body}"
-      # Send JSON data to loadCsvRoute
-      - to: "direct:combineRoutes"
+
+######################
+# BEANS
+######################
+
+- beans:
+  - name: triplesFile
+    type: "#class:com.cefriel.util.ChimeraResourceBean"
+    properties:
+      url: "file://./input/input.ttl"
+      serializationFormat: "turtle"
+  - name: constructGraph
+    type: "#class:com.cefriel.util.ChimeraResourceBean"
+    properties:
+      url: "file://./files/construct.txt"
+      serializationFormat: "txt"
+  - name: selectNodeQuery
+    type: "#class:com.cefriel.util.ChimeraResourceBean"
+    properties:
+      url: "file://./files/select-node.txt"
+      serializationFormat: "txt"
+  - name: loweringMappingTemplate
+    type: "#class:com.cefriel.util.ChimeraResourceBean"
+    properties:
+      url: "file://./files/mappings.vm"
+      serializationFormat: "vtl"
+
+######################
+# ROUTES
+######################
 
 - from:
-    id: "loadCsvRoute"
-    uri: "file:input?fileName=data.csv&noop=true"
+    id: loadTriples
+    uri: "graph:get"
     steps:
-      # Split CSV file into rows
-      - split:
-          tokenize: "\n"
-          streaming: true
-          steps:
-            # Set CsvRowHeader from the current row
-            - set-header:
-                name: "CsvRowHeader"
-                simple: "${body}"
-            # Send to combiner from for processing
-            - to: "direct:produceJson"
+      - to:
+          uri: "graph://add"
+          parameters:
+            chimeraResource: "#bean:triplesFile"
+      - to:
+          uri: "seda:lowering"
 
 - from:
-    id: "combinerRoute"
-    uri: "direct:combineRoutes"
+    id: lowering
+    uri: "seda:lowering"
     steps:
-      # Restore original JSON data into the body from exchange property
+      - to:
+          uri: "mapt://rdf"
+          parameters:
+            template: "#bean:loweringMappingTemplate"
+            query: "#bean:selectNodeQuery"
       - log:
-          message: "JSON Body: ${body}, CsvRow Header: ${header.CsvRowHeader}"
+          message: "${body}"
+
