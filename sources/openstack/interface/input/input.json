@@ -1,154 +1,1676 @@
 {
-    "ports": [
+  "ports": [
+    {
+      "id": "008722bb-c994-4301-87c6-50c504e9d80e",
+      "name": "",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:f1:c1:d2",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "3a4632eb-6743-4f80-ac33-4272334cce28",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
         {
-            "id": "18a1a6bd-4d3d-4902-be3f-19e86481d41f",
-            "name": "r3_eth4",
-            "network_id": "0f656566-5bb7-4501-a8dc-9302ef4f68ed",
-            "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
-            "mac_address": "fa:16:3e:17:77:89",
-            "admin_state_up": true,
-            "status": "ACTIVE",
-            "device_id": "173e0b81-06e5-4af0-9e87-8cab0117bb38",
-            "device_owner": "compute:nova",
-            "fixed_ips": [
-                {
-                    "subnet_id": "d32feabb-75e8-4fc4-8ed1-85d0689beec1",
-                    "ip_address": "192.168.8.3"
-                }
-            ],
-            "allowed_address_pairs": [],
-            "extra_dhcp_opts": [],
-            "security_groups": [
-                "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
-            ],
-            "description": "",
-            "binding:vnic_type": "normal",
-            "port_security_enabled": true,
-            "tags": [],
-            "created_at": "2025-05-22T15:38:58Z",
-            "updated_at": "2025-05-22T15:39:39Z",
-            "revision_number": 5,
-            "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
-        },
-        {
-            "id": "42e7149d-a5c1-4027-9c17-be28123f4df3",
-            "name": "r3_eth2",
-            "network_id": "4e127b07-49b8-418a-ab6a-de77d404dcfb",
-            "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
-            "mac_address": "fa:16:3e:46:56:92",
-            "admin_state_up": true,
-            "status": "ACTIVE",
-            "device_id": "173e0b81-06e5-4af0-9e87-8cab0117bb38",
-            "device_owner": "compute:nova",
-            "fixed_ips": [
-                {
-                    "subnet_id": "6b5d9daf-109b-4e23-89a0-484c0fd121b0",
-                    "ip_address": "192.168.12.3"
-                }
-            ],
-            "allowed_address_pairs": [],
-            "extra_dhcp_opts": [],
-            "security_groups": [
-                "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
-            ],
-            "description": "",
-            "binding:vnic_type": "normal",
-            "port_security_enabled": true,
-            "tags": [],
-            "created_at": "2025-05-22T15:38:52Z",
-            "updated_at": "2025-05-22T15:39:40Z",
-            "revision_number": 5,
-            "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
-        },
-        {
-            "id": "827b4072-9b84-45b9-a460-fc8b98a567b4",
-            "name": "r3_eth5",
-            "network_id": "5b7e50b7-9699-4a9b-83d8-e7ba20486844",
-            "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
-            "mac_address": "fa:16:3e:7a:12:c9",
-            "admin_state_up": true,
-            "status": "ACTIVE",
-            "device_id": "173e0b81-06e5-4af0-9e87-8cab0117bb38",
-            "device_owner": "compute:nova",
-            "fixed_ips": [
-                {
-                    "subnet_id": "a5c75775-5a90-418e-b831-d4ebe58ec6de",
-                    "ip_address": "192.168.14.3"
-                }
-            ],
-            "allowed_address_pairs": [],
-            "extra_dhcp_opts": [],
-            "security_groups": [
-                "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
-            ],
-            "description": "",
-            "binding:vnic_type": "normal",
-            "port_security_enabled": true,
-            "tags": [],
-            "created_at": "2025-05-22T15:38:58Z",
-            "updated_at": "2025-05-22T15:39:40Z",
-            "revision_number": 5,
-            "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
-        },
-        {
-            "id": "92ed2b4b-9074-4c1b-93a3-d30219595c3c",
-            "name": "r3_eth3",
-            "network_id": "12b4b9f0-55e9-4dee-967f-25964f6f78a9",
-            "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
-            "mac_address": "fa:16:3e:44:f7:2b",
-            "admin_state_up": true,
-            "status": "ACTIVE",
-            "device_id": "173e0b81-06e5-4af0-9e87-8cab0117bb38",
-            "device_owner": "compute:nova",
-            "fixed_ips": [
-                {
-                    "subnet_id": "bfd746d1-765f-4f4c-9703-3e2c658d1603",
-                    "ip_address": "192.168.10.3"
-                }
-            ],
-            "allowed_address_pairs": [],
-            "extra_dhcp_opts": [],
-            "security_groups": [
-                "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
-            ],
-            "description": "",
-            "binding:vnic_type": "normal",
-            "port_security_enabled": true,
-            "tags": [],
-            "created_at": "2025-05-22T15:38:46Z",
-            "updated_at": "2025-05-22T15:39:40Z",
-            "revision_number": 5,
-            "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
-        },
-        {
-            "id": "eb78cd3e-8ae0-4d7f-ad6a-e59339291af3",
-            "name": "",
-            "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
-            "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
-            "mac_address": "fa:16:3e:24:94:56",
-            "admin_state_up": true,
-            "status": "ACTIVE",
-            "device_id": "173e0b81-06e5-4af0-9e87-8cab0117bb38",
-            "device_owner": "compute:nova",
-            "fixed_ips": [
-                {
-                    "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
-                    "ip_address": "192.168.27.184"
-                }
-            ],
-            "allowed_address_pairs": [],
-            "extra_dhcp_opts": [],
-            "security_groups": [
-                "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
-            ],
-            "description": "",
-            "binding:vnic_type": "normal",
-            "port_security_enabled": true,
-            "tags": [],
-            "created_at": "2025-05-22T15:39:25Z",
-            "updated_at": "2025-05-22T15:39:39Z",
-            "revision_number": 5,
-            "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.173"
         }
-    ]
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [
+        "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
+      ],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": true,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:41Z",
+      "updated_at": "2025-06-18T17:08:52Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "0148757c-9899-4fb3-854c-9bfb4757dceb",
+      "name": "ens4",
+      "network_id": "018dff4b-ad02-4ec8-b531-a71a31c6ecfa",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:50:2f:3a",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "3a4632eb-6743-4f80-ac33-4272334cce28",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "05315a2e-947b-4a66-8ae9-fb82629bfce0",
+          "ip_address": "192.168.7.5"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:05Z",
+      "updated_at": "2025-06-18T17:08:51Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "16f2679e-0603-41c9-9e8c-147034de96af",
+      "name": "",
+      "network_id": "5e1c3a0c-9825-4b11-abea-c5f1b5773bee",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:2b:d6:69",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-5e1c3a0c-9825-4b11-abea-c5f1b5773bee",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "a44fb8b0-6c35-4b51-883b-5ba4c39ec2b2",
+          "ip_address": "192.168.2.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:11:16Z",
+      "updated_at": "2025-05-21T15:11:19Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "192b92a7-d877-4641-8d84-6efe67ad0db8",
+      "name": "",
+      "network_id": "20b8b1ef-8cfe-4099-a60e-2e1306f2fd93",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:78:fb:14",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-20b8b1ef-8cfe-4099-a60e-2e1306f2fd93",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "47ed346a-aba4-46e5-b900-d312a86a3cb5",
+          "ip_address": "192.168.5.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:23:00Z",
+      "updated_at": "2025-05-21T15:23:03Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "1a7320a4-8150-46f0-9b44-d950c793090f",
+      "name": "ens5",
+      "network_id": "5e1c3a0c-9825-4b11-abea-c5f1b5773bee",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:fe:1a:b6",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "28197c79-ccb6-44ea-9aa1-9d4ee8a424a9",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "a44fb8b0-6c35-4b51-883b-5ba4c39ec2b2",
+          "ip_address": "192.168.2.11"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:17Z",
+      "updated_at": "2025-06-18T17:08:57Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "208e8f11-a0d0-4d12-a669-187cfee66e43",
+      "name": "",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:9a:d0:2a",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "28ed9028-52d4-4bce-8dcc-d1f5bfdd1587",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.172"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [
+        "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
+      ],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": true,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:54Z",
+      "updated_at": "2025-06-18T17:09:06Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "2e81e121-171e-41a9-89a3-baabec84bf13",
+      "name": "ens4",
+      "network_id": "94c8a8b2-a012-46e3-b739-9bd64f11ca7d",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:63:9f:af",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "6fd33e86-bc2b-459f-93da-6e22d6cee463",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "03c5efb8-a240-4232-8183-6fc510d1a691",
+          "ip_address": "192.168.15.20"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:22Z",
+      "updated_at": "2025-06-18T17:09:17Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "309cd551-14a3-420f-8ea1-fe883d4b17c1",
+      "name": "ens4",
+      "network_id": "a63780a3-a992-4b86-97b3-d988ec4b5bfe",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:38:78:62",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "03800770-43bd-4b37-b592-e7ab4d38ca1b",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "3eda892d-4e9b-443c-8977-9fc60bd0a8c1",
+          "ip_address": "192.168.9.6"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:17Z",
+      "updated_at": "2025-06-18T17:09:03Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "33635bcf-0186-4dc5-86aa-076215efb44d",
+      "name": "",
+      "network_id": "e2172a2b-d6e8-488c-b932-babfbbb09d1b",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:cb:da:03",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-e2172a2b-d6e8-488c-b932-babfbbb09d1b",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "3a406604-28b3-41b0-8007-d71c4dd413b3",
+          "ip_address": "192.168.11.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:27:37Z",
+      "updated_at": "2025-05-21T15:27:39Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "346b819e-a5fb-4eff-80b3-7ac05f1e3399",
+      "name": "ens5",
+      "network_id": "12b4b9f0-55e9-4dee-967f-25964f6f78a9",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:f0:bc:6c",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "0f753a2b-87de-41b0-aacf-5dea7dea500f",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "bfd746d1-765f-4f4c-9703-3e2c658d1603",
+          "ip_address": "192.168.10.3"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:11Z",
+      "updated_at": "2025-06-18T17:08:50Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "34ea2540-75b8-4a94-a6d1-93f4a5a859b4",
+      "name": "ens3",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:c7:64:47",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "6a14c1c5-e33a-4919-b50e-873a616fa195",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.185"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:05Z",
+      "updated_at": "2025-06-18T17:08:32Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "35b064b7-0b3f-4f18-ace9-e2fb13142e26",
+      "name": "",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:ca:17:6e",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "921afc0f-2f29-4919-950f-ecb26d2cfc02",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.186"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [
+        "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
+      ],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": true,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:30Z",
+      "updated_at": "2025-06-18T17:08:40Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "37ab891e-a101-4fa1-a5b1-ca6c1eec93f2",
+      "name": "",
+      "network_id": "c0422e79-2088-4181-9b3b-7fa3ba7c6321",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:49:00:e3",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-c0422e79-2088-4181-9b3b-7fa3ba7c6321",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "5d0f2222-2429-496e-9a60-4d5c6e8fda94",
+          "ip_address": "192.168.13.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:28:10Z",
+      "updated_at": "2025-05-21T15:28:11Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "39370e4f-9de6-4212-a6dd-d4361c1567e5",
+      "name": "ens4",
+      "network_id": "261842e3-a345-4b90-b37b-5c9ba1fce18b",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:be:7b:e2",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "28ed9028-52d4-4bce-8dcc-d1f5bfdd1587",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "c6699e16-4fb2-4ae6-8d90-5d568974b018",
+          "ip_address": "192.168.3.1"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:11Z",
+      "updated_at": "2025-06-18T17:09:06Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "399ebd8e-32e0-46eb-bcf0-cedbee48eda2",
+      "name": "",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:b5:50:fb",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "8decd573-1001-48bd-ac5a-2fc9fad0eddd",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.174"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [
+        "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
+      ],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": true,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:49Z",
+      "updated_at": "2025-06-18T17:08:57Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "3ab2938e-ce18-4670-ac25-eb8d9ed2353a",
+      "name": "ens4",
+      "network_id": "261842e3-a345-4b90-b37b-5c9ba1fce18b",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:88:76:67",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "20edd894-8763-4002-b9b6-bb2aae70f893",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "c6699e16-4fb2-4ae6-8d90-5d568974b018",
+          "ip_address": "192.168.3.4"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:05Z",
+      "updated_at": "2025-06-18T17:08:44Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "3c09bcd7-d4d9-4bf9-a469-d3a942f3afae",
+      "name": "ens4",
+      "network_id": "e2dee63f-1aac-4c2d-b977-46b610ec5b8f",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:f4:8c:ce",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "28197c79-ccb6-44ea-9aa1-9d4ee8a424a9",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "8dc94851-3847-4c09-831f-f55df97eb602",
+          "ip_address": "192.168.1.11"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:17Z",
+      "updated_at": "2025-06-18T17:08:58Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "40e0cc78-7f22-413b-930a-4b2ac07c4ab5",
+      "name": "",
+      "network_id": "261842e3-a345-4b90-b37b-5c9ba1fce18b",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:d7:c8:77",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-261842e3-a345-4b90-b37b-5c9ba1fce18b",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "c6699e16-4fb2-4ae6-8d90-5d568974b018",
+          "ip_address": "192.168.3.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:09:43Z",
+      "updated_at": "2025-05-21T15:09:45Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "41285081-e357-493e-b0fc-0637ab61ef70",
+      "name": "",
+      "network_id": "94c8a8b2-a012-46e3-b739-9bd64f11ca7d",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:47:97:00",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-94c8a8b2-a012-46e3-b739-9bd64f11ca7d",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "03c5efb8-a240-4232-8183-6fc510d1a691",
+          "ip_address": "192.168.15.1"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-03T14:01:28Z",
+      "updated_at": "2025-06-03T14:01:30Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "489a01c4-586d-43cc-8676-191b37b63f2e",
+      "name": "ens4",
+      "network_id": "4e127b07-49b8-418a-ab6a-de77d404dcfb",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:6f:2b:c8",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "0f753a2b-87de-41b0-aacf-5dea7dea500f",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "6b5d9daf-109b-4e23-89a0-484c0fd121b0",
+          "ip_address": "192.168.12.3"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:05Z",
+      "updated_at": "2025-06-18T17:08:49Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "48b9fe03-a316-475d-981f-8b9f5c1a738e",
+      "name": "ens5",
+      "network_id": "c0422e79-2088-4181-9b3b-7fa3ba7c6321",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:64:a0:5f",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "6fd33e86-bc2b-459f-93da-6e22d6cee463",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "5d0f2222-2429-496e-9a60-4d5c6e8fda94",
+          "ip_address": "192.168.13.20"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:12Z",
+      "updated_at": "2025-06-18T17:09:17Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "54bd73e8-1a53-4058-b573-f4abe9b58a73",
+      "name": "ens8",
+      "network_id": "18937e35-91f4-434a-a65b-f15b9757cd6c",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:a7:b5:df",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "6fd33e86-bc2b-459f-93da-6e22d6cee463",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "afa7dd99-85e9-410a-9858-d1d7058b0393",
+          "ip_address": "192.168.6.20"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:05Z",
+      "updated_at": "2025-06-18T17:09:18Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "57c5a20d-f85a-46fa-a296-c22d830ca8a3",
+      "name": "ens6",
+      "network_id": "20b8b1ef-8cfe-4099-a60e-2e1306f2fd93",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:6a:37:7d",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "03800770-43bd-4b37-b592-e7ab4d38ca1b",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "47ed346a-aba4-46e5-b900-d312a86a3cb5",
+          "ip_address": "192.168.5.6"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:17Z",
+      "updated_at": "2025-06-18T17:09:05Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "603c7bc8-bcab-4908-84ba-f8ef53c1c928",
+      "name": "ens5",
+      "network_id": "e2172a2b-d6e8-488c-b932-babfbbb09d1b",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:04:14:7e",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "921afc0f-2f29-4919-950f-ecb26d2cfc02",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "3a406604-28b3-41b0-8007-d71c4dd413b3",
+          "ip_address": "192.168.11.13"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:11Z",
+      "updated_at": "2025-06-18T17:08:41Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "6f1021b6-0d7c-41f0-b81b-66976c8fc5cf",
+      "name": "ens5",
+      "network_id": "e2172a2b-d6e8-488c-b932-babfbbb09d1b",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:d8:9b:bd",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "3a406604-28b3-41b0-8007-d71c4dd413b3",
+          "ip_address": "192.168.11.7"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:11Z",
+      "updated_at": "2025-06-18T17:08:55Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "6f850f13-fd14-43d0-8184-1f4252c31f80",
+      "name": "",
+      "network_id": "12b4b9f0-55e9-4dee-967f-25964f6f78a9",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:23:f8:13",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-12b4b9f0-55e9-4dee-967f-25964f6f78a9",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "bfd746d1-765f-4f4c-9703-3e2c658d1603",
+          "ip_address": "192.168.10.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:31:55Z",
+      "updated_at": "2025-05-21T15:31:57Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "72054a9b-395b-4ab9-aaf2-3945fbe443ee",
+      "name": "ens4",
+      "network_id": "c0422e79-2088-4181-9b3b-7fa3ba7c6321",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:80:ea:49",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "affa2096-e63d-430f-a51f-e2ee7c503a4b",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "5d0f2222-2429-496e-9a60-4d5c6e8fda94",
+          "ip_address": "192.168.13.12"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:16Z",
+      "updated_at": "2025-06-18T17:08:47Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "773738d7-24fb-4ca2-a2f6-6ce9453ba89e",
+      "name": "",
+      "network_id": "018dff4b-ad02-4ec8-b531-a71a31c6ecfa",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:c8:3b:37",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-018dff4b-ad02-4ec8-b531-a71a31c6ecfa",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "05315a2e-947b-4a66-8ae9-fb82629bfce0",
+          "ip_address": "192.168.7.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:23:30Z",
+      "updated_at": "2025-05-21T15:23:31Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "81b7d786-2c65-417a-850b-385a9f817b22",
+      "name": "ens4",
+      "network_id": "4e127b07-49b8-418a-ab6a-de77d404dcfb",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:b5:ba:9e",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "921afc0f-2f29-4919-950f-ecb26d2cfc02",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "6b5d9daf-109b-4e23-89a0-484c0fd121b0",
+          "ip_address": "192.168.12.13"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:05Z",
+      "updated_at": "2025-06-18T17:08:40Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "848ba49c-3da3-408c-b409-0ec48b04bdc1",
+      "name": "ens5",
+      "network_id": "5e1c3a0c-9825-4b11-abea-c5f1b5773bee",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:f1:4f:48",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "20edd894-8763-4002-b9b6-bb2aae70f893",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "a44fb8b0-6c35-4b51-883b-5ba4c39ec2b2",
+          "ip_address": "192.168.2.4"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:11Z",
+      "updated_at": "2025-06-18T17:08:44Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "8904fa21-1a8f-46a7-ac51-1d35c95b8689",
+      "name": "ens5",
+      "network_id": "f99ab493-edcc-4ed6-9ea1-65098dafa1d6",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:5a:49:72",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "28ed9028-52d4-4bce-8dcc-d1f5bfdd1587",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "bca7abdf-4e00-4d47-a6f2-5cf69fae6082",
+          "ip_address": "192.168.4.1"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:11Z",
+      "updated_at": "2025-06-18T17:09:07Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "95084121-61b9-467a-9bef-d5a9aba18c70",
+      "name": "",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:a3:7a:7b",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.181"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [
+        "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
+      ],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": true,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:43Z",
+      "updated_at": "2025-06-18T17:08:55Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "95829df9-6976-4219-b091-98a9dc3427ec",
+      "name": "",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:57:c9:ea",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "20edd894-8763-4002-b9b6-bb2aae70f893",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.168"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [
+        "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
+      ],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": true,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:33Z",
+      "updated_at": "2025-06-18T17:08:45Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "9ffa6ca8-9cf7-4ae9-bac2-75a5e270f9b7",
+      "name": "ens7",
+      "network_id": "0f656566-5bb7-4501-a8dc-9302ef4f68ed",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:a8:5c:4e",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "6fd33e86-bc2b-459f-93da-6e22d6cee463",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "d32feabb-75e8-4fc4-8ed1-85d0689beec1",
+          "ip_address": "192.168.8.20"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:17Z",
+      "updated_at": "2025-06-18T17:09:17Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "a87d750f-0eea-4691-98e7-45855431b5c3",
+      "name": "",
+      "network_id": "7d4f9d2c-301d-430f-a2db-2b5be96de2e1",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:1f:d1:b2",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-7d4f9d2c-301d-430f-a2db-2b5be96de2e1",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "42438de1-bf9c-49a1-9fbb-b7feed54c920",
+          "ip_address": "11.0.1.1"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-04T16:24:29Z",
+      "updated_at": "2025-06-04T16:24:31Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "ad17041f-0f2b-4723-aa8b-badddf29eb75",
+      "name": "ens6",
+      "network_id": "20b8b1ef-8cfe-4099-a60e-2e1306f2fd93",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:05:e7:5b",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "20edd894-8763-4002-b9b6-bb2aae70f893",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "47ed346a-aba4-46e5-b900-d312a86a3cb5",
+          "ip_address": "192.168.5.4"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:17Z",
+      "updated_at": "2025-06-18T17:08:45Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "b359b5dd-d6e9-459a-9b45-6ed102b984dc",
+      "name": "ens4",
+      "network_id": "94c8a8b2-a012-46e3-b739-9bd64f11ca7d",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:b5:9a:fe",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "8decd573-1001-48bd-ac5a-2fc9fad0eddd",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "03c5efb8-a240-4232-8183-6fc510d1a691",
+          "ip_address": "192.168.15.3"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:17Z",
+      "updated_at": "2025-06-18T17:08:57Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "b73d8bf7-9b9a-4e46-8033-b5449b889a97",
+      "name": "ens6",
+      "network_id": "f99ab493-edcc-4ed6-9ea1-65098dafa1d6",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:56:6a:fc",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "6fd33e86-bc2b-459f-93da-6e22d6cee463",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "bca7abdf-4e00-4d47-a6f2-5cf69fae6082",
+          "ip_address": "192.168.4.20"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:05Z",
+      "updated_at": "2025-06-18T17:09:18Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "b9c37b8e-49bc-4c7b-a898-f60a55fb6304",
+      "name": "ens5",
+      "network_id": "5b7e50b7-9699-4a9b-83d8-e7ba20486844",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:be:50:3a",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "affa2096-e63d-430f-a51f-e2ee7c503a4b",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "a5c75775-5a90-418e-b831-d4ebe58ec6de",
+          "ip_address": "192.168.14.12"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:05Z",
+      "updated_at": "2025-06-18T17:08:47Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "c0290eb2-0dd3-47d9-a812-04bf0c55684a",
+      "name": "",
+      "network_id": "18937e35-91f4-434a-a65b-f15b9757cd6c",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:98:3c:1f",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-18937e35-91f4-434a-a65b-f15b9757cd6c",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "afa7dd99-85e9-410a-9858-d1d7058b0393",
+          "ip_address": "192.168.6.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:24:04Z",
+      "updated_at": "2025-05-21T15:24:05Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "c09112c5-92db-4d08-92d4-2ca271de62ef",
+      "name": "ens6",
+      "network_id": "e2dee63f-1aac-4c2d-b977-46b610ec5b8f",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:d8:9c:45",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "28ed9028-52d4-4bce-8dcc-d1f5bfdd1587",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "8dc94851-3847-4c09-831f-f55df97eb602",
+          "ip_address": "192.168.1.1"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:22Z",
+      "updated_at": "2025-06-18T17:09:07Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "c71e8fe2-39b9-4130-b4e1-bbc46d0aeb0c",
+      "name": "ens7",
+      "network_id": "5b7e50b7-9699-4a9b-83d8-e7ba20486844",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:9a:67:00",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "0f753a2b-87de-41b0-aacf-5dea7dea500f",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "a5c75775-5a90-418e-b831-d4ebe58ec6de",
+          "ip_address": "192.168.14.3"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:05Z",
+      "updated_at": "2025-06-18T17:08:48Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "cbdeeb00-7a4f-43cc-b15e-8928af486ce7",
+      "name": "",
+      "network_id": "5b7e50b7-9699-4a9b-83d8-e7ba20486844",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:aa:1c:b6",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-5b7e50b7-9699-4a9b-83d8-e7ba20486844",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "a5c75775-5a90-418e-b831-d4ebe58ec6de",
+          "ip_address": "192.168.14.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:28:53Z",
+      "updated_at": "2025-05-21T15:28:55Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "ce3e9d08-7d0b-424a-9026-f7654351fa49",
+      "name": "ens5",
+      "network_id": "018dff4b-ad02-4ec8-b531-a71a31c6ecfa",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:75:d5:60",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "03800770-43bd-4b37-b592-e7ab4d38ca1b",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "05315a2e-947b-4a66-8ae9-fb82629bfce0",
+          "ip_address": "192.168.7.6"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:11Z",
+      "updated_at": "2025-06-18T17:09:05Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "d87ed771-d3d1-448a-b556-f15e442e8633",
+      "name": "",
+      "network_id": "a63780a3-a992-4b86-97b3-d988ec4b5bfe",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:52:c0:81",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-a63780a3-a992-4b86-97b3-d988ec4b5bfe",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "3eda892d-4e9b-443c-8977-9fc60bd0a8c1",
+          "ip_address": "192.168.9.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:26:45Z",
+      "updated_at": "2025-05-21T15:26:47Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "dadb7f6e-86b5-4728-b550-748254099e33",
+      "name": "ens6",
+      "network_id": "0f656566-5bb7-4501-a8dc-9302ef4f68ed",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:85:57:48",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "0f753a2b-87de-41b0-aacf-5dea7dea500f",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "d32feabb-75e8-4fc4-8ed1-85d0689beec1",
+          "ip_address": "192.168.8.3"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:11Z",
+      "updated_at": "2025-06-18T17:08:48Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "db8c4323-5faf-44a6-a080-591353bf9316",
+      "name": "",
+      "network_id": "f99ab493-edcc-4ed6-9ea1-65098dafa1d6",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:98:a5:e5",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-f99ab493-edcc-4ed6-9ea1-65098dafa1d6",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "bca7abdf-4e00-4d47-a6f2-5cf69fae6082",
+          "ip_address": "192.168.4.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:07:46Z",
+      "updated_at": "2025-05-21T15:07:48Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "df7f4b0b-c59b-4d1a-a48a-6e73e123506d",
+      "name": "ens6",
+      "network_id": "12b4b9f0-55e9-4dee-967f-25964f6f78a9",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:19:f9:eb",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "bfd746d1-765f-4f4c-9703-3e2c658d1603",
+          "ip_address": "192.168.10.7"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:11Z",
+      "updated_at": "2025-06-18T17:08:55Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "dfc099aa-43f7-402a-8d20-d312531ca8e2",
+      "name": "",
+      "network_id": "e2dee63f-1aac-4c2d-b977-46b610ec5b8f",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:24:2b:ed",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-e2dee63f-1aac-4c2d-b977-46b610ec5b8f",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "8dc94851-3847-4c09-831f-f55df97eb602",
+          "ip_address": "192.168.1.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-28T14:38:38Z",
+      "updated_at": "2025-05-28T14:38:39Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "e1a6b126-60d8-4f27-9485-e53f26bd0859",
+      "name": "ens3",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:fc:3e:7f",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "28197c79-ccb6-44ea-9aa1-9d4ee8a424a9",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.175"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:05Z",
+      "updated_at": "2025-06-18T17:08:57Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "e3ba2dad-f51e-4539-a048-d8eb95b18b9f",
+      "name": "",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:25:20:54",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "0f753a2b-87de-41b0-aacf-5dea7dea500f",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.178"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [
+        "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
+      ],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": true,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:35Z",
+      "updated_at": "2025-06-18T17:08:50Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "e597ca74-ba63-4278-83a3-9fe088643812",
+      "name": "",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:6b:3b:1e",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "6fd33e86-bc2b-459f-93da-6e22d6cee463",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.183"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [
+        "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
+      ],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": true,
+      "tags": [],
+      "created_at": "2025-06-18T17:09:03Z",
+      "updated_at": "2025-06-18T17:09:18Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "e6a0960d-67b9-4a5b-a802-c75d395827d7",
+      "name": "ens5",
+      "network_id": "18937e35-91f4-434a-a65b-f15b9757cd6c",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:97:c2:bd",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "3a4632eb-6743-4f80-ac33-4272334cce28",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "afa7dd99-85e9-410a-9858-d1d7058b0393",
+          "ip_address": "192.168.6.5"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:17Z",
+      "updated_at": "2025-06-18T17:08:50Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "e91d815f-bb60-44b2-a8da-2da0b86ae1ef",
+      "name": "ens4",
+      "network_id": "a63780a3-a992-4b86-97b3-d988ec4b5bfe",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:22:6b:68",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "0a7ee4bf-fcb1-416b-b550-00c42f6e2a7d",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "3eda892d-4e9b-443c-8977-9fc60bd0a8c1",
+          "ip_address": "192.168.9.7"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:17Z",
+      "updated_at": "2025-06-18T17:08:55Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "eed364f1-df47-4526-b34a-076e68ce3679",
+      "name": "",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:6e:ef:27",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "affa2096-e63d-430f-a51f-e2ee7c503a4b",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.184"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [
+        "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
+      ],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": true,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:38Z",
+      "updated_at": "2025-06-18T17:08:46Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "f0e2ee8d-730a-458e-82aa-c57522cc9f1f",
+      "name": "",
+      "network_id": "0f656566-5bb7-4501-a8dc-9302ef4f68ed",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:60:31:62",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-0f656566-5bb7-4501-a8dc-9302ef4f68ed",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "d32feabb-75e8-4fc4-8ed1-85d0689beec1",
+          "ip_address": "192.168.8.21"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-29T14:55:22Z",
+      "updated_at": "2025-05-29T14:55:24Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "f2cbe16b-10f6-4a91-b770-ce987be015c2",
+      "name": "",
+      "network_id": "4e127b07-49b8-418a-ab6a-de77d404dcfb",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:87:09:f8",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "dhcp79f64a04-7ed3-5c9a-a009-7a9fa42e9cae-4e127b07-49b8-418a-ab6a-de77d404dcfb",
+      "device_owner": "network:dhcp",
+      "fixed_ips": [
+        {
+          "subnet_id": "6b5d9daf-109b-4e23-89a0-484c0fd121b0",
+          "ip_address": "192.168.12.2"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-05-21T15:32:57Z",
+      "updated_at": "2025-05-21T15:33:00Z",
+      "revision_number": 4,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "fd6f1234-2209-439f-ae96-cd9ba49c577b",
+      "name": "ens3",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:a0:36:14",
+      "admin_state_up": true,
+      "status": "DOWN",
+      "device_id": "",
+      "device_owner": "",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.187"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": false,
+      "tags": [],
+      "created_at": "2025-06-11T10:21:29Z",
+      "updated_at": "2025-06-18T17:05:06Z",
+      "revision_number": 7,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "fee100f2-97b8-49aa-b90f-5c8c9014e471",
+      "name": "",
+      "network_id": "e00db497-40a2-4648-bb99-183a38c2371e",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "mac_address": "fa:16:3e:77:5d:87",
+      "admin_state_up": true,
+      "status": "ACTIVE",
+      "device_id": "03800770-43bd-4b37-b592-e7ab4d38ca1b",
+      "device_owner": "compute:nova",
+      "fixed_ips": [
+        {
+          "subnet_id": "06ff9050-d42e-4504-ac0f-69b030077ede",
+          "ip_address": "192.168.27.169"
+        }
+      ],
+      "allowed_address_pairs": [],
+      "extra_dhcp_opts": [],
+      "security_groups": [
+        "7535b8b1-78f7-43d2-b27b-bfc252e40a5c"
+      ],
+      "description": "",
+      "binding:vnic_type": "normal",
+      "port_security_enabled": true,
+      "tags": [],
+      "created_at": "2025-06-18T17:08:52Z",
+      "updated_at": "2025-06-18T17:09:03Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    }
+  ]
 }
