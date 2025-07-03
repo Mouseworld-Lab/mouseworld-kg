@@ -4,16 +4,6 @@
 ######################
 
 - beans:
-  - name: triplesFile
-    type: "#class:com.cefriel.util.ChimeraResourceBean"
-    properties:
-      url: "file://./input/input.ttl"
-      serializationFormat: "turtle"
-  - name: constructGraph
-    type: "#class:com.cefriel.util.ChimeraResourceBean"
-    properties:
-      url: "file://./files/construct.txt"
-      serializationFormat: "txt"
   - name: selectNodeQuery
     type: "#class:com.cefriel.util.ChimeraResourceBean"
     properties:
@@ -30,13 +20,11 @@
 ######################
 
 - from:
-    id: loadTriples
-    uri: "graph:get"
+    uri: "file:input"
+    parameters:
+      fileName: "input.ttl"
+      noop: true
     steps:
-      - to:
-          uri: "graph://add"
-          parameters:
-            chimeraResource: "#bean:triplesFile"
       - to:
           uri: "seda:lowering"
 
@@ -50,5 +38,26 @@
             template: "#bean:loweringMappingTemplate"
             query: "#bean:selectNodeQuery"
       - log:
-          message: "${body}"
+          message: "Lowering ${body}"
+      - to:
+          uri: "seda:store"
+
+- from:
+    id: store
+    uri: "seda:store"
+    steps:
+      - split:
+          expression:
+            simple: "${body}"
+      - log:
+          message: "Lowering key ${body.key}"
+      - log:
+          message: "Lowering value ${body.value}"
+      - to:
+          uri: "file:output"
+          parameters:
+            fileName: example.conf
+            noop: true
+      - log:
+          message: "Lowering has been generated and saved to output/example.conf"
 

@@ -11,12 +11,9 @@ PREFIX mw-rt: <https://w3id.org/mouseworld/routing#>
 PREFIX mw-topo: <https://w3id.org/mouseworld/topology#>
 PREFIX mw-infra: <https://w3id.org/mouseworld/infra#>
 
-SELECT ?nodeId
+SELECT ?id
 
 WHERE {
-    ?topology a mw-topo:Topology ;
-        mw-topo:node ?node .
-
     ?node a mw-pm:Router ;
-        mw-topo:nodeName ?nodeId .
+        mw-topo:nodeName ?id .
 }
