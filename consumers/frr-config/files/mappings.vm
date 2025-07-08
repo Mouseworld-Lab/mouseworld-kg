@@ -21,9 +21,9 @@
         ?interface mw-topo:interfaceName ?ifName .
     }
 " )
-#set( $queryRouter = "${prefixes}${router}" )
-#set ( $routers = $reader.getDataframe(queryRouter))
-#foreach($r in $routers)
+#set ($queryRouter = "${prefixes}${router}" )
+#set ($routers = $reader.getDataframe($queryRouter))
+#foreach( $r in $routers)
 interface $r.ifName
 !
 #end
