@@ -37,8 +37,6 @@
           parameters:
             template: "#bean:loweringMappingTemplate"
             query: "#bean:selectNodeQuery"
-      - log:
-          message: "Lowering ${body}"
       - to:
           uri: "seda:store"
 
@@ -49,15 +47,20 @@
       - split:
           expression:
             simple: "${body}"
+      - set-header:
+          name: routerId
+          simple: "${body.key}"
+      - set-body:
+          simple: "${body.value}"
       - log:
-          message: "Lowering key ${body.key}"
+          message: "routerId header: ${header.routerId}"
       - log:
-          message: "Lowering value ${body.value}"
+          message: "Body is ${body}"
       - to:
           uri: "file:output"
           parameters:
-            fileName: example.conf
+            fileName: ${header.routerId}.conf
             noop: true
       - log:
-          message: "Lowering has been generated and saved to output/example.conf"
+          message: "Lowering has been generated and saved to output/${header.routerId}.conf"
 
