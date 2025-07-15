@@ -12,13 +12,20 @@ Before executing the Camel routes, deploy GraphDB container:
 docker container run --rm -it -p 7200:7200 \
   -v ./graphdb/data:/opt/graphdb/home \
   -v ./graphdb/imports:/root/graphdb-import \
-  ontotext/graphdb:10.7.0
+  ontotext/graphdb:10.8.9
 ```
 
 Once GraphDB has started, make sure to create a repository in the database.
 
-Next, execute each Camel route using JBang:
+```bash
+curl -X POST \
+  http://localhost:7200/rest/repositories \
+  -H "Content-Type: multipart/form-data" \
+  -F "config=@graphdb/init/config.ttl"
+```
+
+Now, you can execute each Camel route using JBang:
 
 ```bash
-jbang camel@apache/camel run route.yaml --camel-version=4.10.0 --dep=mvn:com.cefriel:camel-chimera-graph:4.4.1,mvn:com.cefriel:camel-chimera-mapping-template:4.4.1
+jbang camel@apache/camel run route.yaml --camel-version=4.10.0 --dep=mvn:com.cefriel:camel-chimera-mapping-template:4.5.0
 ```
