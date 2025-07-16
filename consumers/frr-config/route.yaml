@@ -26,12 +26,14 @@
 
 - from:
     id: connectGraph
-    uri: "graph://get"
-    parameters:
-      serverUrl: http://127.0.0.1:7200
-      repositoryId: default
-      defaultGraph: true
+    uri: "timer:run-once?repeatCount=1&delay=1000"
     steps:
+      - to:
+          uri: "graph://get"
+          parameters:
+            serverUrl: http://127.0.0.1:7200
+            repositoryId: default
+            defaultGraph: true
       - to:
           uri: "seda:getConfigGraph"
 
@@ -44,6 +46,8 @@
           parameters:
             newGraph: true
             chimeraResource: "#bean:constructGraph"
+      - to:
+          uri: "seda:lowering"
 
 - from:
     id: lowering
@@ -55,16 +59,24 @@
             template: "#bean:loweringMappingTemplate"
             query: "#bean:selectNodeQuery"
       - to:
-          uri: "direct:storeConfig"
+          uri: "seda:store"
 
 - from:
-    id: storeConfig
-    uri: "direct:storeConfig"
+    id: store
+    uri: "seda:store"
     steps:
-      - toD:
+      - split:
+          expression:
+            simple: "${body}"
+      - setHeader:
+          name: routerId
+          simple: "${body.key}"
+      - setBody:
+          simple: "${body.value}"
+      - to:
           uri: "file:output"
           parameters:
-            fileName: ${x.id}.conf
+            fileName: ${header.routerId}.conf
             noop: true
       - log:
-          message: "Lowering has been generated and saved to output/${x.id}.conf"
+          message: "Lowering has been generated and saved to output/${header.routerId}.conf"

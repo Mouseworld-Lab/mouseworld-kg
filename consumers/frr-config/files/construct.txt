@@ -14,17 +14,21 @@ PREFIX mw-infra: <https://w3id.org/mouseworld/infra#>
 CONSTRUCT {
     ?node a mw-pm:Router ;
         mw-topo:nodeName ?nodeId ;
-        mw-pm:hostname ?nodeId ;
         mw-topo:interface ?interface .
-
-    ?interface mw-topo:interfaceName ?ifName ,
-
+    ?interface mw-topo:interfaceName ?ifName ;
+        mw-rt:ipAddress ?ipAddress .
+    ?ipAddress mw-rt:addressValue ?addressValue ;
+        mw-rt:belongsToNetwork ?ipNetwork .
+    ?ipNetwork mw-rt:networkPrefix ?networkPrefix .
 }
 
 WHERE {
     ?node a mw-pm:Router ;
         mw-topo:nodeName ?nodeId ;
         mw-topo:interface ?interface .
-
-    ?interface mw-topo:interfaceName ?ifName .
+    ?interface mw-topo:interfaceName ?ifName ;
+        mw-rt:ipAddress ?ipAddress .
+    ?ipAddress mw-rt:addressValue ?addressValue ;
+        mw-rt:belongsToNetwork ?ipNetwork .
+    ?ipNetwork mw-rt:networkPrefix ?networkPrefix .
 }

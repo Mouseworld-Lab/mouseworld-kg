@@ -1,3 +1,7 @@
+hostname $x.id
+!
+ip routing
+!
 #set ( $prefixes = "
     PREFIX mod: <https://w3id.org/mod#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -12,19 +16,24 @@
     PREFIX mw-topo: <https://w3id.org/mouseworld/topology#>
     PREFIX mw-infra: <https://w3id.org/mouseworld/infra#>
 " )
-#set ( $router = "
+#set ( $interface = "
     SELECT *
     WHERE {
         ?node a mw-pm:Router ;
             mw-topo:nodeName ""$x.id"" ;
             mw-topo:interface ?interface .
-        ?interface mw-topo:interfaceName ?ifName .
+        ?interface mw-topo:interfaceName ?ifName ;
+            mw-rt:ipAddress ?ipAddress .
+        ?ipAddress mw-rt:addressValue ?addressValue ;
+            mw-rt:belongsToNetwork ?ipNetwork .
+        ?ipNetwork mw-rt:networkPrefix ?networkPrefix .
     }
 " )
-
-#set ($queryRouter = "${prefixes}${router}" )
-#set ($routers = $reader.getDataframe($queryRouter))
-#foreach( $r in $routers)
-interface $r.ifName
+#set ($queryInterface = "${prefixes}${interface}" )
+#set ($interfaces = $reader.getDataframe($queryInterface))
+#foreach( $i in $interfaces)
+interface $i.ifName
+    ip address $i.addressValue/$i.networkPrefix
+    no shutdown
 !
 #end

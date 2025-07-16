@@ -47,10 +47,10 @@
       - split:
           expression:
             simple: "${body}"
-      - set-header:
+      - setHeader:
           name: routerId
           simple: "${body.key}"
-      - set-body:
+      - setBody:
           simple: "${body.value}"
       - log:
           message: "routerId header: ${header.routerId}"
