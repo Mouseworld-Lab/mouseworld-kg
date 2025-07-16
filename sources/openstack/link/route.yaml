@@ -16,6 +16,12 @@
           constant: "application/json"
       - to:
           uri: "http://192.168.27.44:9696/v2.0/networks"
+      # Store input JSON for testing
+      - to:
+          uri: "file:input"
+          parameters:
+            fileName: "input.json"
+            noop: true
       - to:
           uri: "direct:liftOpenStack"
 

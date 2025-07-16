@@ -1,5 +1,8 @@
+hostname $x.id
+!
+ip routing
+!
 #set ( $prefixes = "
-	PREFIX mw: <https://w3id.org/candil/mouseworld#>
     PREFIX mod: <https://w3id.org/mod#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -8,48 +11,29 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX vann: <http://purl.org/vocab/vann/>
     PREFIX dcterms: <http://purl.org/dc/terms/>
+    PREFIX mw-pm: <https://w3id.org/mouseworld/platform#>
+    PREFIX mw-rt: <https://w3id.org/mouseworld/routing#>
+    PREFIX mw-topo: <https://w3id.org/mouseworld/topology#>
+    PREFIX mw-infra: <https://w3id.org/mouseworld/infra#>
 " )
-
-#set ( $router = "
+#set ( $interface = "
     SELECT *
     WHERE {
-        ?node a mw:Router ;
-            mw:nodeId ""$map.routerId"" ;
-            mw:hostname ?hostname ;
-            mw:interface ?interface .
-        ?interface mw:interfaceName ?ifName ;
-            mw:ipAddress ?address ;
-            a ?ifType .
-        ?address mw:addressValue ?addressValue ;
-            mw:belongsToNetwork ?network .
-        ?network mw:networkPrefix ?networkPrefix .
+        ?node a mw-pm:Router ;
+            mw-topo:nodeName ""$x.id"" ;
+            mw-topo:interface ?interface .
+        ?interface mw-topo:interfaceName ?ifName ;
+            mw-rt:ipAddress ?ipAddress .
+        ?ipAddress mw-rt:addressValue ?addressValue ;
+            mw-rt:belongsToNetwork ?ipNetwork .
+        ?ipNetwork mw-rt:networkPrefix ?networkPrefix .
     }
-
 " )
-#set( $queryRouter = "${prefixes}${router}" )
-#set( $routers = $reader.getDataframe($queryRouter) )
-#foreach($r in $routers)
-interface $r.ifName
-    ip address $r.addressValue/$r.networkPrefix
-    #if($r.ifType == "https://w3id.org/candil/mouseworld#IpInterface")    no switchport#end
-
+#set ($queryInterface = "${prefixes}${interface}" )
+#set ($interfaces = $reader.getDataframe($queryInterface))
+#foreach( $i in $interfaces)
+interface $i.ifName
+    ip address $i.addressValue/$i.networkPrefix
+    no shutdown
 !
-#end
-#set ( $staticRoute = "
-    SELECT *
-    WHERE {
-        ?node a mw:Router ;
-            mw:staticRoute ?staticRoute .
-        ?staticRoute mw:nextHop ?nextHop ;
-            mw:destinationNetwork ?destinationNetwork .
-        ?nextHop mw:addressValue ?nextHopAddress .
-        ?destinationNetwork mw:addressValue ?addressValue ;
-            mw:networkMask ?networkMask .
-    }
-
-" )
-#set( $queryStaticRoute = "$prefixes$staticRoute" )
-#set( $staticRoutes = $reader.getDataframe($queryStaticRoute) )
-#foreach($statics in $staticRoutes)
-ip route $statics.addressValue $statics.networkMask $statics.nextHopAddress
 #end

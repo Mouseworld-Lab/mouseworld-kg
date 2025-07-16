@@ -1,6 +1,35 @@
 {
   "subnets": [
     {
+      "id": "03c5efb8-a240-4232-8183-6fc510d1a691",
+      "name": "r2-gateway",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "94c8a8b2-a012-46e3-b739-9bd64f11ca7d",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "192.168.15.0/24",
+      "allocation_pools": [
+        {
+          "start": "192.168.15.3",
+          "end": "192.168.15.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": false,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-06-03T14:01:27Z",
+      "updated_at": "2025-06-05T07:40:04Z",
+      "revision_number": 0,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
       "id": "05315a2e-947b-4a66-8ae9-fb82629bfce0",
       "name": "r5r6",
       "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
@@ -14,7 +43,7 @@
       "cidr": "192.168.7.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.7.2",
+          "start": "192.168.7.7",
           "end": "192.168.7.254"
         }
       ],
@@ -25,8 +54,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:23:30Z",
-      "updated_at": "2025-05-23T12:06:38Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:35:52Z",
+      "revision_number": 3,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -48,16 +77,14 @@
         }
       ],
       "host_routes": [],
-      "dns_nameservers": [
-        "8.8.8.8"
-      ],
+      "dns_nameservers": [],
       "description": "",
       "router:external": true,
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-19T11:30:58Z",
-      "updated_at": "2025-05-19T11:30:58Z",
-      "revision_number": 0,
+      "updated_at": "2025-06-05T07:40:19Z",
+      "revision_number": 2,
       "project_id": "311f8f3d723644368e2a386ad7e38cfb"
     },
     {
@@ -74,7 +101,7 @@
       "cidr": "192.168.11.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.11.2",
+          "start": "192.168.11.8",
           "end": "192.168.11.254"
         }
       ],
@@ -85,8 +112,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:27:36Z",
-      "updated_at": "2025-05-23T12:09:25Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:38:07Z",
+      "revision_number": 5,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -103,7 +130,7 @@
       "cidr": "192.168.9.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.9.2",
+          "start": "192.168.9.7",
           "end": "192.168.9.254"
         }
       ],
@@ -114,8 +141,37 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:26:45Z",
-      "updated_at": "2025-05-23T12:09:02Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:37:41Z",
+      "revision_number": 5,
+      "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
+    },
+    {
+      "id": "42438de1-bf9c-49a1-9fbb-b7feed54c920",
+      "name": "edge-client",
+      "tenant_id": "47db6af3f5ae4a958fd90100ebdef0cd",
+      "network_id": "7d4f9d2c-301d-430f-a2db-2b5be96de2e1",
+      "ip_version": 4,
+      "subnetpool_id": null,
+      "enable_dhcp": true,
+      "ipv6_ra_mode": null,
+      "ipv6_address_mode": null,
+      "gateway_ip": null,
+      "cidr": "11.0.1.0/24",
+      "allocation_pools": [
+        {
+          "start": "11.0.1.1",
+          "end": "11.0.1.254"
+        }
+      ],
+      "host_routes": [],
+      "dns_nameservers": [],
+      "description": "",
+      "router:external": false,
+      "service_types": [],
+      "tags": [],
+      "created_at": "2025-06-04T16:24:28Z",
+      "updated_at": "2025-06-04T16:24:28Z",
+      "revision_number": 0,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -132,7 +188,7 @@
       "cidr": "192.168.5.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.5.2",
+          "start": "192.168.5.5",
           "end": "192.168.5.254"
         }
       ],
@@ -143,8 +199,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:23:00Z",
-      "updated_at": "2025-05-23T12:07:48Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:36:41Z",
+      "revision_number": 3,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -161,7 +217,7 @@
       "cidr": "192.168.13.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.13.2",
+          "start": "192.168.13.21",
           "end": "192.168.13.254"
         }
       ],
@@ -172,8 +228,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:28:09Z",
-      "updated_at": "2025-05-23T12:09:14Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:37:56Z",
+      "revision_number": 3,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -190,7 +246,7 @@
       "cidr": "192.168.12.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.12.2",
+          "start": "192.168.12.14",
           "end": "192.168.12.254"
         }
       ],
@@ -201,8 +257,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:32:56Z",
-      "updated_at": "2025-05-23T12:08:22Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:37:05Z",
+      "revision_number": 5,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -219,7 +275,7 @@
       "cidr": "192.168.1.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.1.2",
+          "start": "192.168.1.12",
           "end": "192.168.1.254"
         }
       ],
@@ -230,8 +286,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:08:55Z",
-      "updated_at": "2025-05-23T12:09:36Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:38:20Z",
+      "revision_number": 6,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -248,7 +304,7 @@
       "cidr": "192.168.2.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.2.2",
+          "start": "192.168.2.12",
           "end": "192.168.2.254"
         }
       ],
@@ -259,8 +315,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:11:15Z",
-      "updated_at": "2025-05-23T12:08:51Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:37:29Z",
+      "revision_number": 3,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -277,7 +333,7 @@
       "cidr": "192.168.14.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.14.2",
+          "start": "192.168.14.4",
           "end": "192.168.14.254"
         }
       ],
@@ -288,8 +344,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:28:53Z",
-      "updated_at": "2025-05-23T12:08:38Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:37:17Z",
+      "revision_number": 3,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -306,7 +362,7 @@
       "cidr": "192.168.6.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.6.3",
+          "start": "192.168.6.6",
           "end": "192.168.6.254"
         }
       ],
@@ -317,8 +373,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:24:03Z",
-      "updated_at": "2025-05-23T12:07:22Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:36:26Z",
+      "revision_number": 3,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -346,8 +402,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:07:46Z",
-      "updated_at": "2025-05-23T12:09:46Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:38:31Z",
+      "revision_number": 3,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -364,7 +420,7 @@
       "cidr": "192.168.10.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.10.2",
+          "start": "192.168.10.8",
           "end": "192.168.10.254"
         }
       ],
@@ -375,8 +431,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:31:55Z",
-      "updated_at": "2025-05-23T12:07:11Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:36:15Z",
+      "revision_number": 3,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -393,7 +449,7 @@
       "cidr": "192.168.3.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.3.2",
+          "start": "192.168.3.5",
           "end": "192.168.3.254"
         }
       ],
@@ -404,8 +460,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:09:42Z",
-      "updated_at": "2025-05-23T12:08:04Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:36:52Z",
+      "revision_number": 3,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     },
     {
@@ -422,7 +478,7 @@
       "cidr": "192.168.8.0/24",
       "allocation_pools": [
         {
-          "start": "192.168.8.2",
+          "start": "192.168.8.21",
           "end": "192.168.8.254"
         }
       ],
@@ -433,8 +489,8 @@
       "service_types": [],
       "tags": [],
       "created_at": "2025-05-21T15:24:53Z",
-      "updated_at": "2025-05-23T12:06:55Z",
-      "revision_number": 1,
+      "updated_at": "2025-05-29T15:36:04Z",
+      "revision_number": 6,
       "project_id": "47db6af3f5ae4a958fd90100ebdef0cd"
     }
   ]
