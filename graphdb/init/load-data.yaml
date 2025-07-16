@@ -44,6 +44,38 @@
           uri: "direct:storeTriplestore"
 
 - from:
+    uri: "timer:once?repeatCount=1&delay=1000"
+    steps:
+      - to:
+          uri: "https://raw.githubusercontent.com/Mouseworld-Lab/mouseworld-ontology/refs/heads/develop/ontology/topology.ttl"
+      - to:
+          uri: "direct:storeTriplestore"
+
+- from:
+    uri: "timer:once?repeatCount=1&delay=1000"
+    steps:
+      - to:
+          uri: "https://raw.githubusercontent.com/Mouseworld-Lab/mouseworld-ontology/refs/heads/develop/ontology/routing.ttl"
+      - to:
+          uri: "direct:storeTriplestore"
+
+- from:
+    uri: "timer:once?repeatCount=1&delay=1000"
+    steps:
+      - to:
+          uri: "https://raw.githubusercontent.com/Mouseworld-Lab/mouseworld-ontology/refs/heads/develop/ontology/platform.ttl"
+      - to:
+          uri: "direct:storeTriplestore"
+
+- from:
+    uri: "timer:once?repeatCount=1&delay=1000"
+    steps:
+      - to:
+          uri: "https://raw.githubusercontent.com/Mouseworld-Lab/mouseworld-ontology/refs/heads/develop/ontology/infra.ttl"
+      - to:
+          uri: "direct:storeTriplestore"
+
+- from:
     uri: "direct:storeTriplestore"
     steps:
       - to:
